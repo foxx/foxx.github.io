@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    {% for article in articles %}
+        {{ article.title }}
+    {% endfor %}
+
+{% endblock %}
