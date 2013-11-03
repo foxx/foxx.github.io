@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>{{ page.title }}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,8 +39,8 @@
             */
         </script>
 
-        {% block content %}
-        {% endblock %}
+        <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+
+        {{ content }}
     </body>
 </html>
-
