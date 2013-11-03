@@ -1,4 +1,4 @@
 all:
 
 runserver:
-	python runserver.py
+	python compile.py
