@@ -1,4 +1,4 @@
 all:
 
 runserver:
-	jekyll serve -w
+	python compile.py
