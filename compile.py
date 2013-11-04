@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from jinja2 import Environment, PackageLoader, Template
-from bottle import route, run, template
+from bottle import route, run, template, static_file
 
 import os
 import markdown
@@ -20,9 +20,9 @@ def get_project_root(path=None):
 
 class ContentBuilder(object):
     SCSS_ROOT = get_project_root("contentbuilder/static/scss/")
-    SCSS_OUTPUT_ROOT = get_project_root("blog/static/scss/")
+    SCSS_OUTPUT_ROOT = get_project_root("static/scss/")
     STATIC_ROOT = get_project_root("contentbuilder/static/")
-    STATIC_OUTPUT_ROOT = get_project_root("blog/static/")
+    STATIC_OUTPUT_ROOT = get_project_root("static/")
 
     def __init__(self):
         self.env = Environment(loader=PackageLoader('contentbuilder', ))
@@ -51,17 +51,21 @@ class ContentBuilder(object):
             with open(path, 'wb') as fd:
                 fd.write(content.encode('utf-8'))
 
-        # clear out old static
-        output_root = get_project_root("blog/")
-        if os.path.exists(output_root):
-            shutil.rmtree(output_root)
+        def remove_if_exists(path):
+            if os.path.exists(path):
+                shutil.rmtree(path)
 
-        if not os.path.exists(output_root):
-            os.mkdir(output_root)
+        def create_if_not_exists(path):
+            if not os.path.exists(path):
+                os.makedirs(path)
+
+        # clear out old static
+        remove_if_exists(get_project_root("blog/"))
+        remove_if_exists(self.STATIC_OUTPUT_ROOT)
+
+        create_if_not_exists(get_project_root("blog/"))
 
         # copy static
-        #os.makedirs(self.SCSS_OUTPUT_ROOT, )
-        #os.makedirs(self.STATIC_OUTPUT_ROOT)
         shutil.copytree(self.STATIC_ROOT, self.STATIC_OUTPUT_ROOT)
 
         # temp assign
@@ -69,9 +73,16 @@ class ContentBuilder(object):
         opts = dict(articles=articles)
 
         # build blog index page
-        index_path = get_project_root("blog/home.html")
+        home_path = get_project_root("index.html")
+        index_path = get_project_root("blog/index.html")
         index_content = self.env.get_template('home.html').render(opts)
         write_to_file(index_path, index_content)
+        write_to_file(home_path, index_content)
+
+        # compile 404
+        path_404 = get_project_root("404.html")
+        content_404 = self.env.get_template('404.html').render(opts)
+        write_to_file(path_404, content_404)
 
         # build scss
         css = ""
@@ -93,20 +104,25 @@ def runserver():
     def index(url):
         cb = ContentBuilder()
         cb.build()
-        url = "/%s" % ( url, ) if url else "/index"
-        has_ext = True if os.path.splitext(os.path.basename(url))[1] else False
-        url = "%s.html" % ( url, ) if not has_ext else url
-        
-        target_file = get_project_root("/%s" % ( url, ))
 
-        return template('<b>Hello {{target_file}}</b>!', target_file=target_file)
+        url = url if url else "index.html"
+        target_path = "/%s" % ( url, )
+        target_path_full = get_project_root(target_path)
+
+        if not os.path.exists(target_path_full):
+            target_file = "/404.html"
+        elif os.path.isdir(target_path_full):
+            target_file = "%s/index.html" % ( target_path, )
+        else:
+            target_file = target_path
+
+        return static_file(target_file, get_project_root())
 
     print "Running on http://%s:%s" % ( socket.gethostname(), LISTEN_PORT, )
     run(host=LISTEN_ADDR, port=LISTEN_PORT, reloader=True)
 
 
 if __name__ == '__main__':
-    from bottle import route, run, template
     runserver()
-
-
+    #cb = ContentBuilder()
+    #cb.build()
