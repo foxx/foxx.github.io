@@ -1,5 +1,3 @@
-@import 'vars'
-
 body {
     //background-color: #363d40;
     background-color:#333333;
@@ -49,61 +47,64 @@ pre, code {
     clear:both;
 }
 
-.posts {
-    .post {
-        background-color:#5fb75d;
-        margin-bottom:30px;
+.post {
+    background-color:#5fb75d;
+    margin-bottom:30px;
 
-        .post-image {
-            overflow:hidden;
+    .post-image {
+        overflow:hidden;
 
-            a, a:hover {
-                color:white;
-            }
-            
-            img {
-                //width:100%;
-                height:200px;
-                //min-width:200px;
-                //min-height:220px;
-                //max-height:220px;
-                //max-width:150px;
-            }
-        }
-
-        .post-title {
+        a, a:hover {
             color:white;
+        }
+        
+        img {
+            //width:100%;
+            height:200px;
+            //min-width:200px;
+            //min-height:220px;
+            //max-height:220px;
+            //max-width:150px;
+        }
+    }
 
-            a, a:hover {
-                color:white;
-            }
+    .timestamp {
+        margin-bottom:10px;
+    }
 
-            h2 {
-                margin-top:15px;
-                padding-right:10px;
-            }
+    .post-title {
+        color:white;
+
+        a, a:hover {
+            color:white;
         }
 
-        .post-content {
+        h2 {
+            margin-top:15px;
+            padding-right:10px;
+        }
+    }
 
-            a {
-                color:black;
-                text-decoration:underline;
-            }
+    .post-content {
 
-            background-color:white;
-            min-height:100px;
-            font-size: 18px;
-            line-height: 24px;
-            color:#898989;
-            padding:20px;
+        a {
+            color:black;
+            text-decoration:underline;
+        }
 
-            * {
-                max-width: 100%;
-            }
+        background-color:white;
+        min-height:100px;
+        font-size: 18px;
+        line-height: 24px;
+        color:#898989;
+        padding:20px;
+
+        * {
+            max-width: 100%;
         }
     }
 }
+
 
 .section-about {
     .segment {

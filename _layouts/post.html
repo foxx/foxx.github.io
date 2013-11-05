@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="post">
+    <div class="row">
+        <div class="col-xs-3 col-md-3">
+            <div class="post-image">
+                <img src="{{ page.coverimage }}" />
+            </div>
+        </div>
+
+        <div class="col-xs-9 col-md-9 post-title">
+            <h2>
+                <a href="/blog/{{article.name}}">{{ page.title }}</a>
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post-content">
+                <div class="timestamp">
+                    Added on <span>{{ page.date | date_to_string }}</span>
+                </div>
+                <div>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
