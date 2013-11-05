@@ -1,3 +1,6 @@
+$darkgreen: #5fb75d;
+$lightgreen: lighten($darkgreen, 10%);
+
 body {
     //background-color: #363d40;
     background-color:#333333;
@@ -127,7 +130,6 @@ pre, code {
     }
 }
 
-
 .site-header {
     height:100px;
     width:100%;
@@ -141,6 +143,33 @@ pre, code {
         font-weight: 300;
         padding:10px;
     }
+}
+
+.button {
+    background: #5fb75d;
+    background-repeat: repeat;
+    display: inline-block;
+    border: none;
+    line-height: 20px;
+    padding: 12px 18px 14px 18px;
+    font-size: 18px;
+    color: #FFF !important;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    text-decoration:none !important;
+}
+
+.button:hover {
+    //color:white;
+   background-color:$lightgreen;
 }
 
 /*
