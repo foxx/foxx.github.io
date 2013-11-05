@@ -5,12 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" href="/static/css/normalize.css">
         <link rel="stylesheet" href="/static/css/main.css">
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="/static/scss/site.css">
         <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -20,7 +32,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -40,6 +52,404 @@
             */
         </script>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-header">
+                        <div>
+                            <div>
+                                <a href="/" class="site-title">Cal Leeming Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    
+
+    <div class="posts">
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/requires-professional.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            RPS/APS vulnerability disclosure in Yealink, Snom and others
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>On Wednesday 23rd October 2013, I released a security disclosure highlighting vulnerabilities in several vendors/providers relating to APS/RPS (Automated/Redirection Provision System). These flaws puts hundreds of thousands of users at risk of toll fraud, and most vendors/providers chose to ignore the problem when I reported it to them a year ago (it was discovered in mid 2012).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/lol-seahorse.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            GlusterFS - "Operation failed on XXX", "Host XXX not a friend" and silent output
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>GlusterFS is a lovely piece of technology, but it is bitchy as hell. If you stumbled across this thread, it's because GlusterFS is giving you problems, no one seems to explain why and the CLI is about as useful as a third leg.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/better-approach-for-multi-tenant.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Better approach for multi-tenant SIP testing (part #1)
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>Building our own VoIP platform has been an interesting journey, and there are many scenarios you need to test to ensure the call flow is handled correctly. Attempting to test this logic with desk phones can quickly become overwhelming, and makes the development process dependent on hardware. Although you should always do a hardware compatibility test on every release, virtualizing this system is a great way of speeding up development. This approach has saved me countless hours in unnecessary overheads during testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/analysis-of-cisco-7940-sip.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Analysis of Cisco 7940, SIP ALG and NAT traversal problems
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>I'm personally a huge fan of the Cisco phones, ever since I was a little kid I'd always wanted one.. I'd see them on TV shows, they were in the offices at school, and it made me insanely jealous that I couldn't have one. Now I'm all grown up, and about a year ago I purchased my very first [Cisco 7940][1] phone.. It was an exciting day, trying to re-flash a 10 year old phone with nothing but a monochrome LCD with no backlight, and a few buttons. Eventually after 2-3 days of messing around, I managed to get it hooked up to a TFTP, [reflashed with the SIP firmware][2], and connected to my provider.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/storing-billions-of-uuids.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Storing billions of UUID fields in MySQL InnoDB
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>During one of our builds, we came up against a requirement of having to store UUIDs in MySQL. Not knowing which was the best way, we tried all of them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/reproducing-dice-roll.png" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Reproducing 'dice roll' from "[27C3] Cognitive Psychology for Hackers"
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>On a lazy Sunday afternoon, I was watching a presentation by [Sai Zai][1] on [Cognitive Psychology for Hackers from 27C3][2]. At around 13 minutes in, he showed an example of betting against a dice roll on the following slide (as seen in the article picture above).Immediately, the most obvious choice to me was B, but was quickly told I was wrong. Despite this being explained I still didn't understand why this was happening, and found it difficult to believe. So I wrote a little Python script to reproduce this, which proved me wrong :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/strut-channel-monitor-stand.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Building a strut channel monitor stand (January 2013)
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>After seeing the <a href="http://www.techradar.com/news/computing-components/peripherals/build-a-triple-screen-stand-for-25-1090082">TechRadar article</a> on building a cheap strut channel monitor, and an [imgur thread][3] of someone doing this, I decided to have a shot at this myself. The jigsaw made the job much faster, but not before scaring the utter shit out of me. I didn't know you had to put oil on the blades, which meant they not only got blunt extremely fast (30 seconds), they also starting sparking and glowing. I made the mistake of putting the wrong blade in and hit the floor and went flying across the garden. I also pull the jigsaw out of the metal before it stopped moving and the damn thing almost flew out of my hand. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/legacy-natwest-cc.png" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Converting legacy Natwest CC PDF statements to importable CSV
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>This code is alpha as fuck, and you will almost certainly have to either modify or make your own depending on your own circumstances. This article is just to show you how we did it and give some food for thought. My apologies for the heavily obfuscated text, you can view these yourself by logging into your own portal. For those of you that use Natwest credit cards, you are probably all too familiar with the "4 month restriction" on downloading transactions, after which they only provide PDF statements. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/python-random-cast.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Python random.random() collisions caused by str() cast!
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>Today we were building a queuing system that generated job IDs using an MD5 of random.random(), but noticed we were getting collisions every few seconds. However, after much investigation, this was failing because str() automatically rounds depending on what Python version you are on. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/billion-row-db.png" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            1.1 billion row / 160GB Percona MySQL DB on EC2 with RAID 1 SSD1
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>So today, we broke our hosting companies record.. 1.1 billion rows in a Percona MySQL InnoDB table! Sounds impressive, but reality soon kicks in when you can't run SELECT() queries against it for fear of saturating our poor SAS disks and locking up the web application. And even harder when you're working against the clock on deadlines. With a total datadir size of around 160GB, 1,159,945,113 rows in a single table and no long term NoSQL plans on the horizon, our immediate options were limited. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/home-office-1.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            Home office - part #1
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>Had a couple of people asking what sort of home office set up I have, so here you go (taken in early 2012).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/quiet-fan-replacement.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            QUIET FAN HACK – 3COM 2824 GIGABIT SWITCH
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>After picking up a used 2824 switch on eBay for only £25, we soon realised the noise was too much for our small office. These switches are "enterprise grade", they have a 24gbit/sec switching fabric (that's full line speed on all ports), and a quiet/desktop version of this sort of product would have easily cost £100+. So, we bought a Rasurbo 40mm x 10mm Quiet Cooling fan replacement for £6 - and got ourselves a bargin at around £40 in total (switch+fan+delivery).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="post">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="post-image">
+                            <img src="/static/img/covers/access_virus_ti_03.jpg" />
+                        </div>
+                    </div>
+
+                    <div class="col-xs-9 col-md-9 post-title">
+                        <h2>
+                            ACCESS VIRUS TI FIRMWARE – REVERSE ENGINEERING ATTEMPT #1
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="post-content">
+                            <p>After several times of looking around on eBay for an Access Virus TI, and each time deciding that I didn't really have £800 to blow on a unit, I went in search of a firmware emulator. This drew a blank, so I decided to have a shot at poking into the firmware. I'd done this a few times before (mostly with phones and routers), but never with this. I didn't have an actual unit to look inside, so first I had to find some pictures and/or a hardware spec. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+
+                </div>
+
+                <div class="col-md-4 section-about">
+                    <div class="segment">
+                        <h3>About Me</h3>
+                        <p>
+                            Pythonic data freak with a startup mentality to move fast and break things. Commit privileges are a privilege not a right, and I work hard to keep them.
+                        </p>
+                        <p>
+                            Little collection of posts made over the years, from programming to reverse engineering to real life build projects.
+                        </p>
+                    </div>
+
+                    <div class="segment section-contact">
+                        <h3>Contact</h3>
+
+                        <p>Reach out to me any time at   <a class="special" href="mailto:cal@iops.io">cal@iops.io</a></p>
+
+                        <p>
+                            
+                        </p>
+
+                        <p>
+                            07534 971120 [UK]
+                        </p>
+
+                        <p>
+                            +1 (310) 362 7070 [US]
+                        </p>
+                    </div>
+
+                    <div class="segment">
+                        <h3>Social</h3>
+
+                        <div class="social">
+                            <a href="http://github.com/foxx" target="_blank">
+                                <img class="icon" src="/static/img/github-128.png" />
+                            </a>
+
+                            <a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/" target="_blank">
+                                <img class="icon" src="/static/img/li-128.png" />
+                            </a>
+
+                            <a href="http://www.facebook.com/sleepycal" target="_blank">
+                                <img class="icon" src="/static/img/fb-128.png" />
+                            </a>
+
+                            <a href="http://www.youtube.com/user/foxiewhisper" target="_blank">
+                                <img class="icon" src="/static/img/yt-128.png" />
+                            </a>
+
+                            <a href="http://www.twitter.com/sleepycal" target="_blank">
+                                <img class="icon" src="/static/img/twitter-128.png" />
+                            </a>
+
+                            <a href="skype:state2state_" target="_blank">
+                                <img class="icon" src="/static/img/skype-128.png" />
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
         <div class="site-container">
             <div class="header">
 
@@ -66,72 +476,13 @@
             </div>
 
             <div class="right">
-                <div class="segment">
-                    <h3>About Me</h3>
-                    <p>
-                        Pythonic data freak with a startup mentality to move fast and break things.
-                    </p>
-                </div>
-
-                <div class="segment">
-                    <h3>Contact</h3>
-
-                    <p>
-                        <a href="mailto:cal@iops.io">cal@iops.io</a>
-                    </p>
-
-                    <p>
-                        uk: 07534 971120
-                    </p>
-
-                    <p>
-                        us: +1 (310) 362 7070
-                    </p>
-                </div>
-
-                <div class="segment">
-                    <h3>Social</h3>
-
-                    <div class="social">
-                        <a href="http://github.com/foxx" target="_blank">
-                            <img class="icon" src="/static/img/github-128.png" />
-                        </a>
-
-                        <a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/" target="_blank">
-                            <img class="icon" src="/static/img/li-128.png" />
-                        </a>
-
-                        <a href="http://www.facebook.com/sleepycal" target="_blank">
-                            <img class="icon" src="/static/img/fb-128.png" />
-                        </a>
-
-                        <a href="http://www.youtube.com/user/foxiewhisper" target="_blank">
-                            <img class="icon" src="/static/img/yt-128.png" />
-                        </a>
-
-                        <a href="http://www.twitter.com/sleepycal" target="_blank">
-                            <img class="icon" src="/static/img/twitter-128.png" />
-                        </a>
-
-                        <a href="skype:state2state_" target="_blank">
-                            <img class="icon" src="/static/img/skype-128.png" />
-                        </a>
-                        
-                    </div>
-                </div>
+                
             </div>
             <div class="clear"></div>
         </div>
+
+        -->
         <div>
-            
-
-    
-        QUIET FAN HACK – 3COM 2824 GIGABIT SWITCH
-    
-        ACCESS VIRUS TI FIRMWARE – REVERSE ENGINEERING ATTEMPT #1
-    
-
-
         </div>
     </body>
 </html>

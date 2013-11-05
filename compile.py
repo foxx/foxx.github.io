@@ -35,13 +35,24 @@ class ContentBuilder(object):
 
     def fetch_articles(self):
         articles = []
-        for article_filename in os.listdir("contentbuilder/templates/articles/"):
+
+        files = os.listdir("contentbuilder/templates/articles/")
+        def fsort(v,):
+            v = int(v.split("-")[0])
+            return v
+
+        files = sorted(files, key=fsort)
+        files = reversed(files)
+
+        for article_filename in files:
             article = dict()
             article['template_path'] = "articles/%s" % ( article_filename, )
             article['template'] = self.env.get_template(article['template_path'])
             article['title'] = ''.join(article['template'].blocks['title']({})).strip()
             article['content'] = ''.join(article['template'].blocks['content']({})).strip()
             article['content_html'] = markdown.markdown(article['content'])
+            article['content_excerpt'] = markdown.markdown(article['content'].strip().split("\n")[0])
+            article['coverimage'] = ''.join(article['template'].blocks['coverimage']({})).strip()
             article['name'] = os.path.splitext(article_filename)[0]
             articles.append(article)
         return articles

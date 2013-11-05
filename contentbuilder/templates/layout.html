@@ -5,12 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <link rel="stylesheet" href="/static/css/normalize.css">
         <link rel="stylesheet" href="/static/css/main.css">
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="/static/scss/site.css">
         <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -20,7 +32,7 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -40,6 +52,87 @@
             */
         </script>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="site-header">
+                        <div>
+                            <div>
+                                <a href="/" class="site-title">Cal Leeming Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+
+                <div class="col-md-4 section-about">
+                    <div class="segment">
+                        <h3>About Me</h3>
+                        <p>
+                            Pythonic data freak with a startup mentality to move fast and break things. Commit privileges are a privilege not a right, and I work hard to keep them.
+                        </p>
+                        <p>
+                            Little collection of posts made over the years, from programming to reverse engineering to real life build projects.
+                        </p>
+                    </div>
+
+                    <div class="segment section-contact">
+                        <h3>Contact</h3>
+
+                        <p>Reach out to me any time at   <a class="special" href="mailto:cal@iops.io">cal@iops.io</a></p>
+
+                        <p>
+                            
+                        </p>
+
+                        <p>
+                            07534 971120 [UK]
+                        </p>
+
+                        <p>
+                            +1 (310) 362 7070 [US]
+                        </p>
+                    </div>
+
+                    <div class="segment">
+                        <h3>Social</h3>
+
+                        <div class="social">
+                            <a href="http://github.com/foxx" target="_blank">
+                                <img class="icon" src="/static/img/github-128.png" />
+                            </a>
+
+                            <a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/" target="_blank">
+                                <img class="icon" src="/static/img/li-128.png" />
+                            </a>
+
+                            <a href="http://www.facebook.com/sleepycal" target="_blank">
+                                <img class="icon" src="/static/img/fb-128.png" />
+                            </a>
+
+                            <a href="http://www.youtube.com/user/foxiewhisper" target="_blank">
+                                <img class="icon" src="/static/img/yt-128.png" />
+                            </a>
+
+                            <a href="http://www.twitter.com/sleepycal" target="_blank">
+                                <img class="icon" src="/static/img/twitter-128.png" />
+                            </a>
+
+                            <a href="skype:state2state_" target="_blank">
+                                <img class="icon" src="/static/img/skype-128.png" />
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
         <div class="site-container">
             <div class="header">
 
@@ -66,65 +159,13 @@
             </div>
 
             <div class="right">
-                <div class="segment">
-                    <h3>About Me</h3>
-                    <p>
-                        Pythonic data freak with a startup mentality to move fast and break things.
-                    </p>
-                </div>
-
-                <div class="segment">
-                    <h3>Contact</h3>
-
-                    <p>
-                        <a href="mailto:cal@iops.io">cal@iops.io</a>
-                    </p>
-
-                    <p>
-                        uk: 07534 971120
-                    </p>
-
-                    <p>
-                        us: +1 (310) 362 7070
-                    </p>
-                </div>
-
-                <div class="segment">
-                    <h3>Social</h3>
-
-                    <div class="social">
-                        <a href="http://github.com/foxx" target="_blank">
-                            <img class="icon" src="/static/img/github-128.png" />
-                        </a>
-
-                        <a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/" target="_blank">
-                            <img class="icon" src="/static/img/li-128.png" />
-                        </a>
-
-                        <a href="http://www.facebook.com/sleepycal" target="_blank">
-                            <img class="icon" src="/static/img/fb-128.png" />
-                        </a>
-
-                        <a href="http://www.youtube.com/user/foxiewhisper" target="_blank">
-                            <img class="icon" src="/static/img/yt-128.png" />
-                        </a>
-
-                        <a href="http://www.twitter.com/sleepycal" target="_blank">
-                            <img class="icon" src="/static/img/twitter-128.png" />
-                        </a>
-
-                        <a href="skype:state2state_" target="_blank">
-                            <img class="icon" src="/static/img/skype-128.png" />
-                        </a>
-                        
-                    </div>
-                </div>
+                
             </div>
             <div class="clear"></div>
         </div>
+
+        -->
         <div>
-            {% block content %}
-            {% endblock %}
         </div>
     </body>
 </html>
