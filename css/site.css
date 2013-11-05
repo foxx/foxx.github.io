@@ -77,6 +77,10 @@ pre, code {
   color: black;
   text-decoration: underline;
 }
+.post .post-content iframe {
+  width: 100%;
+  height: 460px;
+}
 .post .post-content * {
   max-width: 100%;
 }
