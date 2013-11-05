@@ -1,0 +1,34 @@
+---
+layout: post
+title:  Quiet Fan Hack - 3com 2824 Gigabit Switch
+date:   2012-10-26 00:00:00
+categories: general
+coverimage: /img/covers/quiet-fan-replacement.jpg
+---
+
+After picking up a used 2824 switch on eBay for only £25, we soon realised the noise was too much for our small office. These switches are "enterprise grade", they have a 24gbit/sec switching fabric (that's full line speed on all ports), and a quiet/desktop version of this sort of product would have easily cost £100+. So, we bought a Rasurbo 40mm x 10mm Quiet Cooling fan replacement for £6 - and got ourselves a bargin at around £40 in total (switch+fan+delivery).
+
+
+Initially I bought the wrong type of fan (you MUST make sure it is a three-wire, as these fans require speed control to work), and this wasted about £10 on wrong components. Check it :) Also posted on http://imgur.com/a/boCRB
+
+And yes, this will void your warranty ;)
+
+[![fan-hack-1.jpg](/img/postcontent/fan-hack-1.jpg)](/img/postcontent/fan-hack-1.jpg)
+
+[![fan-hack-2.jpg](/img/postcontent/fan-hack-2.jpg)](/img/postcontent/fan-hack-2.jpg)
+
+[![fan-hack-3.jpg](/img/postcontent/fan-hack-3.jpg)](/img/postcontent/fan-hack-3.jpg)
+
+[![fan-hack-4.jpg](/img/postcontent/fan-hack-4.jpg)](/img/postcontent/fan-hack-4.jpg)
+
+[![fan-hack-5.jpg](/img/postcontent/fan-hack-5.jpg)](/img/postcontent/fan-hack-5.jpg)
+
+[![fan-hack-6.jpg](/img/postcontent/fan-hack-6.jpg)](/img/postcontent/fan-hack-6.jpg)
+
+[![fan-hack-7.jpg](/img/postcontent/fan-hack-7.jpg)](/img/postcontent/fan-hack-7.jpg)
+
+[![fan-hack-8.jpg](/img/postcontent/fan-hack-8.jpg)](/img/postcontent/fan-hack-8.jpg)
+
+[![fan-hack-9.jpg](/img/postcontent/fan-hack-9.jpg)](/img/postcontent/fan-hack-9.jpg)
+
+[![fan-hack-10.jpg](/img/postcontent/fan-hack-10.jpg)](/img/postcontent/fan-hack-10.jpg)

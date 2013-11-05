@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ACCESS VIRUS TI FIRMWARE – REVERSE ENGINEERING ATTEMPT #1
+title:  Access Virus TI Firmware Reverse Engineering - Attempt 1
 date:   2012-10-26 00:00:00
 categories: general
 coverimage: /img/covers/access_virus_ti_03.jpg
@@ -738,16 +738,16 @@ vti-edit.bin = offset first 5 bytes = SUCCESS
 I then tried using the following tools:
   
 * "DSP56xxx Toolchain v3.6r1" from Tasking. (TASKING_DSP56k_v3.6r4.exe)
-  http://www.tasking.com/forms/trial/download-dsp56xxx.shtml
+  [http://www.tasking.com/forms/trial/download-dsp56xxx.shtml](http://www.tasking.com/forms/trial/download-dsp56xxx.shtml)
 
 * Suite56™ DSP Simulator
-  http://styles.freescale.com/lgfiles/updates/Suite56/DSP56300_Tools.exe
+  [http://styles.freescale.com/lgfiles/updates/Suite56/DSP56300_Tools.exe](http://styles.freescale.com/lgfiles/updates/Suite56/DSP56300_Tools.exe)
 
 * Freescale DSPS56SIMUM docs
-  http://cache.freescale.com/files/dsp/doc/user_guide/DSPS56SIMUM.pdf
+  [http://cache.freescale.com/files/dsp/doc/user_guide/DSPS56SIMUM.pdf](http://cache.freescale.com/files/dsp/doc/user_guide/DSPS56SIMUM.pdf)
 
 * DSP56xxx v3.6 C Cross-Compiler User Guide
-  http://www.tasking.com/support/dsp56xxx/m_c56.pdf
+  [http://www.tasking.com/support/dsp56xxx/m_c56.pdf](http://www.tasking.com/support/dsp56xxx/m_c56.pdf)
 
 All of those tools looked great, and would probably get us digging deeper into the firmware..... However due to my my lack of embedded development / assembly, this was the end of the line for me. Maybe one day I will look back at this once I'm a little more clued up about assembly.. Hopefully this post will be useful to others!
   
