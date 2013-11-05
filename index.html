@@ -12,18 +12,6 @@
 
         <link rel="stylesheet" href="/static/css/normalize.css">
         <link rel="stylesheet" href="/static/css/main.css">
-
-
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="/static/scss/site.css">
         <script src="/static/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -36,9 +24,26 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/static/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+
         <script src="/static/js/plugins.js"></script>
         <script src="/static/js/main.js"></script>
         <link rel='stylesheet' id='gwf-heading-css'  href='http://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic&#038;ver=3.6' type='text/css' media='all' />
+
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/7.4/styles/default.min.css">
+        <script src="http://yandex.st/highlightjs/7.4/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <link rel="stylesheet" href="/static/scss/site.css">
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -74,13 +79,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/requires-professional.jpg" />
+                            <a href="/blog/13-rps-aps-vulnerability-yealink-snom">
+                                <img src="/static/img/covers/requires-professional.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            RPS/APS vulnerability disclosure in Yealink, Snom and others
+                            <a href="/blog/13-rps-aps-vulnerability-yealink-snom">RPS/APS vulnerability disclosure in Yealink, Snom and others</a>
                         </h2>
                     </div>
                 </div>
@@ -98,13 +105,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/lol-seahorse.jpg" />
+                            <a href="/blog/12-glusterfs-operation-failed-host-not-friend">
+                                <img src="/static/img/covers/lol-seahorse.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            GlusterFS - "Operation failed on XXX", "Host XXX not a friend" and silent output
+                            <a href="/blog/12-glusterfs-operation-failed-host-not-friend">GlusterFS - "Operation failed on XXX", "Host XXX not a friend" and silent output</a>
                         </h2>
                     </div>
                 </div>
@@ -122,13 +131,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/better-approach-for-multi-tenant.jpg" />
+                            <a href="/blog/11-multi-tenant-sip-testing-approach">
+                                <img src="/static/img/covers/better-approach-for-multi-tenant.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Better approach for multi-tenant SIP testing (part #1)
+                            <a href="/blog/11-multi-tenant-sip-testing-approach">Better approach for multi-tenant SIP testing (part #1)</a>
                         </h2>
                     </div>
                 </div>
@@ -146,13 +157,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/analysis-of-cisco-7940-sip.jpg" />
+                            <a href="/blog/10-cisco-7940-sip-alg-nat-traversal-problems">
+                                <img src="/static/img/covers/analysis-of-cisco-7940-sip.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Analysis of Cisco 7940, SIP ALG and NAT traversal problems
+                            <a href="/blog/10-cisco-7940-sip-alg-nat-traversal-problems">Analysis of Cisco 7940, SIP ALG and NAT traversal problems</a>
                         </h2>
                     </div>
                 </div>
@@ -160,7 +173,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="post-content">
-                            <p>I'm personally a huge fan of the Cisco phones, ever since I was a little kid I'd always wanted one.. I'd see them on TV shows, they were in the offices at school, and it made me insanely jealous that I couldn't have one. Now I'm all grown up, and about a year ago I purchased my very first [Cisco 7940][1] phone.. It was an exciting day, trying to re-flash a 10 year old phone with nothing but a monochrome LCD with no backlight, and a few buttons. Eventually after 2-3 days of messing around, I managed to get it hooked up to a TFTP, [reflashed with the SIP firmware][2], and connected to my provider.</p>
+                            <p>I'm personally a huge fan of the Cisco phones, ever since I was a little kid I'd always wanted one.. I'd see them on TV shows, they were in the offices at school, and it made me insanely jealous that I couldn't have one. Now I'm all grown up, and about a year ago I purchased my very first <a href="http://www.cisco.com/en/US/products/hw/phones/ps379/ps1854/index.html">Cisco 7940</a> phone.. It was an exciting day, trying to re-flash a 10 year old phone with nothing but a monochrome LCD with no backlight, and a few buttons. Eventually after 2-3 days of messing around, I managed to get it hooked up to a TFTP, <a href="http://www.3cx.com/blog/docs/cisco-7940-sip/">reflashed with the SIP firmware</a>, and connected to my provider.</p>
                         </div>
                     </div>
                 </div>
@@ -170,13 +183,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/storing-billions-of-uuids.jpg" />
+                            <a href="/blog/9-storing-billions-uuid-mysql">
+                                <img src="/static/img/covers/storing-billions-of-uuids.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Storing billions of UUID fields in MySQL InnoDB
+                            <a href="/blog/9-storing-billions-uuid-mysql">Storing billions of UUID fields in MySQL InnoDB</a>
                         </h2>
                     </div>
                 </div>
@@ -194,13 +209,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/reproducing-dice-roll.png" />
+                            <a href="/blog/8-reproducing-dice-roll-cognitive-psychology-hackers">
+                                <img src="/static/img/covers/reproducing-dice-roll.png" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Reproducing 'dice roll' from "[27C3] Cognitive Psychology for Hackers"
+                            <a href="/blog/8-reproducing-dice-roll-cognitive-psychology-hackers">Reproducing 'dice roll' from "[27C3] Cognitive Psychology for Hackers"</a>
                         </h2>
                     </div>
                 </div>
@@ -208,7 +225,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="post-content">
-                            <p>On a lazy Sunday afternoon, I was watching a presentation by [Sai Zai][1] on [Cognitive Psychology for Hackers from 27C3][2]. At around 13 minutes in, he showed an example of betting against a dice roll on the following slide (as seen in the article picture above).Immediately, the most obvious choice to me was B, but was quickly told I was wrong. Despite this being explained I still didn't understand why this was happening, and found it difficult to believe. So I wrote a little Python script to reproduce this, which proved me wrong :)</p>
+                            <p>On a lazy Sunday afternoon, I was watching a presentation by <a href="http://s.ai/">Sai Zai</a> on <a href="http://www.youtube.com/watch?v=uJAuAuGboOM">Cognitive Psychology for Hackers from 27C3</a>. At around 13 minutes in, he showed an example of betting against a dice roll on the following slide (as seen in the article picture above).Immediately, the most obvious choice to me was B, but was quickly told I was wrong. Despite this being explained I still didn't understand why this was happening, and found it difficult to believe. So I wrote a little Python script to reproduce this, which proved me wrong :)</p>
                         </div>
                     </div>
                 </div>
@@ -218,13 +235,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/strut-channel-monitor-stand.jpg" />
+                            <a href="/blog/7-building-strut-channel-monitor-stand">
+                                <img src="/static/img/covers/strut-channel-monitor-stand.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Building a strut channel monitor stand (January 2013)
+                            <a href="/blog/7-building-strut-channel-monitor-stand">Building a strut channel monitor stand (January 2013)</a>
                         </h2>
                     </div>
                 </div>
@@ -232,7 +251,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="post-content">
-                            <p>After seeing the <a href="http://www.techradar.com/news/computing-components/peripherals/build-a-triple-screen-stand-for-25-1090082">TechRadar article</a> on building a cheap strut channel monitor, and an [imgur thread][3] of someone doing this, I decided to have a shot at this myself. The jigsaw made the job much faster, but not before scaring the utter shit out of me. I didn't know you had to put oil on the blades, which meant they not only got blunt extremely fast (30 seconds), they also starting sparking and glowing. I made the mistake of putting the wrong blade in and hit the floor and went flying across the garden. I also pull the jigsaw out of the metal before it stopped moving and the damn thing almost flew out of my hand. </p>
+                            <p>After seeing the <a href="http://www.techradar.com/news/computing-components/peripherals/build-a-triple-screen-stand-for-25-1090082">TechRadar article</a> on building a cheap strut channel monitor, and an <a href="http://imgur.com/a/XaSz7">imgur thread</a> of someone doing this, I decided to have a shot at this myself. The jigsaw made the job much faster, but not before scaring the utter shit out of me. I didn't know you had to put oil on the blades, which meant they not only got blunt extremely fast (30 seconds), they also starting sparking and glowing. I made the mistake of putting the wrong blade in and hit the floor and went flying across the garden. I also pull the jigsaw out of the metal before it stopped moving and the damn thing almost flew out of my hand. </p>
                         </div>
                     </div>
                 </div>
@@ -242,13 +261,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/legacy-natwest-cc.png" />
+                            <a href="/blog/6-converting-legacy-natwest-statements-to-csv">
+                                <img src="/static/img/covers/legacy-natwest-cc.png" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Converting legacy Natwest CC PDF statements to importable CSV
+                            <a href="/blog/6-converting-legacy-natwest-statements-to-csv">Converting legacy Natwest CC PDF statements to importable CSV</a>
                         </h2>
                     </div>
                 </div>
@@ -266,13 +287,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/python-random-cast.jpg" />
+                            <a href="/blog/5-python-random-collisions-str-cast">
+                                <img src="/static/img/covers/python-random-cast.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Python random.random() collisions caused by str() cast!
+                            <a href="/blog/5-python-random-collisions-str-cast">Python random.random() collisions caused by str() cast!</a>
                         </h2>
                     </div>
                 </div>
@@ -290,13 +313,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/billion-row-db.png" />
+                            <a href="/blog/4-billion-row-percona-mysql-ec2-ssd">
+                                <img src="/static/img/covers/billion-row-db.png" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            1.1 billion row / 160GB Percona MySQL DB on EC2 with RAID 1 SSD1
+                            <a href="/blog/4-billion-row-percona-mysql-ec2-ssd">1.1 billion row / 160GB Percona MySQL DB on EC2 with RAID 1 SSD1</a>
                         </h2>
                     </div>
                 </div>
@@ -314,13 +339,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/home-office-1.jpg" />
+                            <a href="/blog/3-home-office-part-1">
+                                <img src="/static/img/covers/home-office-1.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            Home office - part #1
+                            <a href="/blog/3-home-office-part-1">Home office - part #1</a>
                         </h2>
                     </div>
                 </div>
@@ -338,13 +365,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/quiet-fan-replacement.jpg" />
+                            <a href="/blog/2-quiet-fan-hack">
+                                <img src="/static/img/covers/quiet-fan-replacement.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            QUIET FAN HACK – 3COM 2824 GIGABIT SWITCH
+                            <a href="/blog/2-quiet-fan-hack">QUIET FAN HACK – 3COM 2824 GIGABIT SWITCH</a>
                         </h2>
                     </div>
                 </div>
@@ -362,13 +391,15 @@
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
                         <div class="post-image">
-                            <img src="/static/img/covers/access_virus_ti_03.jpg" />
+                            <a href="/blog/1-access-virus-ti-firmware">
+                                <img src="/static/img/covers/access_virus_ti_03.jpg" />
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-xs-9 col-md-9 post-title">
                         <h2>
-                            ACCESS VIRUS TI FIRMWARE – REVERSE ENGINEERING ATTEMPT #1
+                            <a href="/blog/1-access-virus-ti-firmware">ACCESS VIRUS TI FIRMWARE – REVERSE ENGINEERING ATTEMPT #1</a>
                         </h2>
                     </div>
                 </div>

@@ -9,6 +9,11 @@ import socket
 import shutil
 import scss
 
+"""
+This code is really nasty, I got very bored of writing this
+half way through
+"""
+
 LISTEN_ADDR = '0.0.0.0'
 LISTEN_PORT = 8080
 
@@ -25,7 +30,8 @@ class ContentBuilder(object):
     STATIC_OUTPUT_ROOT = get_project_root("static/")
 
     def __init__(self):
-        self.env = Environment(loader=PackageLoader('contentbuilder', ))
+        self.env = Environment(loader=PackageLoader('contentbuilder', ),
+                  extensions=['jinja2.ext.autoescape'])
         self.prep_scss()
 
     def prep_scss(self):
@@ -41,19 +47,27 @@ class ContentBuilder(object):
             v = int(v.split("-")[0])
             return v
 
+        def read_file_content(path):
+            with open(path, 'rb') as fd:
+                return fd.read().decode('utf-8')
+
         files = sorted(files, key=fsort)
         files = reversed(files)
 
         for article_filename in files:
             article = dict()
-            article['template_path'] = "articles/%s" % ( article_filename, )
-            article['template'] = self.env.get_template(article['template_path'])
+
+            article['template_path'] = "contentbuilder/templates/articles/%s" % ( article_filename, )
+            article['template_content'] = read_file_content(get_project_root(article['template_path']))
+            article['template'] = self.env.from_string(article['template_content'])
             article['title'] = ''.join(article['template'].blocks['title']({})).strip()
-            article['content'] = ''.join(article['template'].blocks['content']({})).strip()
-            article['content_html'] = markdown.markdown(article['content'])
-            article['content_excerpt'] = markdown.markdown(article['content'].strip().split("\n")[0])
+            article['content'] = markdown.markdown(''.join(article['template'].blocks['content']({})).strip())
+            article['content_excerpt'] = article['content'].strip().split("\n")[0]
             article['coverimage'] = ''.join(article['template'].blocks['coverimage']({})).strip()
             article['name'] = os.path.splitext(article_filename)[0]
+
+            article_tmpl = self.env.get_template('article.html')
+            article['content_html'] = article_tmpl.render(article=article)
             articles.append(article)
         return articles
 
@@ -90,6 +104,11 @@ class ContentBuilder(object):
         write_to_file(index_path, index_content)
         write_to_file(home_path, index_content)
 
+        # build blog pages
+        for article in articles:
+            fullpath = get_project_root("blog/%s.html" % ( article['name'], ))
+            write_to_file(fullpath, article['content_html'])
+
         # compile 404
         path_404 = get_project_root("404.html")
         content_404 = self.env.get_template('404.html').render(opts)
@@ -113,12 +132,17 @@ def runserver():
 
     @route("/<url:re:.+|>")
     def index(url):
-        cb = ContentBuilder()
-        cb.build()
-
         url = url if url else "index.html"
         target_path = "/%s" % ( url, )
         target_path_full = get_project_root(target_path)
+
+        if not os.path.exists(target_path_full):
+            target_path_full = "%s.html" % ( target_path_full, )
+            target_path = "%s.html" % ( target_path, )
+
+        if target_path.endswith(".html"):
+            cb = ContentBuilder()
+            cb.build()
 
         if not os.path.exists(target_path_full):
             target_file = "/404.html"

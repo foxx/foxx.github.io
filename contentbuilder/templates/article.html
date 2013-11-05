@@ -1,9 +1,15 @@
 {% extends "layout.html" %}
 
-{% block content %}
+{% block title %}
+    {{ title }}
+{% endblock %}
 
+{% block coverimage %}
+    {{ coverimage }}
+{% endblock %}
+
+{% block content %}
     <div class="posts">
-        {% for article in articles %}
             <div class="post">
                 <div class="row">
                     <div class="col-xs-3 col-md-3">
@@ -24,12 +30,10 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="post-content">
-                            {{ article.content_excerpt }}
+                            {{ article.content }}
                         </div>
                     </div>
                 </div>
             </div>
-        {% endfor %}
     </div>
-
 {% endblock %}

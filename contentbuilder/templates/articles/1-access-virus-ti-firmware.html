@@ -13,7 +13,7 @@ access_virus_ti_03.jpg
 After several times of looking around on eBay for an Access Virus TI, and each time deciding that I didn't really have £800 to blow on a unit, I went in search of a firmware emulator. This drew a blank, so I decided to have a shot at poking into the firmware. I'd done this a few times before (mostly with phones and routers), but never with this. I didn't have an actual unit to look inside, so first I had to find some pictures and/or a hardware spec. 
 
 
-## Lets get started 
+### Lets get started
 
 I am by no means an expert when it comes to this subject, so some information on this post may be incorrect. 
 
@@ -23,8 +23,7 @@ TOOLS USED: Windows 7, IDA Pro, binwalk, Hex Workshop, various 563xx tools (see 
 
 Luckily for me this work had already been done by the guys over at midibox: 
 
-<div>
-  <pre class="brush:php">
+<pre>
 * 2X Freescale 150mhz dspb56367ac150 DSP's (the nord lead 3 has 6x 120's)  
 * 6x samsung k6r4008v10-ui10 memory chips,  
 * A totally seperate keyboard controller with 4mhz pic (pic16c238-04/sp) - connected to virus thru midi !  
@@ -39,20 +38,20 @@ Luckily for me this work had already been done by the guys over at midibox:
 * A 'trailing blob' psu -inside- the case,  
 * a really dodgy looking power cap.. that looked ready to explode. &lt;/li>  
 </pre>
-</div> I had some difficulty finding an exact match for "dspb56367ac150", but we did find a DSP56367, which is part of the Motorola DSP 563xx Freescale family (24-bit @ 150mhz). Here is a link to the specification of this chip www.freescale.com/files/dsp/doc/data_sheet/DSP56367.pdf 
 
-## Extracting firmware from installation Next was to get hold of their latest firmware/software, which was a bit tricky. This involved signing up for an account on their website, confirming via email, then downloading the relevant software. In our case, we found the following file on their site; 
+I had some difficulty finding an exact match for "dspb56367ac150", but we did find a DSP56367, which is part of the Motorola DSP 563xx Freescale family (24-bit @ 150mhz). Here is a link to the specification of this chip www.freescale.com/files/dsp/doc/data_sheet/DSP56367.pdf 
 
-<div>
-  <pre class="brush:php">
+Extracting firmware from installation Next was to get hold of their latest firmware/software, which was a bit tricky. This involved signing up for an account on their website, confirming via email, then downloading the relevant software. In our case, we found the following file on their site; 
+
+
+<pre>
 * Virus TI Software Installer_v45300_x64.zip  
 * Virus TI Software Installer 64-bit.msi  
 * Virus TI Setup Guide.pdf  
 </pre>
-</div> After extracting the MSI with 7zip (no need to install), this gave us the following files; 
+After extracting the MSI with 7zip (no need to install), this gave us the following files; 
 
-<div>
-  <pre class="brush:php">
+<pre>
 -rw-r--r-- 1 foxx foxx 2.3K Oct 9 2008 AbletonLive6_vrt  
 -rw-r--r-- 1 foxx foxx 2.3K Oct 9 2008 Atmosphere_vrt  
 -rw-r--r-- 1 foxx foxx 2.3K Oct 9 2008 Attack01_12_vrt  
@@ -205,17 +204,17 @@ Luckily for me this work had already been done by the guys over at midibox:
 -rw-r--r-- 1 foxx foxx 32K May 11 2010 vtimidi_sys  
 -rw-r--r-- 1 foxx foxx 2.3K Oct 9 2008 xpand_vrt  
 </pre>
-</div> Obviously, the file that drew our attention the most was firmware_bin64, so lets have a look at what our initial inspections show According to Google, IFF is basically an image format, so this is probably a false positive. 
 
-<div>
-  <pre class="brush:php">
+Obviously, the file that drew our attention the most was firmware_bin64, so lets have a look at what our initial inspections show According to Google, IFF is basically an image format, so this is probably a false positive. 
+
+<pre class="brush:php">
 $ file firmware_bin64  
 firmware_bin64: IFF data  
 </pre>
-</div> Strings shows some interesting results, the fact we have a list of file names near the start means we're probably dealing with some sort of compressed archive or squashed file. 
 
-<div>
-  <pre class="brush:php">
+Strings shows some interesting results, the fact we have a list of file names near the start means we're probably dealing with some sort of compressed archive or squashed file. 
+
+<pre>
 $ strings firmware_bin64 | head -n10  
 FORM  
 QTABL  
@@ -229,10 +228,10 @@ lcd_backup_006.bin
 lcd_backup_007.bin  
 ---| SNIPPED ---|  
 </pre>
-</div> Binwalk opcodes scan shows the binary might have an ARM bootloader somewhere in there, but this could be a false positive. 
 
-<div>
-  <pre class="brush:php">  
+Binwalk opcodes scan shows the binary might have an ARM bootloader somewhere in there, but this could be a false positive. 
+
+<pre>
 $ binwalk -A firmware_bin64
 
 DECIMAL HEX DESCRIPTION  
@@ -276,10 +275,10 @@ DECIMAL HEX DESCRIPTION
 7716593 0x75BEF1 ARMEB function prologue  
 7765801 0x767F29 ARM function epilogue  
 </pre>
-</div> Binwalk normal scan shows a lot of LZMA data, but this looks to be mostly false positives: 
 
-<div>
-  <pre class="brush:php">  
+Binwalk normal scan shows a lot of LZMA data, but this looks to be mostly false positives: 
+
+<pre>
 $ binwalk firmware_bin64 | head -n10
 
 DECIMAL HEX DESCRIPTION  
@@ -292,10 +291,10 @@ DECIMAL HEX DESCRIPTION
 582498 0x8E362 LZMA compressed data, properties: 0x84, dictionary size: 553648128 bytes, uncompressed size: 210 bytes  
 582840 0x8E4B8 LZMA compressed data, properties: 0x84, dictionary size: 553648128 bytes, uncompressed size: 213 bytes  
 </pre>
-</div> A further binwalk scan shows the presence of a JFFS2 filesystem and a PNG image. 
 
-<div>
-  <pre class="brush:php">  
+A further binwalk scan shows the presence of a JFFS2 filesystem and a PNG image. 
+
+<pre>
 $ binwalk firmware_bin64 | grep -v LZMA
 
 DECIMAL HEX DESCRIPTION  
@@ -303,10 +302,10 @@ DECIMAL HEX DESCRIPTION
 3214531 0x310CC3 JFFS2 filesystem (old) data big endian, JFFS node length: 39  
 8385066 0x7FF22A PNG image, 21 x 21, 8-bit/color RGBA, non-interlaced  
 </pre>
-</div> When we attempted to extract and mount the JFFS, this ended with failure. Upon inspecting the extracted data with file and binwalk, it would appear that this is also a false positive. 
 
-<div>
-  <pre class="brush:php">  
+When we attempted to extract and mount the JFFS, this ended with failure. Upon inspecting the extracted data with file and binwalk, it would appear that this is also a false positive. 
+
+<pre>
 $ dd if=firmware_bin64 bs=1 skip=3214531 of=1.jffs  
 5174422+0 records in  
 5174422+0 records out  
@@ -330,25 +329,29 @@ DECIMAL HEX DESCRIPTION
 ------------------------------------------------------------------------------------------------------|-  
 0 0x0 JFFS2 filesystem (old) data big endian, JFFS node length: 39  
 </pre>
-</div>
 
-## Unpacking firmware So next we take a look at the firmware image inside a hex editor, and see what is going on. 
+Unpacking firmware So next we take a look at the firmware image inside a hex editor, and see what is going on. 
 
-<img class="alignnone size-full wp-image-75" title="1" src="http://blog.simplicitymedialtd.co.uk/wp-content/uploads/2012/10/12.png" alt="" width="1600" height="780" /> <div>
-  <pre class="brush:php">  
+[![access-virus-1.png](/static/img/postcontent/access-virus-1.png)](/static/img/postcontent/access-virus-1.png)
+
+
+<pre>
 1. size of the file list data chunk (03AE hex = 942)  
 2. list of files (50 to be exact), separated out by a null byte (\x00): 941 bytes + 1 byte separator  
 3. file number chunk + null byte (\x00) separator: starts at 0001  
 4. Header identifier of some sort  
 </pre>
-</div> The way we found out that (3) was a file number chunk, was by converting the ASCII string "0001" through to "0050", adding a null byte, then searching in our hex editor (example: 3030 3439 00 = 0049.) Every time we searched, we were able to find a match, followed by what looked like readable information, such as: 
 
-<div>
-  <pre class="brush:php">  
+The way we found out that (3) was a file number chunk, was by converting the ASCII string "0001" through to "0050", adding a null byte, then searching in our hex editor (example: 3030 3439 00 = 0049.) Every time we searched, we were able to find a match, followed by what looked like readable information, such as: 
+
+<pre>
+    {% autoescape true %}
 0047......<head>
   .<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   .<titl  
-  </pre></div>
+  {% endautoescape %}
+</pre>
+
   
   
   <div>
