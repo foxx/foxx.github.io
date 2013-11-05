@@ -2,3 +2,4 @@ name: Cal Leeming Blog
 markdown: redcarpet
 pygments: true
 excerpt_separator: "\n"
+permalink: /blog/:title
