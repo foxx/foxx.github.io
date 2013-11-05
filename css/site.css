@@ -86,6 +86,7 @@ pre, code {
 }
 .section-about .social {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .section-about .social img.icon {
   width: 50px;
