@@ -23,7 +23,8 @@ Alex Hudson wrote an [interesting article][4] and appears to have come to simila
 Here are my initial thoughts;
 
 * AuFS is not a good choice of FS. It requires [kernel patches][1], it still suffers from [problems][2], I'm not convinced by the concept of [stacked file systems][3], nor do the core devs make any assertions as to why this concept is necessary.
-* Documentation quality is poor, and the CLI/API abstraction is non intuitive.
+* CLI/API abstraction is non intuitive.
+* Documentation quality is poor.
 * Network redirection implementation is not clear, the docs say that [iptables is used][6], but commit log [suggests otherwise][7]
 * Lack of maturity. Docker has only been here for [less than a year][5]
 * Written in Go, which in itself lacks maturity, and reduces the number of volunteers able to contribute
