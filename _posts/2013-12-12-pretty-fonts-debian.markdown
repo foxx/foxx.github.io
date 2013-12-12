@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Pretty fonts in Debian. Give up now. Seriously.
-date:   2013-12-12 00:00:00
+date:   2013-12-12 00:00:01
 categories: general
 coverimage: /img/covers/rage.png
 ---
@@ -35,4 +35,3 @@ Here are some other threads discussing this;
 * http://forums.debian.net/viewtopic.php?f=6&t=103175
 
 [1] http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/
-
