@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Pretty fonts in Debian. Give up now. Seriously.
-date:   2012-10-26 00:00:00
+date:   2013-12-12 00:00:00
 categories: general
 coverimage: /img/covers/rage.png
 ---
