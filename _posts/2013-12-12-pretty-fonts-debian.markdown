@@ -34,4 +34,4 @@ Here are some other threads discussing this;
 * http://forums.debian.net/viewtopic.php?f=6&t=52610
 * http://forums.debian.net/viewtopic.php?f=6&t=103175
 
- [1] http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/
+ [1]: http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/
