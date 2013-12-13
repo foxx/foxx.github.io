@@ -20,7 +20,7 @@ If you want a good Linux desktop with pretty fonts then stick with Ubuntu.
 
 Here are some other threads discussing this;
 
-* http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/
+* [http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/](http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/)
 * [http://forums.debian.net/viewtopic.php?f=10&t=78662](http://forums.debian.net/viewtopic.php?f=10&t=78662)
 * [http://forums.debian.net/viewtopic.php?f=6&t=81177](http://forums.debian.net/viewtopic.php?f=6&t=81177)
 * [http://forums.debian.net/viewtopic.php?f=6&t=71333](http://forums.debian.net/viewtopic.php?f=6&t=71333)
