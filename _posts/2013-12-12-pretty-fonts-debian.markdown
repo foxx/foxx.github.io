@@ -21,17 +21,17 @@ If you want a good Linux desktop with pretty fonts then stick with Ubuntu.
 Here are some other threads discussing this;
 
 * http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/
-* http://forums.debian.net/viewtopic.php?f=10&t=78662
-* http://forums.debian.net/viewtopic.php?f=6&t=81177
-* http://forums.debian.net/viewtopic.php?f=6&t=71333
-* http://forums.debian.net/viewtopic.php?f=6&t=46550
-* http://forums.debian.net/viewtopic.php?f=6&t=77868
-* http://forums.debian.net/viewtopic.php?f=6&t=50742
-* http://forums.debian.net/viewtopic.php?f=6&t=96808
-* http://forums.debian.net/viewtopic.php?f=6&t=58173
-* http://forums.debian.net/viewtopic.php?f=10&t=59728
-* http://forums.debian.net/viewtopic.php?f=3&t=55536
-* http://forums.debian.net/viewtopic.php?f=6&t=52610
-* http://forums.debian.net/viewtopic.php?f=6&t=103175
+* [http://forums.debian.net/viewtopic.php?f=10&t=78662](http://forums.debian.net/viewtopic.php?f=10&t=78662)
+* [http://forums.debian.net/viewtopic.php?f=6&t=81177](http://forums.debian.net/viewtopic.php?f=6&t=81177)
+* [http://forums.debian.net/viewtopic.php?f=6&t=71333](http://forums.debian.net/viewtopic.php?f=6&t=71333)
+* [http://forums.debian.net/viewtopic.php?f=6&t=46550](http://forums.debian.net/viewtopic.php?f=6&t=46550)
+* [http://forums.debian.net/viewtopic.php?f=6&t=77868](http://forums.debian.net/viewtopic.php?f=6&t=77868)
+* [http://forums.debian.net/viewtopic.php?f=6&t=50742](http://forums.debian.net/viewtopic.php?f=6&t=50742)
+* [http://forums.debian.net/viewtopic.php?f=6&t=96808](http://forums.debian.net/viewtopic.php?f=6&t=96808)
+* [http://forums.debian.net/viewtopic.php?f=6&t=58173](http://forums.debian.net/viewtopic.php?f=6&t=58173)
+* [http://forums.debian.net/viewtopic.php?f=10&t=59728](http://forums.debian.net/viewtopic.php?f=10&t=59728)
+* [http://forums.debian.net/viewtopic.php?f=3&t=55536](http://forums.debian.net/viewtopic.php?f=3&t=55536)
+* [http://forums.debian.net/viewtopic.php?f=6&t=52610](http://forums.debian.net/viewtopic.php?f=6&t=52610)
+* [http://forums.debian.net/viewtopic.php?f=6&t=103175](http://forums.debian.net/viewtopic.php?f=6&t=103175)
 
  [1]: http://www.techytalk.info/font-smoothing-in-debian-6-0-squeeze-like-in-ubuntu/
