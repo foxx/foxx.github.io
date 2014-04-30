@@ -38,6 +38,9 @@ body {
 .ct-posts {
   @include outer-container;
   .ct-post {
+    .inner {
+      text-decoration:none !important;
+    }
 
     @include span-columns(4 of 12);
     margin-bottom:15px;
@@ -45,8 +48,6 @@ body {
     display:block;
     border:0px;
     //background-color:red;
-
-    text-decoration:none !important;
 
     img {
       min-width:100%;

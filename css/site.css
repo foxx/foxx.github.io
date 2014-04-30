@@ -160,8 +160,9 @@ body {
     margin-bottom: 15px;
     padding-right: 15px;
     display: block;
-    border: 0px;
-    text-decoration: none !important; }
+    border: 0px; }
+    .ct-posts .ct-post .inner {
+      text-decoration: none !important; }
     .ct-posts .ct-post:last-child {
       margin-right: 0; }
     .ct-posts .ct-post img {

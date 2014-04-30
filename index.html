@@ -7,16 +7,18 @@ position: 1
 <div class="ct-content-left">
     <div class="ct-posts">
 {% for weight in (1..99) reversed %}{% for post in site.posts %}{% if post.weight == weight %}
-  <a class="ct-post ct-post-{{ post.type }}" href="{{ post.url }}">
-    <div class="img-holder">
-      <img style="background-image:url('{{ post.coverimage }}');" />
-    </div>
+  <div class="ct-post ct-post-{{ post.type }}">
+    <a class="inner" href="{{ post.url }}">
+      <div class="img-holder">
+        <img style="background-image:url('{{ post.coverimage }}');" />
+      </div>
 
-    <div class="title">
-      <h2>{{ post.title }} {{post.position}}</h2>
-      <h3>{{ post.date | date_to_string }}</h3>
-    </div>
-  </a>
+      <div class="title">
+        <h2>{{ post.title }} {{post.position}}</h2>
+        <h3>{{ post.date | date_to_string }}</h3>
+      </div>
+    </a>
+  </div>
 {% endif %}{% endfor %}{% endfor %}
     </div>
 </div>
