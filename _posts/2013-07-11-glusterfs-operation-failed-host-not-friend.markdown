@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  GlusterFS Operation failed on {host}, Host {host} not a friend and silent output
+title:  GlusterFS operation failed, host not a friend
 date:   2013-07-11 00:00:00
 categories: general
 coverimage: /img/covers/lol-seahorse.jpg
+weight: 8
 ---
-
-
 
 GlusterFS is a lovely piece of technology, but it is bitchy as hell. If you stumbled across this thread, it's because GlusterFS is giving you problems, no one seems to explain why and the CLI is about as useful as a third leg. Please note, this post relates to GlusterFS 3.2.7, and most of these problems are fixed in 3.3.
 

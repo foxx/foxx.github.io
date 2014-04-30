@@ -1,0 +1,59 @@
+@mixin hidden($breakpoint) {
+  @include media($breakpoint) {
+    display:none;
+  }
+}
+
+@mixin show($breakpoint) {
+  @include media($breakpoint) {
+    display:block;
+  }
+}
+
+@mixin hide() {
+  display:none;
+}
+
+@mixin fixed-breakpoint-width() {
+  @include media($xs) {
+      width: 100%;
+  }
+
+  @include media($sm) {
+      width: $sm-size-start;
+  }
+
+  @include media($md) {
+      width: $md-size-start;
+  }
+
+  @include media($lg) {
+      width: $lg-size-start;
+  }
+}
+
+
+@mixin transparent-background($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}

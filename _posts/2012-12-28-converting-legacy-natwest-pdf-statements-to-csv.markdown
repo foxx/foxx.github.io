@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  Converting legacy Natwest CC PDF statements to importable CSV
+title:  Converting Natwest CC PDF statements to importable CSV
 date:   2012-12-28 00:00:00
 categories: general
 coverimage: /img/covers/legacy-natwest-cc.png
+weight: 6
 ---
 
 

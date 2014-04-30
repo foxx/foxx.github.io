@@ -4,6 +4,7 @@ title:  Reproducing 'dice roll' from [27C3] Cognitive Psychology for Hackers
 date:   2013-02-03 00:00:00
 categories: general
 coverimage: /img/covers/reproducing-dice-roll.png
+weight: 8
 ---
 
 

@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  Building a strut channel monitor stand (January 2013)
+title:  Building a strut channel monitor stand
 date:   2013-01-16 00:00:00
 categories: general
 coverimage: /img/covers/strut-channel-monitor-stand.jpg
+type: full
+weight: 7
 ---
 
 For photos of this build on imgur, [click here][1].

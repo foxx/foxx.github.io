@@ -4,6 +4,7 @@ title:  Storing billions of UUID fields in MySQL InnoDB
 date:   2013-02-17 00:00:00
 categories: general
 coverimage: /img/covers/storing-billions-of-uuids.jpg
+weight: 9
 ---
 
 During one of our builds, we came up against a requirement of having to store UUIDs in MySQL. Not knowing which was the best way, we tried all of them. We ran these benchmarks on commodity hardware with no modifications on Percona MySQL 5.5 with no stock my.cnf changes. Our benchmarks showed that BINARY(16) was the fastest option. However, with some tuning to my.cnf you may see different results.

@@ -1,40 +1,35 @@
 ---
-layout: default
+layout: layout
 ---
-<div class="post">
-    <div class="row">
-        <div class="col-xs-3 col-md-3">
-            <div class="post-image">
-                <a href="{{ page.coverimage }}">
-                    <img src="{{ page.coverimage }}" />
-                </a>
-            </div>
-        </div>
 
-        <div class="col-xs-9 col-md-9 post-title">
-            <h2>
-                <a href="{{page.url}}">{{ page.title }}</a>
-            </h2>
-        </div>
+
+<div class="ct-content-left">
+  <div class="ct-post-header ct-post-header-{{ post.type }}">
+    <a class="img-holder" href="#">
+      <!--<img style="background-image:url('{{ page.coverimage }}');" />-->
+      <img src="{{ page.coverimage }}" />
+    </a>
+  </div>
+
+  <div class="ct-post-content">
+
+    <h1>{{ page.title }}</h1>
+
+    <h2>
+      {{ page.date | date_to_string }} by Cal Leeming
+    </h2>
+
+    <div>
+      {{ content }}
     </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="post-content">
-                <div class="timestamp">
-                    Added on <span>{{ page.date | date_to_string }}</span>
-                </div>
-                <div>
-                    <!--
-                    <img src="{{ page.coverimage }}" />
-                    -->
-
-                    {{ content }}
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
+
+<div class="ct-content-right">
+  {% include right.html %}
+</div>
+
+
 
 <div>
     <div id="disqus_thread"></div>

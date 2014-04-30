@@ -4,6 +4,7 @@ title:  Embedding files into ELF executable
 date:   2014-01-01 00:00:01
 categories: general
 coverimage: /img/covers/boxcat.jpg
+weight: 16
 ---
 
 There are several ways to embed data into ELF binaries, but none were suitable for my needs. So I created [elfdataembed](https://github.com/foxx/elfdataembed), a small library that embeds files into 32/64bit ELF sections, and provides a simple C interface for the runtime to [extract them](http://stackoverflow.com/questions/2900936/packing-a-file-into-an-elf-executable).
@@ -30,9 +31,7 @@ $ md5sum build/image.file build/test
 09441e5fd94bf722af5b5bfc2676638f  build/test
 ```
 
-### Alternative methods
-
-There are many ways to embed files into executable, but depending on your use case they may not be suitable.
+There are many alternative ways to embed files into executable, but depending on your use case they may not be suitable.
 
 #### Compile as symbol and link
 

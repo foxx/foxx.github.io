@@ -4,11 +4,11 @@ title:  1.1 billion row 160GB Percona MySQL DB on EC2 with RAID 1 SSD1
 date:   2012-10-30 00:00:00
 categories: general
 coverimage: /img/covers/billion-row-db.png
+weight: 12
 ---
 
 So today, we broke our hosting companies record.. 1.1 billion rows in a Percona MySQL InnoDB table! Sounds impressive, but reality soon kicks in when you can't run SELECT() queries against it for fear of saturating our poor SAS disks and locking up the web application. And even harder when you're working against the clock on deadlines. With a total datadir size of around 160GB, 1,159,945,113 rows in a single table and no long term NoSQL plans on the horizon, our immediate options were limited. 
 
-### Day 1
 The affected database servers were limited to just 300 IOPS over SAS RAID 1, of which the disk IO showed a cool and steady 99.95% average IO utilization for a 24 hour period. So in a small moment of caffeine fueled epiphany, we fired up the biggest bad ass EC2 instance possible (hi1.4xlarge), this is where things started to get fun. 
 
 For those of you that don't know about the hi1.4xlarge specs, let me fill you in; 
@@ -109,7 +109,7 @@ After a few hours of pure geek heaven, I calmed down and started thinking how we
 *   All queries on the EC2 instance would have to be ran as one-off scripts, and couldn't be sanely implemented into our existing code base at this stage.
 *   The effective data was split over two existing databases, and merging them would be troublesome So we took an LVM snapshot of databases and started to copy the datadir's to EC2.. And this is where the fun started to turn into a nightmare of 70+ hours work. 
 
-I almost choked on my tea as I saw the 93796434 alarms flood my mailbox  Whilst attempting to resolve a transfer speed problem with the networks team, one of the firewalls locked up. This lasted several (very long) minutes, and once the fail over kicked in we decided to leave it until monday and settle for 10MB/sec. Now, I'm not an impatient kinda guy, but this was like driving a Austin Metro after just having a test drive in a Lamborghini. Patiently, I sit and watch the rsync progress meter get closer and closer, teasing me with its damn fluxuating average speed. 
+Whilst attempting to resolve a transfer speed problem with the networks team, one of the firewalls locked up. I almost choked on my tea as I saw the 93796434 alarms flood my mailbox. This lasted several (very long) minutes, and once the fail over kicked in we decided to leave it until monday and settle for 10MB/sec. Now, I'm not an impatient kinda guy, but this was like driving a Austin Metro after just having a test drive in a Lamborghini. Patiently, I sit and watch the rsync progress meter get closer and closer, teasing me with its damn fluxuating average speed. 
 
 {% highlight text %}
   3211001856   2%    4.63MB/s    8:22:12
@@ -121,7 +121,7 @@ I almost choked on my tea as I saw the 93796434 alarms flood my mailbox  Whilst 
 
 After about 30 minutes of flicking to and from the putty window and realising it's now 8pm, I reluctantly background my screen session and sign off for the night. 
 
-### Day 2
+### The next day..
 
 At this point we had both a SQL dump and a datadir snapshot, but there was a problem. In order to run two datadirs, you either need to merge them, or you need to run two instances of MySQL, and I gave up pretty quickly trying to modify Debian's init scripts to support multiple MySQL instances. So I opt'd to merge; Annoyingly, using symlink's seems to break Percona innobackupex copy-back tool fails with the following message; 
 

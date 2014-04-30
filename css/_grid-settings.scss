@@ -1,0 +1,35 @@
+@import "neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$column: 80px;
+$gutter: 0px;
+$grid-columns: 12;
+$min-width: 320px;
+$max-width: em(1440);
+
+// Define your breakpoints
+$xs-size-start: 0px;
+$sm-size-start: 768px;
+$md-size-start: 1024px;
+$lg-size-start: 1200px;
+
+$xs-size-end: $sm-size-start - 1;
+$sm-size-end: $md-size-start - 1;
+$md-size-end: $lg-size-start - 1;
+$lg-size-end: 2048px;
+
+$xs: new-breakpoint(min-width $xs-size-start $grid-columns);
+$sm: new-breakpoint(min-width $sm-size-start $grid-columns);
+$md: new-breakpoint(min-width $md-size-start $grid-columns);
+$lg: new-breakpoint(min-width $lg-size-start $grid-columns);
+
+$xs-only: new-breakpoint(min-width $xs-size-start max-width $xs-size-end $grid-columns);
+$sm-only: new-breakpoint(min-width $sm-size-start max-width $sm-size-end $grid-columns);
+$md-only: new-breakpoint(min-width $md-size-start max-width $md-size-end $grid-columns);
+$lg-only: new-breakpoint(min-width $lg-size-start max-width $lg-size-end $grid-columns);
+
+//max-width 767px
+
+// Define your breakpoints
+//$tablet: new-breakpoint(max-width 768px 8);
+//$mobile: new-breakpoint(max-width 480px 4);

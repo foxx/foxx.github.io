@@ -4,6 +4,8 @@ title:  Inside my home office - part 1
 date:   2012-10-26 00:00:00
 categories: general
 coverimage: /img/covers/home-office-1.jpg
+type: full
+weight: 2
 ---
 
 Had a couple of people asking what sort of home office set up I have, so here you go (taken in early 2012). I'm a firm believer in spending as little money as possible, and most of the above I either got heavily discounted or second hand from eBay. I'm hoping to make a few improvements in here soon, given that I'm now spending nearly 14 hours a day in here!

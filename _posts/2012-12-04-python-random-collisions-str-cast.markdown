@@ -4,6 +4,7 @@ title:  Python random.random() collisions caused by str() cast
 date:   2012-12-04 00:00:00
 categories: general
 coverimage: /img/covers/python-random-cast.jpg
+weight: 5
 ---
 
 

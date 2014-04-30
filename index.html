@@ -1,44 +1,26 @@
 ---
-layout: default
+layout: layout
 title: Cal Leeming Blog
+position: 1
 ---
 
-<div class="posts">
-    {% for post in site.posts %}
+<div class="ct-content-left">
+    <div class="ct-posts">
+{% for weight in (1..99) reversed %}{% for post in site.posts %}{% if post.weight == weight %}
+  <div class="ct-post ct-post-{{ post.type }}" href="{{ post.url }}">
+    <a class="img-holder" href="{{ post.url }}">
+      <img style="background-image:url('{{ post.coverimage }}');" />
+    </a>
 
-        <div class="post">
-            <div class="row">
-                <div class="col-xs-3 col-md-3">
-                    <div class="post-image">
-                        <a href="{{ post.url }}">
-                            <img src="{{ post.coverimage }}" />
-                        </a>
-                    </div>
-                </div>
+    <div class="title">
+      <h2>{{ post.title }} {{post.position}}</h2>
+      <h3>{{ post.date | date_to_string }}</h3>
+    </div>
+  </div>
+{% endif %}{% endfor %}{% endfor %}
+    </div>
+</div>
 
-                <div class="col-xs-9 col-md-9 post-title">
-                    <h2>
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post-content">
-                        <div class="timestamp">
-                            Added on <span>{{ post.date | date_to_string }}</span>
-                        </div>
-                        <div>
-                            {{ post.excerpt }}
-                        </div>
-
-                        <div>
-                            <a class="button" href="{{ post.url }}">Continue reading</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
+<div class="ct-content-right">
+  {% include right.html %}
 </div>

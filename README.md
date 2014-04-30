@@ -8,8 +8,8 @@ Inspirations;
 ## Requirements
 
 ```
-$ sudo apt-get install ruby rubygems
-$ sudo gem install rdoc
-$ sudo gem install jekyll
+sudo apt-get install ruby rubygems
+sudo gem install rdoc
+sudo gem install jekyll
 
 ```
