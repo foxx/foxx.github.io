@@ -114,7 +114,7 @@ Also have a look at the [PTK (Percona Toolkit)](http://www.percona.com/software/
 
 [http://redis.io/](http://redis.io/)
 
-Redis is an advanced, multi-purpose key-value store. It even has pub/sub support, and is a great alternative to [dead rabbit](https://www.rabbitmq.com/). [Salvatore (antirez)](http://antirez.com/latest/0) has done an amazing job keeping Redis fresh and alive.
+Redis is an advanced, multi-purpose key-value store. It even has pub/sub support, and is a great alternative to [dead rabbit](https://www.rabbitmq.com/). Redis stays fresh and alive thanks to the amazing work from [Salvatore (antirez)](http://antirez.com/latest/0).
 
 ### Salt Stack
 
