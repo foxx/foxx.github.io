@@ -31,20 +31,20 @@ Cisco phone sends REGISTER packet:
 
 {% highlight text %}
 [17:00:53:148185] sipTransportSendMessage: Closed a one-time UDP send channel handle = 3
-[17:00:53:148194] sipTransportSendMessage: ccb &lt;7>: config &lt;5.79.5.158>:&lt;5060> - remote &lt;5.79.5.158>:&lt;5060>
-[17:00:53:148194] sipTransportSendMessage: Opened a one-time UDP send channel to server &lt;5.79.5.158>:&lt;5060>, handle = 3 local port= 5060
-[17:00:53:148195] sipTransportSendMessage:Sent SIP message to &lt;5.79.5.158>:&lt;5060>, handle=&lt;3>, length=&lt;567>, message=
+[17:00:53:148194] sipTransportSendMessage: ccb <7>: config <5.79.5.158>:<5060> - remote <5.79.5.158>:<5060>
+[17:00:53:148194] sipTransportSendMessage: Opened a one-time UDP send channel to server <5.79.5.158>:<5060>, handle = 3 local port= 5060
+[17:00:53:148195] sipTransportSendMessage:Sent SIP message to <5.79.5.158>:<5060>, handle=<3>, length=<567>, message=
 
 [17:00:53:148195] REGISTER sip:3cx.voiceflare.co.uk SIP/2.0
 Via: SIP/2.0/UDP 192.168.1.104:5060;branch=z9hG4bK683a1a40
-From: &lt;sip:2006@3cx.voiceflare.co.uk>;tag=000c30a97025005c3fa02d4d-5ce6939d
-To: &lt;sip:2006@3cx.voiceflare.co.uk>
+From: <sip:2006@3cx.voiceflare.co.uk>;tag=000c30a97025005c3fa02d4d-5ce6939d
+To: <sip:2006@3cx.voiceflare.co.uk>
 Call-ID: 000c30a9-70250003-381e261d-34d10c8e@192.168.1.104
 Max-Forwards: 70
 Date: Fri, 10 May 2013 16:00:52 GMT
 CSeq: 145 REGISTER
 User-Agent: Cisco-CP7940G/8.0
-Contact: &lt;sip:2006@192.168.1.104:5060;transport=udp>;+sip.instance="&lt;urn:uuid:00000000-0000-0000-0000-000c30a97025>";+u.sip!model.ccm.cisco.com="8"
+Contact: <sip:2006@192.168.1.104:5060;transport=udp>;+sip.instance="<urn:uuid:00000000-0000-0000-0000-000c30a97025>";+u.sip!model.ccm.cisco.com="8"
 Content-Length: 0
 Expires: 120
 {% endhighlight %}
@@ -57,14 +57,14 @@ User Datagram Protocol, Src Port: 23201 (23201), Dst Port: sip (5060)
 
 REGISTER sip:3cx.voiceflare.co.uk SIP/2.0
 Via: SIP/2.0/UDP 192.168.1.104:5060;branch=z9hG4bK683a1a40
-From: &lt;sip:2006@3cx.voiceflare.co.uk>;tag=000c30a97025005c3fa02d4d-5ce6939d
-To: &lt;sip:2006@3cx.voiceflare.co.uk>
+From: <sip:2006@3cx.voiceflare.co.uk>;tag=000c30a97025005c3fa02d4d-5ce6939d
+To: <sip:2006@3cx.voiceflare.co.uk>
 Call-ID: 000c30a9-70250003-381e261d-34d10c8e@192.168.1.104
 Max-Forwards: 70
 Date: Fri, 10 May 2013 16:00:52 GMT
 CSeq: 145 REGISTER
 User-Agent: Cisco-CP7940G/8.0
-Contact: &lt;sip:2006@192.168.1.104:5060;transport=udp>;+sip.instance="&lt;urn:uuid:00000000-0000-0000-0000-000c30a97025>";+u.sip!model.ccm.cisco.com="8"
+Contact: <sip:2006@192.168.1.104:5060;transport=udp>;+sip.instance="<urn:uuid:00000000-0000-0000-0000-000c30a97025>";+u.sip!model.ccm.cisco.com="8"
 Content-Length: 0
 Expires: 120
 
@@ -79,8 +79,8 @@ User Datagram Protocol, Src Port: sip (5060), Dst Port: sip (5060)
 SIP/2.0 407 Proxy Authentication Required
 Via: SIP/2.0/UDP 192.168.1.104:5060;branch=z9hG4bK683a1a40;received=86.5.223.17
 Proxy-Authenticate: Digest nonce="414d535c079daad234:38465ad0db9a18427774f51f1dcb7ab3",algorithm=MD5,realm="3CXPhoneSystem"
-To: &lt;sip:2006@3cx.voiceflare.co.uk>;tag=1c7d7042
-From: &lt;sip:2006@3cx.voiceflare.co.uk>;tag=000c30a97025005c3fa02d4d-5ce6939d
+To: <sip:2006@3cx.voiceflare.co.uk>;tag=1c7d7042
+From: <sip:2006@3cx.voiceflare.co.uk>;tag=000c30a97025005c3fa02d4d-5ce6939d
 Call-ID: 000c30a9-70250003-381e261d-34d10c8e@192.168.1.104
 CSeq: 145 REGISTER
 User-Agent: 3CXPhoneSystem 11.0.28976.849 (28862)
@@ -122,9 +122,9 @@ User Datagram Protocol, Src Port: 50822 (50822), Dst Port: sip (5060)
 REGISTER sip:3cx.voiceflare.co.uk:5060 SIP/2.0
 Via: SIP/2.0/UDP 192.168.1.101:50822;branch=z9hG4bK-d8754z-ae09014c5a6a9d05-1---d8754z-;rport
 Max-Forwards: 70
-Contact: &lt;sip:2101@192.168.1.101:50822;rinstance=b9a426fa141ad0b8>
-To: &lt;sip:2101@3cx.voiceflare.co.uk:5060>
-From: &lt;sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
+Contact: <sip:2101@192.168.1.101:50822;rinstance=b9a426fa141ad0b8>
+To: <sip:2101@3cx.voiceflare.co.uk:5060>
+From: <sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
 Call-ID: ODBiMThkMTBlMTNkNzViZjhmNjFlMGVkOWI5ZDYxOTI.
 CSeq: 1 REGISTER
 Expires: 120
@@ -143,9 +143,9 @@ User Datagram Protocol, Src Port: 36321 (36321), Dst Port: sip (5060)
 REGISTER sip:3cx.voiceflare.co.uk:5060 SIP/2.0
 Via: SIP/2.0/UDP 192.168.1.101:50822;branch=z9hG4bK-d8754z-ae09014c5a6a9d05-1---d8754z-;rport
 Max-Forwards: 70
-Contact: &lt;sip:2101@192.168.1.101:50822;rinstance=b9a426fa141ad0b8>
-To: &lt;sip:2101@3cx.voiceflare.co.uk:5060>
-From: &lt;sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
+Contact: <sip:2101@192.168.1.101:50822;rinstance=b9a426fa141ad0b8>
+To: <sip:2101@3cx.voiceflare.co.uk:5060>
+From: <sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
 Call-ID: ODBiMThkMTBlMTNkNzViZjhmNjFlMGVkOWI5ZDYxOTI.
 CSeq: 1 REGISTER
 Expires: 120
@@ -164,8 +164,8 @@ User Datagram Protocol, Src Port: sip (5060), Dst Port: 36321 (36321)
 SIP/2.0 407 Proxy Authentication Required
 Via: SIP/2.0/UDP 192.168.1.101:50822;branch=z9hG4bK-d8754z-ae09014c5a6a9d05-1---d8754z-;rport=36321;received=86.5.223.17
 Proxy-Authenticate: Digest nonce="414d535c079dae1434:0e5072f08759b92e57a4b45600d18248",algorithm=MD5,realm="3CXPhoneSystem"
-To: &lt;sip:2101@3cx.voiceflare.co.uk:5060>;tag=84420f52
-From: &lt;sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
+To: <sip:2101@3cx.voiceflare.co.uk:5060>;tag=84420f52
+From: <sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
 Call-ID: ODBiMThkMTBlMTNkNzViZjhmNjFlMGVkOWI5ZDYxOTI.
 CSeq: 1 REGISTER
 User-Agent: 3CXPhoneSystem 11.0.28976.849 (28862)
@@ -181,8 +181,8 @@ User Datagram Protocol, Src Port: sip (5060), Dst Port: 50822 (50822)
 SIP/2.0 407 Proxy Authentication Required
 Via: SIP/2.0/UDP 192.168.1.101:50822;branch=z9hG4bK-d8754z-ae09014c5a6a9d05-1---d8754z-;rport=36321;received=86.5.223.17
 Proxy-Authenticate: Digest nonce="414d535c079dae1434:0e5072f08759b92e57a4b45600d18248",algorithm=MD5,realm="3CXPhoneSystem"
-To: &lt;sip:2101@3cx.voiceflare.co.uk:5060>;tag=84420f52
-From: &lt;sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
+To: <sip:2101@3cx.voiceflare.co.uk:5060>;tag=84420f52
+From: <sip:2101@3cx.voiceflare.co.uk:5060>;tag=196d716f
 Call-ID: ODBiMThkMTBlMTNkNzViZjhmNjFlMGVkOWI5ZDYxOTI.
 CSeq: 1 REGISTER
 User-Agent: 3CXPhoneSystem 11.0.28976.849 (28862)
