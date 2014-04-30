@@ -4,7 +4,7 @@ title:  Quiet Fan Hack - 3com 2824 Gigabit Switch
 date:   2012-10-26 00:00:00
 categories: general
 coverimage: /img/covers/quiet-fan-replacement.jpg
-weight: 3
+weight: 8
 ---
 
 After picking up a used 2824 switch on eBay for only £25, we soon realised the noise was too much for our small office. These switches are "enterprise grade", they have a 24gbit/sec switching fabric (that's full line speed on all ports), and a quiet/desktop version of this sort of product would have easily cost £100+. So, we bought a Rasurbo 40mm x 10mm Quiet Cooling fan replacement for £6 - and got ourselves a bargin at around £40 in total (switch+fan+delivery).

@@ -3,8 +3,8 @@ layout: post
 title:  Analysis of Cisco 7940, SIP ALG and NAT traversal problems
 date:   2013-05-10 00:00:00
 categories: general
-coverimage: /img/covers/analysis-of-cisco-7940-sip.jpg
-type: large
+coverimage: /img/covers/skills.jpg
+type: small
 weight: 10
 ---
 

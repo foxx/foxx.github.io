@@ -3,7 +3,7 @@ layout: post
 title:  Converting Natwest CC PDF statements to importable CSV
 date:   2012-12-28 00:00:00
 categories: general
-coverimage: /img/covers/legacy-natwest-cc.png
+coverimage: /img/covers/proreq2.jpg
 weight: 6
 ---
 

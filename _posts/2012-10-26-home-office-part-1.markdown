@@ -3,7 +3,7 @@ layout: post
 title:  Inside my home office - part 1
 date:   2012-10-26 00:00:00
 categories: general
-coverimage: /img/covers/home-office-1.jpg
+coverimage: /img/postcontent/home-office-2.jpg
 type: full
 weight: 2
 ---
