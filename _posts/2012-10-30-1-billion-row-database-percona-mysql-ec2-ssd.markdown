@@ -5,6 +5,7 @@ date:   2012-10-30 00:00:00
 categories: general
 coverimage: /img/covers/billion-row-db.png
 weight: 12
+type: small
 ---
 
 So today, we broke our hosting companies record.. 1.1 billion rows in a Percona MySQL InnoDB table! Sounds impressive, but reality soon kicks in when you can't run SELECT() queries against it for fear of saturating our poor SAS disks and locking up the web application. And even harder when you're working against the clock on deadlines. With a total datadir size of around 160GB, 1,159,945,113 rows in a single table and no long term NoSQL plans on the horizon, our immediate options were limited. 

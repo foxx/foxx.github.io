@@ -4,8 +4,8 @@ title:  Access Virus TI Firmware Reverse Engineering - Attempt 1
 date:   2012-10-26 00:00:00
 categories: general
 coverimage: /img/covers/access_virus_ti_03.jpg
-type: small
-weight: 3
+type: large
+weight: 8
 ---
 
 After several times of looking around on eBay for an Access Virus TI, and each time deciding that I didn't really have £800 to blow on a unit, I went in search of a firmware emulator. This drew a blank, so I decided to have a shot at poking into the firmware. I'd done this a few times before (mostly with phones and routers), but never with this. I didn't have an actual unit to look inside, so first I had to find some pictures and/or a hardware spec. 

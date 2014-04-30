@@ -309,12 +309,12 @@ body {
     text-decoration: none;
     color: red; }
   .ct-post-content p, .ct-post-content li {
-    font-family: "Roboto";
+    font-family: "Gotham Narrow SSm A";
     font-weight: 300;
     color: #525252;
     font-style: normal;
-    font-size: 18px;
-    line-height: 28px; }
+    font-size: 16px;
+    line-height: 26px; }
   .ct-post-content p {
     margin-bottom: 15px; }
   .ct-post-content h1 {
@@ -397,6 +397,7 @@ body {
       color: #fff;
       margin-bottom: 15px;
       padding-left: 30px;
+      padding-right: 30px;
       padding-top: 15px; }
       .ct-post-header.ct-post-header-full .page-title:last-child {
         margin-right: 0; }
@@ -432,6 +433,7 @@ body {
       color: #fff;
       margin-bottom: 15px;
       padding-left: 30px;
+      padding-right: 30px;
       padding-top: 15px; }
       .ct-post-header.ct-post-header-large .page-title:last-child {
         margin-right: 0; }
@@ -467,6 +469,7 @@ body {
       color: #fff;
       margin-bottom: 15px;
       padding-left: 30px;
+      padding-right: 30px;
       padding-top: 30px; }
       .ct-post-header.ct-post-header-small .page-title:last-child {
         margin-right: 0; }
@@ -482,3 +485,7 @@ pre code {
   line-height: 15px;
   margin-bottom: 15px;
   overflow: hidden; }
+
+hr {
+  border: 0px;
+  border-bottom: 1px solid #ececec; }
