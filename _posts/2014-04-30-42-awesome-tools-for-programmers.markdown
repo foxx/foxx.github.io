@@ -10,6 +10,12 @@ weight: 17
 
 Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow.
 
+### Sandboxie
+
+[http://www.sandboxie.com/](http://www.sandboxie.com/)
+
+Although it doesn't give the same protections of a full hypervisor, Sandboxie helps prevent every day nasties from doing too much damage. It also runs suprisingly seemlessly with little to no conflict, and lets you do things like allowing Chrome bookmarks to persist, but everything else to be sandboxed. Plugins can run inside or outside the sandbox, such as download managers. Quite a neat little tool, not just for security, but for OS hygiene too!
+
 ### Sublime Text 2 with SpaceFunk/FutureFunk
 
 [http://www.sublimetext.com/2](http://www.sublimetext.com/2)
