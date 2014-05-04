@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Awesome tools in 2014 for programmers
+title:  42 awesome tools for programmers
 date:   2014-10-26 00:00:00
 categories: general
 coverimage: /img/covers/requires-professional.jpg
@@ -10,6 +10,11 @@ weight: 17
 
 Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow.
 
+### Sublime Text 2 with SpaceFunk/FutureFunk
+
+[http://www.sublimetext.com/2](http://www.sublimetext.com/2)
+
+This text editor changed my life, seriously. And it looks beautiful with [SpaceFunk Grey Tuesday](https://github.com/Twiebie/ST-Spacefunk) theme and [Future Funk](https://github.com/Twiebie/ST-FutureFunk) color scheme.
 
 ### uWSGI
 
