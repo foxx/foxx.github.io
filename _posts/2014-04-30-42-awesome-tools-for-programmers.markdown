@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  42 awesome tools for programmers
-date:   2014-10-26 00:00:00
+date:   2014-05-01 00:00:00
 categories: general
 coverimage: /img/covers/requires-professional.jpg
 type: small
