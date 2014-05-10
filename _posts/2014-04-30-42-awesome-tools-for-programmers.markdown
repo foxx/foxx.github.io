@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  42 awesome tools for programmers
-date:   2012-10-26 00:00:00
+date:   2014-05-01 00:00:00
 categories: general
 coverimage: /img/covers/requires-professional.jpg
 type: small
@@ -10,6 +10,17 @@ weight: 18
 
 Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow. (in no particular order)
 
+### Sandboxie
+
+[http://www.sandboxie.com/](http://www.sandboxie.com/)
+
+Although it doesn't give the same protections of a full hypervisor, Sandboxie helps prevent every day nasties from doing too much damage. It also runs suprisingly seemlessly with little to no conflict, and lets you do things like allowing Chrome bookmarks to persist, but everything else to be sandboxed. Plugins can run inside or outside the sandbox, such as download managers. Quite a neat little tool, not just for security, but for OS hygiene too!
+
+### Sublime Text 2 with SpaceFunk/FutureFunk
+
+[http://www.sublimetext.com/2](http://www.sublimetext.com/2)
+
+This text editor changed my life, seriously. And it looks beautiful with [SpaceFunk Grey Tuesday](https://github.com/Twiebie/ST-Spacefunk) theme and [Future Funk](https://github.com/Twiebie/ST-FutureFunk) color scheme.
 
 ### 1. uWSGI
 
