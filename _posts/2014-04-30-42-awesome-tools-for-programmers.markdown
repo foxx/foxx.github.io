@@ -10,18 +10,6 @@ weight: 18
 
 Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow. (in no particular order)
 
-### Sandboxie
-
-[http://www.sandboxie.com/](http://www.sandboxie.com/)
-
-Although it doesn't give the same protections of a full hypervisor, Sandboxie helps prevent every day nasties from doing too much damage. It also runs suprisingly seemlessly with little to no conflict, and lets you do things like allowing Chrome bookmarks to persist, but everything else to be sandboxed. Plugins can run inside or outside the sandbox, such as download managers. Quite a neat little tool, not just for security, but for OS hygiene too!
-
-### Sublime Text 2 with SpaceFunk/FutureFunk
-
-[http://www.sublimetext.com/2](http://www.sublimetext.com/2)
-
-This text editor changed my life, seriously. And it looks beautiful with [SpaceFunk Grey Tuesday](https://github.com/Twiebie/ST-Spacefunk) theme and [Future Funk](https://github.com/Twiebie/ST-FutureFunk) color scheme.
-
 ### 1. uWSGI
 
 [http://uwsgi-docs.readthedocs.org/en/latest/](http://uwsgi-docs.readthedocs.org/en/latest/)
@@ -246,3 +234,17 @@ Are you designing an API? You should really keep HATEOAS principle in mind.
 Deferred [constructs](http://en.wikipedia.org/wiki/Futures_and_promises) are a beautiful design approach for concurrent programming.
 
 There are several language specific implementations of promises and deferred, such as [AS3 Promises](https://github.com/CodeCatalyst/promise-as3/) and [JQuery Deferred](http://api.jquery.com/category/deferred-object/). There's also a great article by [Chris Webb](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt2-practical-use).
+
+
+
+### 36. Sandboxie
+
+[http://www.sandboxie.com/](http://www.sandboxie.com/)
+
+Although it doesn't give the same protections of a full hypervisor, Sandboxie helps prevent every day nasties from doing too much damage. It also runs suprisingly seemlessly with little to no conflict, and lets you do things like allowing Chrome bookmarks to persist, but everything else to be sandboxed. Plugins can run inside or outside the sandbox, such as download managers. Quite a neat little tool, not just for security, but for OS hygiene too!
+
+### 37. Sublime Text 2 with SpaceFunk/FutureFunk
+
+[http://www.sublimetext.com/2](http://www.sublimetext.com/2)
+
+This text editor changed my life, seriously. And it looks beautiful with [SpaceFunk Grey Tuesday](https://github.com/Twiebie/ST-Spacefunk) theme and [Future Funk](https://github.com/Twiebie/ST-FutureFunk) color scheme.
