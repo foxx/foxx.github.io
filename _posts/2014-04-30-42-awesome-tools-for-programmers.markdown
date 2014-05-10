@@ -234,5 +234,4 @@ Are you designing an API? You should really keep HATEOAS principle in mind.
 
 Deferred [constructs](http://en.wikipedia.org/wiki/Futures_and_promises) are a beautiful design approach for concurrent programming.
 
-There are several language specific implementations of promises and deferred, such as [AS3 Promises](https://github.com/CodeCatalyst/promise-as3/) and [JQuery Deferred](http://api.jquery.com/category/deferred-object/).
-
+There are several language specific implementations of promises and deferred, such as [AS3 Promises](https://github.com/CodeCatalyst/promise-as3/) and [JQuery Deferred](http://api.jquery.com/category/deferred-object/). There's also a great article by [Chris Webb](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt2-practical-use).
