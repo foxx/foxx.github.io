@@ -30,7 +30,7 @@ Luckily for me this work had already been done by the guys over at midibox:
 * Very heavy aluminum end caps (at least it feels solid),  
 * the front wooden bar is mdf with wooden vineer, lime ?  
 * A 'trailing blob' psu -inside- the case,  
-* a really dodgy looking power cap.. that looked ready to explode. &lt;/li>  
+* a really dodgy looking power cap.. that looked ready to explode. </li>  
 {% endhighlight %}
 
 I had some difficulty finding an exact match for "dspb56367ac150", but we did find a DSP56367, which is part of the Motorola DSP 563xx Freescale family (24-bit @ 150mhz). Here is a link to the specification of this chip www.freescale.com/files/dsp/doc/data_sheet/DSP56367.pdf 
@@ -410,8 +410,8 @@ $ extract1.py
 dFO  
 30303435 00 336b4c464f 00453kLFO  
 30303436 00 1cfe1a464f 0046þFO  
-30303437 00 0006813c21 0047&lt;!  
-30303438 00 0006193c21 0048&lt;!  
+30303437 00 0006813c21 0047<!  
+30303438 00 0006193c21 0048<!  
 §P303439 00 000da78950 0049  
 30303530 00 0001804063 0050@c  
 {% endhighlight %}
@@ -568,121 +568,8 @@ Another quick test, and we can see the PNG now loads - woo! For shits and giggle
 [![access-virus-2.png](/img/postcontent/access-virus-2.png)](/img/postcontent/access-virus-2.png)
   
 If anyone is interested, here is the full working code used to extract the firmware chunks:
-  
-{% highlight python %}  
-import os
-import sys
-
-
-# temp assign
-
-_files = {}
-
-import binascii
-
-class sstr(str):
-    def index_end(self, substring, *args, **kwargs):
-        res = super(sstr, self).index(substring, *args, **kwargs)
-        return res + len(substring)
-
-class FirmwareScan(object):
-    def __init__(self, file):
-        self.file = file
-        self.filelist = {}
-
-    def prep(self):
-        self.data = sstr(open(self.file, 'rb').read())
-        self._build_filelist()
-
-    def _find_file_position(self, fnum):
-        k = "%sx00" % ( str(fnum).zfill(4), )
-        _total_found = self.data.count(k)
-        assert not _total_found == 0, "unable to find file chunk - %s" % ( k, )
-        assert not _total_found > 1 , "duplicate file chunks - %s" % ( k, )
-        return self.data.index(k)
-
-    def _build_filelist(self):
-        # find our file list offsets
-        _fl_start = self.data.index_end("x51x54x41x42x4Cx00x00")
-        _fl_end = self.data.index("x32", _fl_start)
-
-        # find our file list size offset
-        _d = self.data[_fl_start:_fl_end]
-
-        # calculate the filelist size
-        _fl_size = int(binascii.hexlify(_d), 16)
-
-        # extract filelist (small amount of manual offsetting)
-        _fl_data = self.data[_fl_end+1:][:_fl_size-1].split("x00")
-        _fl_data = filter(lambda x: x, _fl_data)
-
-        # define the file number range
-        _start_fnum = 1
-        _end_fnum = len(_fl_data)+1
-
-        _str = "%(fileno)-6s %(filename)-30s %(start_pos)-10s %(chunk_start)-10s %(end_pos)-10s %(size)s/%(calc_size)s"
-            print _str % {
-            'fileno' : "File Num",
-            'filename' : "File Name",
-            'start_pos' : 'SPOS',
-            'chunk_start' : 'CSPOS',
-            'end_pos' : 'EPOS',
-            'size' : 'Actual Size',
-            'calc_size' : 'Chunk Size'
-        }
-                
-        # now build the filelist
-        for x in xrange(_start_fnum, _end_fnum):
-            _start_pos = self._find_file_position(x)
-            if not x == _end_fnum-1:
-                _end_pos = self._find_file_position(x+1)
-            else:
-                _end_pos = len(self.data)
-    
-            _filename = _fl_data[x-1]
-            _f_size = int(binascii.hexlify(self.data[_start_pos:][5:8]), 16)
-    
-            _chunk_start = _start_pos + 8
-            
-            self.filelist[x] = {
-                'start_pos' : _start_pos,
-                'chunk_start' : _chunk_start,
-                'end_pos' : _end_pos,
-                'filename' : _filename,
-                'size' : _f_size,
-                'calc_size' : _end_pos - _chunk_start,
-                'fileno' : str(x).zfill(4),
-            }
-            
-            print _str % self.filelist[x]
-            
-            continue
-
-            #print binascii.hexlify(self.data[_start_pos:][:4]),binascii.hexlify(self.data[_start_pos:][4]), binascii.hexlify(self.data[_start_pos:][5:10]), self.data[_start_pos:][:10]
-
-
-        def dump_to_disk(self, out):
-            for k,v in self.filelist.iteritems():
-                _start_pos = v.get('start_pos')
-                _end_pos = v.get('end_pos')
-                # extract data after 5 bytes
-                fname = "%s/%s" % ( out, v.get('filename'), )
-                f = open(fname, "wb")
-                _chunk = self.data[_start_pos+5 : _end_pos]
-                f.write(_chunk)
-                f.close()
-                print " - written %s (%s bytes)" % ( fname, os.path.getsize(fname), )
-            
-a = FirmwareScan(
-    file = "../firmware_bin64"
-)
-
-a.prep()
-"""a.dump_to_disk(
-out = "/home/foxx/development/virusti/out"
-)"""
-{% endhighlight %}
-    
+ 
+<script src="https://gist.github.com/foxx/d4ce9e71c6860650d7af.js"></script>
 
 ### Analysing the firmware  
 

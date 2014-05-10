@@ -311,10 +311,10 @@ body {
   .ct-post-content p, .ct-post-content li {
     font-family: "Gotham Narrow SSm A";
     font-weight: 300;
-    color: #525252;
+    color: #666;
     font-style: normal;
-    font-size: 16px;
-    line-height: 26px; }
+    font-size: 15px;
+    line-height: 24px; }
   .ct-post-content p {
     margin-bottom: 15px; }
   .ct-post-content h1 {
@@ -412,7 +412,8 @@ body {
       width: 29.16667%;
       display: block;
       background-color: #429d44;
-      text-align: center; }
+      text-align: center;
+      overflow: hidden; }
       .ct-post-header.ct-post-header-large .img-holder:last-child {
         margin-right: 0; }
       .ct-post-header.ct-post-header-large .img-holder img {
@@ -475,14 +476,18 @@ body {
         margin-right: 0; }
 
 pre code {
+  font-size: 11px;
+  line-height: 16px;
+  font-family: Consolas,"Liberation Mono",Courier,monospace !important;
+  width: 100%;
   display: block;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #444;
-  font-family: "Droid Sans Mono", "Lucida Console";
-  font-size: 12px;
-  color: #e4e4e4;
-  line-height: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 3px;
+  background-color: #f8f8ff;
+  border: 1px solid #ddd;
+  color: #555;
+  border-left: 10px solid #ececec;
   margin-bottom: 15px;
   overflow: hidden; }
 
@@ -492,3 +497,30 @@ hr {
 
 a {
   color: #5fb75d; }
+
+/* Better styles for embedding GitHub Gists */
+.gist {
+  font-size: 11px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  width: 100%; }
+
+.gist pre {
+  font-family: Consolas,"Liberation Mono",Courier,monospace !important; }
+
+.gist-meta {
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 13px !important; }
+
+.gist-meta a {
+  color: #26a !important;
+  text-decoration: none; }
+
+.gist-meta a:hover {
+  color: #0e4071 !important; }
+
+b {
+  font-weight: bold; }
+
+iframe {
+  margin-bottom: 15px; }

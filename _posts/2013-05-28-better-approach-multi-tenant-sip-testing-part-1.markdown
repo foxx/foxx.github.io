@@ -3,8 +3,9 @@ layout: post
 title:  Better approach for multi-tenant SIP testing - part 1
 date:   2013-05-28 00:00:00
 categories: general
-coverimage: /img/covers/chill-the-fuck-out.jpg
-weight: 15
+coverimage: /img/postcontent/multi-tenant-1.png
+weight: 17
+type: full
 ---
 
 
@@ -18,8 +19,6 @@ In our scenario, we have a total of 12 users/DDIs which would very quickly becom
 *   1 faux provider on FS3, total of 3 users
 
 The faux provider essentially acts like a PSTN gateway, so you can simulate making calls to PSTN without having to use a real provider. Two of the customer domains are on switch 1, the other domain is on switch 2. You then need to ensure that the call flow works correctly when transferring calls between domains, and when calls are bridged/transferred via FS apps.
-
-[![multi-tenant-1.png](/img/postcontent/multi-tenant-1.png)](/img/postcontent/multi-tenant-1.png)
 
 ### Tools used
 
@@ -96,6 +95,10 @@ Go into each item and tick the "Move to" checkbox, select "This position" and th
 WindowManager can sometimes be a little fussy, and doesn't always position correctly. If this happens, simply click "Quit" on the WindowManager program and then re-run it. Don't right click on the taskbar button as this will cause it to disable and not exit, which doesn't fix the problem. Once you run it, you should see the windows automatically position themselves on the page. You'll need to then configure each phone with the correct user/domain relevant to the label above each one.
 
 And boom, you now have a segregated and fully functional testing environment for your multi-tenant platform. It's also worth mentioning that you could do this in Linux if you don't want to pay for a Windows license. Have you done similar things like this? Feel free to link to your article/project in the comments below.
+
+And here's the final result;
+
+[![multi-tenant-1.png](/img/postcontent/multi-tenant-1.png)](/img/postcontent/multi-tenant-1.png)
 
  [1]: http://blog.simplicitymedialtd.co.uk/wp-content/uploads/2013/05/8.png
  [2]: http://www.vmware.com/products/workstation/ "http://www.vmware.com/products/workstation/"

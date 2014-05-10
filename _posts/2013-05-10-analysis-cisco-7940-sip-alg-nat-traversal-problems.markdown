@@ -5,7 +5,7 @@ date:   2013-05-10 00:00:00
 categories: general
 coverimage: /img/covers/skills.jpg
 type: small
-weight: 10
+weight: 18
 ---
 
 
@@ -132,7 +132,7 @@ Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REGISTER, SUBSCRIBE, NOTIFY, REFER, IN
 Supported: replaces
 User-Agent: 3CXPhone 6.0.26523.0
 Content-Length: 0
-  {% endhighlight %}
+{% endhighlight %}
 
 3CX server receives packet
 
@@ -153,7 +153,7 @@ Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REGISTER, SUBSCRIBE, NOTIFY, REFER, IN
 Supported: replaces
 User-Agent: 3CXPhone 6.0.26523.0
 Content-Length: 0
-  {% endhighlight %}
+{% endhighlight %}
 
 3CX server sends packet
 
@@ -170,7 +170,7 @@ Call-ID: ODBiMThkMTBlMTNkNzViZjhmNjFlMGVkOWI5ZDYxOTI.
 CSeq: 1 REGISTER
 User-Agent: 3CXPhoneSystem 11.0.28976.849 (28862)
 Content-Length: 0
-  {% endhighlight %}
+{% endhighlight %}
 
 Softphone receives packet
 
@@ -187,7 +187,7 @@ Call-ID: ODBiMThkMTBlMTNkNzViZjhmNjFlMGVkOWI5ZDYxOTI.
 CSeq: 1 REGISTER
 User-Agent: 3CXPhoneSystem 11.0.28976.849 (28862)
 Content-Length: 0
-  {% endhighlight %}
+{% endhighlight %}
 
 Again, let's break down what happened here;
 
@@ -203,7 +203,7 @@ So from the results in test 2, we can determine that SIP ALG is still broken, if
 
 {% highlight text %}
 Via: SIP/2.0/UDP 192.168.1.101:50822;branch=z9hG4bK-d8754z-ae09014c5a6a9d05-1---d8754z-;rport
-  {% endhighlight %}
+{% endhighlight %}
 
 So why did the softphone work, but not the Cisco phone? It's because the softphone has included a small parameter on the end of the Via header called 'rport'. Let's take a look at the [SIP RFC 3581][8], which defines 'Symmetric Response Routing' for SIP.
 
@@ -211,7 +211,7 @@ So why did the softphone work, but not the Cisco phone? It's because the softpho
 This extension defines a new parameter for the Via header field, called "rport", that allows a 
 client to request that the server send the response back to the source IP address and port 
 where the request came from. 
-  {% endhighlight %}
+{% endhighlight %}
 
 Now it turns out that this had already been discussed (in extensive detail) back in 2010 over at <http://forum.sipsorcery.com/viewtopic.php?f=6&t=2165>, although no one had done an analysis of why it was working, or what the viable solutions were.
 
@@ -219,21 +219,37 @@ Now it turns out that this had already been discussed (in extensive detail) back
 
 There are several ways that you can fix this problem, all with their pros and cons.
 
-A) Disable port randomization on your NAT (this is referred to as 'static-port' in BSD) However, this could break some phone equipment that doesn't already do its own source port randomization, because if two phones insist on receiving a response on 5060 from the same host, then the router won't know where to send the packet to. Even if the phone does it's own randomization, you could also end up with potential port collision, because if two computers choose the same source port for the same destination, then the router is then not able to prevent overlapping.
+#### Disable NAT port randomization
 
-B) Use static port forwarding (one-to-one NAT) for the phone. If you have phone equipment that doesn't enable rport, then you can enable this feature and force the packets to flow back to the phone. However it means you can only have one "broken phone" on your network, because any response packets on the source port would be forcibly sent to one phone.
+This is referred to as 'static-port' in BSD. However, this could break some phone equipment that doesn't already do its own source port randomization, because if two phones insist on receiving a response on 5060 from the same host, then the router won't know where to send the packet to. Even if the phone does it's own randomization, you could also end up with potential port collision, because if two computers choose the same source port for the same destination, then the router is then not able to prevent overlapping.
 
-C) Enable SIP ALG on your router. This is a good way of resolving the problem but sadly many routers do not implement SIP ALG correctly, and many do it differently. For example, some routers implement SIP ALG by disabling port randomization for SIP packets, where as other routers re-write the Via header in the SIP packet.
+#### Static port forwarding (one-to-one NAT)
 
-D) Enable 'rport' on your phone. Some phones do this by default (such as the Softphone), and it's possible that some phones also allow you to enable/disable this in their configuration. However, despite a 15 minute search on Google, the Cisco 7940 doesn't seem to allow the rport to be optionally enabled or disabled, it's always disabled.
+If you have phone equipment that doesn't enable rport, then you can enable this feature and force the packets to flow back to the phone. However it means you can only have one "broken phone" on your network, because any response packets on the source port would be forcibly sent to one phone.
 
-E) Enable forced 'rport' on your server. Some servers allow you to force 'rport', for example using the [NDLB-force-rport][9] option in [FreeSWITCH][10]. However the 3CX server does not appear to let you do this. This can also cause some phones to break, and should be enabled on an opt-in basis.
+#### Enable SIP ALG on router
 
-F) Use a local SIP gateway behind NAT. You could set up a SIP gateway in your LAN which trunks to your external SIP server, but I've never been a fan of using port forwarding or selective one-to-one NAT for trunking, it means having to ensure a specific port range is only NAT'd (for RTP, SIP etc), and some routers don't handle this very well.
+This is a good way of resolving the problem but sadly many routers do not implement SIP ALG correctly, and many do it differently. For example, some routers implement SIP ALG by disabling port randomization for SIP packets, where as other routers re-write the Via header in the SIP packet.
 
-G) Use a SIP friendly VPN gateway. Some people opt to run their phones over a VPN gateway, this eliminates a lot of routing/mangling issues that you'd typically see running SIP clients straight over the internet. However, I'm yet to find a gateway that does this properly for a cheap price. The Meraki equipment looks good, but I haven't tested this yet and it's a tad expensive.
+#### Enable rport on phone
 
-H) Use a different phone. Although until you have purchased the phone and tested it, then it's not guaranteed to work. And if you change routers or providers, then it could break.
+Some phones do this by default (such as the Softphone), and it's possible that some phones also allow you to enable/disable this in their configuration. However, despite a 15 minute search on Google, the Cisco 7940 doesn't seem to allow the rport to be optionally enabled or disabled, it's always disabled.
+
+#### Enable forced rport on server
+
+Some servers allow you to force 'rport', for example using the [NDLB-force-rport][9] option in [FreeSWITCH][10]. However the 3CX server does not appear to let you do this. This can also cause some phones to break, and should be enabled on an opt-in basis.
+
+#### Local SIP gateway behind NAT
+
+You could set up a SIP gateway in your LAN which trunks to your external SIP server, but I've never been a fan of using port forwarding or selective one-to-one NAT for trunking, it means having to ensure a specific port range is only NAT'd (for RTP, SIP etc), and some routers don't handle this very well.
+
+#### SIP friendly VPN
+
+Some people opt to run their phones over a VPN gateway, this eliminates a lot of routing/mangling issues that you'd typically see running SIP clients straight over the internet. However, I'm yet to find a gateway that does this properly for a cheap price. The Meraki equipment looks good, but I haven't tested this yet and it's a tad expensive.
+
+#### Use a different phone
+
+Although until you have purchased the phone and tested it, then it's not guaranteed to work. And if you change routers or providers, then it could break.
 
 ### Moral of the story
 

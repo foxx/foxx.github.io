@@ -4,7 +4,7 @@ title:  1.1 billion row 160GB Percona MySQL DB on EC2 with RAID 1 SSD1
 date:   2012-10-30 00:00:00
 categories: general
 coverimage: /img/covers/billion-row-db.png
-weight: 12
+weight: 15
 type: small
 ---
 
@@ -118,7 +118,7 @@ Whilst attempting to resolve a transfer speed problem with the networks team, on
   4984176640   3%    5.27MB/s    7:15:30
   5630132224   3%    9.31MB/s    4:05:25
   5807833088   3%    5.10MB/s    7:27:03 (FUUUU!)
-  {% endhighlight %} 
+{% endhighlight %} 
 
 After about 30 minutes of flicking to and from the putty window and realising it's now 8pm, I reluctantly background my screen session and sign off for the night. 
 
@@ -388,24 +388,24 @@ EC2 can also be bitchy when it comes to releasing/attaching disks, and using too
 [2228865.779591]  ffff880ebdf17fd8 ffff880ebdf17fd8 ffff880ebdf17fd8 00000000000136c0
 [2228865.779595]  ffff880ec124adc0 ffff880e98432dc0 0000000000000000 7fffffffffffffff
 [2228865.779599] Call Trace:
-[2228865.779611]  [&lt;ffffffff816508cf>] schedule+0x3f/0x60
-[2228865.779615]  [&lt;ffffffff81650f15>] schedule_timeout+0x2a5/0x320
-[2228865.779622]  [&lt;ffffffff8111e7c4>] ? write_cache_pages+0x124/0x460
-[2228865.779627]  [&lt;ffffffff813a54b1>] ? notify_remote_via_irq+0x31/0x50
-[2228865.779630]  [&lt;ffffffff8111e0a0>] ? set_page_dirty_lock+0x50/0x50
-[2228865.779634]  [&lt;ffffffff8165296e>] ? _raw_spin_unlock_irqrestore+0x1e/0x30
-[2228865.779638]  [&lt;ffffffff8164ff8f>] wait_for_common+0xdf/0x180
-[2228865.779644]  [&lt;ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
-[2228865.779649]  [&lt;ffffffff8105e2c0>] ? try_to_wake_up+0x200/0x200
-[2228865.779653]  [&lt;ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
-[2228865.779656]  [&lt;ffffffff8165010d>] wait_for_completion+0x1d/0x20
-[2228865.779659]  [&lt;ffffffff8119bf8c>] writeback_inodes_sb_nr+0x7c/0xa0
-[2228865.779662]  [&lt;ffffffff8119c1fe>] writeback_inodes_sb+0x2e/0x40
-[2228865.779665]  [&lt;ffffffff811a324e>] __sync_filesystem+0x4e/0x90
-[2228865.779668]  [&lt;ffffffff811a32af>] sync_one_sb+0x1f/0x30
-[2228865.779673]  [&lt;ffffffff81178005>] iterate_supers+0xa5/0x100
-[2228865.779676]  [&lt;ffffffff811a3360>] sys_sync+0x30/0x70
-[2228865.779679]  [&lt;ffffffff8165ad42>] system_call_fastpath+0x16/0x1b
+[2228865.779611]  [<ffffffff816508cf>] schedule+0x3f/0x60
+[2228865.779615]  [<ffffffff81650f15>] schedule_timeout+0x2a5/0x320
+[2228865.779622]  [<ffffffff8111e7c4>] ? write_cache_pages+0x124/0x460
+[2228865.779627]  [<ffffffff813a54b1>] ? notify_remote_via_irq+0x31/0x50
+[2228865.779630]  [<ffffffff8111e0a0>] ? set_page_dirty_lock+0x50/0x50
+[2228865.779634]  [<ffffffff8165296e>] ? _raw_spin_unlock_irqrestore+0x1e/0x30
+[2228865.779638]  [<ffffffff8164ff8f>] wait_for_common+0xdf/0x180
+[2228865.779644]  [<ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
+[2228865.779649]  [<ffffffff8105e2c0>] ? try_to_wake_up+0x200/0x200
+[2228865.779653]  [<ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
+[2228865.779656]  [<ffffffff8165010d>] wait_for_completion+0x1d/0x20
+[2228865.779659]  [<ffffffff8119bf8c>] writeback_inodes_sb_nr+0x7c/0xa0
+[2228865.779662]  [<ffffffff8119c1fe>] writeback_inodes_sb+0x2e/0x40
+[2228865.779665]  [<ffffffff811a324e>] __sync_filesystem+0x4e/0x90
+[2228865.779668]  [<ffffffff811a32af>] sync_one_sb+0x1f/0x30
+[2228865.779673]  [<ffffffff81178005>] iterate_supers+0xa5/0x100
+[2228865.779676]  [<ffffffff811a3360>] sys_sync+0x30/0x70
+[2228865.779679]  [<ffffffff8165ad42>] system_call_fastpath+0x16/0x1b
 [2229068.552059] blkfront device/vbd/2208 num-ring-pages 1 nr_ents 32.
 [2229068.963419] blkfront: xvdk: barrier or flush: disabled
 [2229068.964565]  xvdk: xvdk1
@@ -417,24 +417,24 @@ EC2 can also be bitchy when it comes to releasing/attaching disks, and using too
 [2229225.779594]  ffff880ebdf17fd8 ffff880ebdf17fd8 ffff880ebdf17fd8 00000000000136c0
 [2229225.779598]  ffffffff81c0d020 ffff880e98432dc0 ffff880e00000000 7fffffffffffffff
 [2229225.779603] Call Trace:
-[2229225.779615]  [&lt;ffffffff816508cf>] schedule+0x3f/0x60
-[2229225.779618]  [&lt;ffffffff81650f15>] schedule_timeout+0x2a5/0x320
-[2229225.779623]  [&lt;ffffffff813a54b1>] ? notify_remote_via_irq+0x31/0x50
-[2229225.779626]  [&lt;ffffffff813a5e6b>] ? xen_send_IPI_one+0x2b/0x30
-[2229225.779632]  [&lt;ffffffff81011770>] ? xen_smp_send_reschedule+0x10/0x20
-[2229225.779636]  [&lt;ffffffff810516c2>] ? ttwu_queue+0x92/0xd0
-[2229225.779639]  [&lt;ffffffff8164ff8f>] wait_for_common+0xdf/0x180
-[2229225.779646]  [&lt;ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
-[2229225.779650]  [&lt;ffffffff8105e2c0>] ? try_to_wake_up+0x200/0x200
-[2229225.779653]  [&lt;ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
-[2229225.779656]  [&lt;ffffffff8165010d>] wait_for_completion+0x1d/0x20
-[2229225.779660]  [&lt;ffffffff8119c15d>] sync_inodes_sb+0x8d/0xc0
-[2229225.779665]  [&lt;ffffffff81110000>] ? perf_event_create_kernel_counter+0x20/0xf0
-[2229225.779668]  [&lt;ffffffff811a3288>] __sync_filesystem+0x88/0x90
-[2229225.779671]  [&lt;ffffffff811a32af>] sync_one_sb+0x1f/0x30
-[2229225.779676]  [&lt;ffffffff81178005>] iterate_supers+0xa5/0x100
-[2229225.779679]  [&lt;ffffffff811a3377>] sys_sync+0x47/0x70
-[2229225.779683]  [&lt;ffffffff8165ad42>] system_call_fastpath+0x16/0x1b
+[2229225.779615]  [<ffffffff816508cf>] schedule+0x3f/0x60
+[2229225.779618]  [<ffffffff81650f15>] schedule_timeout+0x2a5/0x320
+[2229225.779623]  [<ffffffff813a54b1>] ? notify_remote_via_irq+0x31/0x50
+[2229225.779626]  [<ffffffff813a5e6b>] ? xen_send_IPI_one+0x2b/0x30
+[2229225.779632]  [<ffffffff81011770>] ? xen_smp_send_reschedule+0x10/0x20
+[2229225.779636]  [<ffffffff810516c2>] ? ttwu_queue+0x92/0xd0
+[2229225.779639]  [<ffffffff8164ff8f>] wait_for_common+0xdf/0x180
+[2229225.779646]  [<ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
+[2229225.779650]  [<ffffffff8105e2c0>] ? try_to_wake_up+0x200/0x200
+[2229225.779653]  [<ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
+[2229225.779656]  [<ffffffff8165010d>] wait_for_completion+0x1d/0x20
+[2229225.779660]  [<ffffffff8119c15d>] sync_inodes_sb+0x8d/0xc0
+[2229225.779665]  [<ffffffff81110000>] ? perf_event_create_kernel_counter+0x20/0xf0
+[2229225.779668]  [<ffffffff811a3288>] __sync_filesystem+0x88/0x90
+[2229225.779671]  [<ffffffff811a32af>] sync_one_sb+0x1f/0x30
+[2229225.779676]  [<ffffffff81178005>] iterate_supers+0xa5/0x100
+[2229225.779679]  [<ffffffff811a3377>] sys_sync+0x47/0x70
+[2229225.779683]  [<ffffffff8165ad42>] system_call_fastpath+0x16/0x1b
 [2229225.779686] INFO: task cfdisk:15523 blocked for more than 120 seconds.
 [2229225.779692] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
 [2229225.779697] cfdisk          D ffff880f22c336c0     0 15523  29316 0x00000000
@@ -442,23 +442,23 @@ EC2 can also be bitchy when it comes to releasing/attaching disks, and using too
 [2229225.779705]  ffff880ec04adfd8 ffff880ec04adfd8 ffff880ec04adfd8 00000000000136c0
 [2229225.779709]  ffff880ec121adc0 ffff880d1c4144a0 ffff880ec04adce8 7fffffffffffffff
 [2229225.779713] Call Trace:
-[2229225.779716]  [&lt;ffffffff816508cf>] schedule+0x3f/0x60
-[2229225.779719]  [&lt;ffffffff81650f15>] schedule_timeout+0x2a5/0x320
-[2229225.779724]  [&lt;ffffffff8111e7c4>] ? write_cache_pages+0x124/0x460
-[2229225.779727]  [&lt;ffffffff813a54b1>] ? notify_remote_via_irq+0x31/0x50
-[2229225.779730]  [&lt;ffffffff8111e0a0>] ? set_page_dirty_lock+0x50/0x50
-[2229225.779734]  [&lt;ffffffff8165296e>] ? _raw_spin_unlock_irqrestore+0x1e/0x30
-[2229225.779738]  [&lt;ffffffff8164ff8f>] wait_for_common+0xdf/0x180
-[2229225.779741]  [&lt;ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
-[2229225.779744]  [&lt;ffffffff8105e2c0>] ? try_to_wake_up+0x200/0x200
-[2229225.779747]  [&lt;ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
-[2229225.779750]  [&lt;ffffffff8165010d>] wait_for_completion+0x1d/0x20
-[2229225.779753]  [&lt;ffffffff8119bf8c>] writeback_inodes_sb_nr+0x7c/0xa0
-[2229225.779756]  [&lt;ffffffff8119c1fe>] writeback_inodes_sb+0x2e/0x40
-[2229225.779759]  [&lt;ffffffff811a324e>] __sync_filesystem+0x4e/0x90
-[2229225.779762]  [&lt;ffffffff811a32af>] sync_one_sb+0x1f/0x30
-[2229225.779765]  [&lt;ffffffff81178005>] iterate_supers+0xa5/0x100
-[2229225.779768]  [&lt;ffffffff811a3360>] sys_sync+0x30/0x70
-[2229225.779770]  [&lt;ffffffff8165ad42>] system_call_fastpath+0x16/0x1b
+[2229225.779716]  [<ffffffff816508cf>] schedule+0x3f/0x60
+[2229225.779719]  [<ffffffff81650f15>] schedule_timeout+0x2a5/0x320
+[2229225.779724]  [<ffffffff8111e7c4>] ? write_cache_pages+0x124/0x460
+[2229225.779727]  [<ffffffff813a54b1>] ? notify_remote_via_irq+0x31/0x50
+[2229225.779730]  [<ffffffff8111e0a0>] ? set_page_dirty_lock+0x50/0x50
+[2229225.779734]  [<ffffffff8165296e>] ? _raw_spin_unlock_irqrestore+0x1e/0x30
+[2229225.779738]  [<ffffffff8164ff8f>] wait_for_common+0xdf/0x180
+[2229225.779741]  [<ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
+[2229225.779744]  [<ffffffff8105e2c0>] ? try_to_wake_up+0x200/0x200
+[2229225.779747]  [<ffffffff811a3290>] ? __sync_filesystem+0x90/0x90
+[2229225.779750]  [<ffffffff8165010d>] wait_for_completion+0x1d/0x20
+[2229225.779753]  [<ffffffff8119bf8c>] writeback_inodes_sb_nr+0x7c/0xa0
+[2229225.779756]  [<ffffffff8119c1fe>] writeback_inodes_sb+0x2e/0x40
+[2229225.779759]  [<ffffffff811a324e>] __sync_filesystem+0x4e/0x90
+[2229225.779762]  [<ffffffff811a32af>] sync_one_sb+0x1f/0x30
+[2229225.779765]  [<ffffffff81178005>] iterate_supers+0xa5/0x100
+[2229225.779768]  [<ffffffff811a3360>] sys_sync+0x30/0x70
+[2229225.779770]  [<ffffffff8165ad42>] system_call_fastpath+0x16/0x1b
 [2229470.670222] block xvdh: releasing disk
 {% endhighlight %}
