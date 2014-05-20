@@ -10,7 +10,11 @@ position: 1
   <div class="ct-post ct-post-{{ post.type }}">
     <a class="inner" href="{{ post.url }}">
       <div class="img-holder">
-        <img style="background-image:url('{{ post.coverimage }}');" />
+        <img style="background-image:url('{{ post.coverimage }}'); 
+        {% if post.background_position %}
+          background-position: {{ post.background_position }};
+        {% endif %}
+        " />
       </div>
 
       <div class="title">

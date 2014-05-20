@@ -1,3 +1,9 @@
+
+/**
+ * This code was written in a rush and caffeine fueled rage.
+ * It is fucking terrible, sorry.
+ **/
+
 body {
     background: #444444 url(/img/bg1.png) left top fixed;
 }
@@ -9,19 +15,38 @@ body {
 .ct-site-header {
     @include fixed-breakpoint-width;
     @include outer-container;
+
+    padding-left:30px;
+    padding-right:30px;
 }
 
 .ct-site-content {
     @include fixed-breakpoint-width;
     @include outer-container;
 
-    .ct-content-left {
-      @include span-columns(9 of 12);
-      padding-right:15px;
+    padding-left:30px;
+    padding-right:30px;
+
+    @include media($xs) {
+      .ct-content-left {
+        @include span-columns(12 of 12);
+        padding-right:0px;
+      }
+
+      .ct-content-right {
+        @include span-columns(12 of 12);
+      }
     }
 
-    .ct-content-right {
-      @include span-columns(3 of 12);
+    @include media($md) {
+      .ct-content-left {
+        @include span-columns(9 of 12);
+        padding-right:30px;
+      }
+
+      .ct-content-right {
+        @include span-columns(3 of 12);
+      }
     }
 
     .ct-content-full {
@@ -44,7 +69,7 @@ body {
 
     @include span-columns(4 of 12);
     margin-bottom:15px;
-    padding-right:15px;
+    padding-right:30px;
     display:block;
     border:0px;
     //background-color:red;
@@ -58,12 +83,47 @@ body {
 
     }
 
-    &.ct-post-large {
-      @include span-columns(8 of 12);
+    &.ct-post-full {
+      .img-holder {
+        height:300px;
+      }
     }
 
-    &.ct-post-full {
-      @include span-columns(12 of 12);
+    @include media($xs) {
+      &.ct-post { 
+        @include span-columns(12 of 12);
+        padding-right:0px;
+
+        .img-holder {
+          height:300px;
+        }
+      }
+    }
+
+    @include media($sm) {
+      &.ct-post { 
+        @include span-columns(6 of 12);
+        padding-right:30px;
+
+        .img-holder {
+          height:300px;
+        }
+      }
+    }
+
+    @include media($lg) {
+      &.ct-post { 
+        @include span-columns(4 of 12);
+        padding-right:30px;
+      }
+
+      &.ct-post-large {
+        @include span-columns(8 of 12);
+      }
+
+      &.ct-post-full {
+        @include span-columns(12 of 12);
+      }
     }
 
     // styling
@@ -108,17 +168,6 @@ body {
         text-align:right;
       }
     }
-
-    &.ct-post-full {
-      .img-holder {
-        height:300px;
-      }
-      .title {
-        h2 {
-          min-height:30px;
-        }
-      }
-    }
   }
 }
 
@@ -132,7 +181,7 @@ body {
 }
 
 .social {
-  $size:58px;
+  $size:50px;
   background-color:#444;
   margin-bottom:5px;
   margin-right:5px;
@@ -182,6 +231,10 @@ body {
     background-image:url('/img/mixcloud-128.png');
   }
 
+  &.social-stackoverflow {
+    background-image:url('/img/so-128.png');
+  }
+
   img.icon {
       width:50px; 
       background-color:#444;
@@ -221,10 +274,6 @@ body {
     text-decoration:none;
     color:#5fb75d;
   }
-}
-
-.ct-post {
-  padding-right:30px !important;
 }
 
 .ct-post-content {

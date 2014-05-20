@@ -4,8 +4,8 @@ title:  Better approach for multi-tenant SIP testing - part 1
 date:   2013-05-28 00:00:00
 categories: general
 coverimage: /img/postcontent/multi-tenant-1.png
-weight: 17
-type: full
+weight: 16
+
 ---
 
 

@@ -37,6 +37,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/**
+ * This code was written in a rush and caffeine fueled rage.
+ * It is fucking terrible, sorry.
+ **/
 body {
   background: #444444 url(/img/bg1.png) left top fixed; }
 
@@ -55,7 +59,9 @@ body {
   *zoom: 1;
   max-width: em(1440);
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px; }
   @media screen and (min-width: 0px) {
     .ct-site-header {
       width: 100%; } }
@@ -78,7 +84,9 @@ body {
   *zoom: 1;
   max-width: em(1440);
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px; }
   @media screen and (min-width: 0px) {
     .ct-site-content {
       width: 100%; } }
@@ -96,21 +104,38 @@ body {
     display: table; }
   .ct-site-content:after {
     clear: both; }
-  .ct-site-content .ct-content-left {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 75%;
-    padding-right: 15px; }
-    .ct-site-content .ct-content-left:last-child {
-      margin-right: 0; }
-  .ct-site-content .ct-content-right {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 25%; }
-    .ct-site-content .ct-content-right:last-child {
-      margin-right: 0; }
+  @media screen and (min-width: 0px) {
+    .ct-site-content .ct-content-left {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      padding-right: 0px; }
+      .ct-site-content .ct-content-left:last-child {
+        margin-right: 0; }
+    .ct-site-content .ct-content-right {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%; }
+      .ct-site-content .ct-content-right:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1024px) {
+    .ct-site-content .ct-content-left {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 75%;
+      padding-right: 30px; }
+      .ct-site-content .ct-content-left:last-child {
+        margin-right: 0; }
+    .ct-site-content .ct-content-right {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 25%; }
+      .ct-site-content .ct-content-right:last-child {
+        margin-right: 0; } }
   .ct-site-content .ct-content-full {
     float: left;
     display: block;
@@ -158,7 +183,7 @@ body {
     margin-right: 0%;
     width: 33.33333%;
     margin-bottom: 15px;
-    padding-right: 15px;
+    padding-right: 30px;
     display: block;
     border: 0px; }
     .ct-posts .ct-post .inner {
@@ -168,20 +193,53 @@ body {
     .ct-posts .ct-post img {
       min-width: 100%;
       height: 250px; }
-    .ct-posts .ct-post.ct-post-large {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 66.66667%; }
-      .ct-posts .ct-post.ct-post-large:last-child {
-        margin-right: 0; }
-    .ct-posts .ct-post.ct-post-full {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 100%; }
-      .ct-posts .ct-post.ct-post-full:last-child {
-        margin-right: 0; }
+    .ct-posts .ct-post.ct-post-full .img-holder {
+      height: 300px; }
+    @media screen and (min-width: 0px) {
+      .ct-posts .ct-post.ct-post {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 100%;
+        padding-right: 0px; }
+        .ct-posts .ct-post.ct-post:last-child {
+          margin-right: 0; }
+        .ct-posts .ct-post.ct-post .img-holder {
+          height: 300px; } }
+    @media screen and (min-width: 768px) {
+      .ct-posts .ct-post.ct-post {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 50%;
+        padding-right: 30px; }
+        .ct-posts .ct-post.ct-post:last-child {
+          margin-right: 0; }
+        .ct-posts .ct-post.ct-post .img-holder {
+          height: 300px; } }
+    @media screen and (min-width: 1200px) {
+      .ct-posts .ct-post.ct-post {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 33.33333%;
+        padding-right: 30px; }
+        .ct-posts .ct-post.ct-post:last-child {
+          margin-right: 0; }
+      .ct-posts .ct-post.ct-post-large {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 66.66667%; }
+        .ct-posts .ct-post.ct-post-large:last-child {
+          margin-right: 0; }
+      .ct-posts .ct-post.ct-post-full {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 100%; }
+        .ct-posts .ct-post.ct-post-full:last-child {
+          margin-right: 0; } }
     .ct-posts .ct-post .img-holder {
       display: block;
       overflow: hidden;
@@ -214,10 +272,6 @@ body {
         color: #666;
         font-size: 14px;
         text-align: right; }
-    .ct-posts .ct-post.ct-post-full .img-holder {
-      height: 300px; }
-    .ct-posts .ct-post.ct-post-full .title h2 {
-      min-height: 30px; }
 
 .ct-site-photo {
   margin-bottom: 15px; }
@@ -240,8 +294,8 @@ body {
   margin-right: 5px;
   text-decoration: none;
   border: 0px;
-  width: 58px;
-  height: 58px;
+  width: 50px;
+  height: 50px;
   display: block;
   background-size: contain;
   background-repeat: no-repeat;
@@ -265,6 +319,8 @@ body {
     background-image: url("/img/soundcloud-128.png"); }
   .social.social-mixcloud {
     background-image: url("/img/mixcloud-128.png"); }
+  .social.social-stackoverflow {
+    background-image: url("/img/so-128.png"); }
   .social img.icon {
     width: 50px;
     background-color: #444;
@@ -292,9 +348,6 @@ body {
 .ct-about-me a {
   text-decoration: none;
   color: #5fb75d; }
-
-.ct-post {
-  padding-right: 30px !important; }
 
 .ct-post-content {
   background-color: #fff;
