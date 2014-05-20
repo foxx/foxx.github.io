@@ -194,7 +194,7 @@ body {
       min-width: 100%;
       height: 250px; }
     .ct-posts .ct-post.ct-post-full .img-holder {
-      height: 300px; }
+      height: 250px; }
     @media screen and (min-width: 0px) {
       .ct-posts .ct-post.ct-post {
         float: left;
@@ -205,7 +205,7 @@ body {
         .ct-posts .ct-post.ct-post:last-child {
           margin-right: 0; }
         .ct-posts .ct-post.ct-post .img-holder {
-          height: 300px; } }
+          height: 250px; } }
     @media screen and (min-width: 768px) {
       .ct-posts .ct-post.ct-post {
         float: left;
@@ -216,7 +216,7 @@ body {
         .ct-posts .ct-post.ct-post:last-child {
           margin-right: 0; }
         .ct-posts .ct-post.ct-post .img-holder {
-          height: 300px; } }
+          height: 250px; } }
     @media screen and (min-width: 1200px) {
       .ct-posts .ct-post.ct-post {
         float: left;
