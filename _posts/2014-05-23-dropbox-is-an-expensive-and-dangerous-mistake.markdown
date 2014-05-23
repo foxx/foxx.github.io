@@ -10,9 +10,15 @@ weight: 19
 
 Our requirements were quite simple, we wanted a cloud storage system that could store sensitive files, such as tax returns, accountancy and personal family albums.
 
-### BoxCryptor is not safe
+
+### DropBox is fundementally unsafe
+
 
 DropBox is an established brand with multiple device support and good pricing. However they have suffered with multiple security problems over the years, such as making [passwords optional (?!)](http://techcrunch.com/2011/06/20/dropbox-security-bug-made-passwords-optional-for-four-hours/) and [others](https://www.google.co.uk/search?q=dropbox+password+hack).
+
+The concept of storing unencrypted data in the cloud is not just a potentially expensive mistake, it's also a dangerous one that is changing our perception of privacy. You shouldn't need to give up security for the sake of durability or accessibility.
+
+### BoxCryptor is not safe
 
 Although [BoxCryptor](https://www.boxcryptor.com/) offers client side encryption for the big cloud providers, their client application is extremely buggy (at least on Windows 7) if you're dealing with more than a few hundred files. Not only was it slow, we also suffered with [file corruption](https://www.google.co.uk/search?q=boxcryptor+file+corruption) which caused the entire contents of the file to be replaced with null bytes. The mounted drive would also show files/folders as randomly missing, later returning if logout and login.
 
@@ -22,10 +28,6 @@ The plan was to use [TrueCrypt inside DropBox](http://www.cloudwards.net/the-ult
 
 This approach also requires you to classify files as either sensitive or unsensitive, requiring each file to be reviewed and still susceptable to human error. For example, nudity accidently slipping through the net in your photo albums imported from a camera. Or forgetting to remove a file permently after it was accidently uploaded.
 
-
-### DropBox is fundementally unsafe
-
-The concept of storing unencrypted data in the cloud is not just a potentially expensive mistake, it's also a dangerous one that is changing our perception of privacy. You shouldn't need to give up security for the sake of durability or accessibility.
 
 ### Client side encryption should be standard
 
