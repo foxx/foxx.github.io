@@ -10,255 +10,132 @@ weight: 18
 
 Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow. (in no particular order)
 
-### BugSnag
+### Windows Development
 
-[http://www.bugsnag.com/](http://www.bugsnag.com/)
+[SandBoxie](http://www.sandboxie.com/) - Sandbox-based isolation that works suprisingly well
 
-An awesome hosted error collection service with integration libraries for many languages and frameworks. This is a serious competitor for GetSentry, and would highly recommend checking them out.
+[Sublime Text 2](http://www.sublimetext.com/2) - Super fast and super awesome text editor for programmers
 
-### Sandboxie
+[RegexBuddy](http://www.regexbuddy.com/) - Regex testing application for Windows
 
-[http://www.sandboxie.com/](http://www.sandboxie.com/)
+[SourceTree](http://www.sourcetreeapp.com/) - Although still lacking, it's still a neat GIT client
 
-Although it doesn't give the same protections of a full hypervisor, Sandboxie helps prevent every day nasties from doing too much damage. It also runs suprisingly seemlessly with little to no conflict, and lets you do things like allowing Chrome bookmarks to persist, but everything else to be sandboxed. Plugins can run inside or outside the sandbox, such as download managers. Quite a neat little tool, not just for security, but for OS hygiene too!
+[MongoVue](http://www.mongovue.com/) - Tool for MongoDB management
 
-### Sublime Text 2 with SpaceFunk/FutureFunk
+[Navicat](http://www.navicat.com/) - Defacto Windows GUI for MySQL management (and others)
 
-[http://www.sublimetext.com/2](http://www.sublimetext.com/2)
+[VMWare Workstation](http://www.vmware.com/uk/products/workstation) - Virtual machine hypervisor, much better than [VirtualBox](https://www.virtualbox.org/) in my opinion.
 
-This text editor changed my life, seriously. And it looks beautiful with [SpaceFunk Grey Tuesday](https://github.com/Twiebie/ST-Spacefunk) theme and [Future Funk](https://github.com/Twiebie/ST-FutureFunk) color scheme.
+[KeePass](http://keepass.info/) - Secure password management for those that care about security
 
-### uWSGI
 
-[http://uwsgi-docs.readthedocs.org/en/latest/](http://uwsgi-docs.readthedocs.org/en/latest/)
+### Sublime addons
 
-Application server that works with Python and a multitude of other languages. Roberto really has done a fantastic job with this software.
+[SpaceFunk Grey Tuesday](https://github.com/Twiebie/ST-Spacefunk) - Beautifully clean UI theme
 
-### virtualenvwrapper
+[Future Funk](https://github.com/Twiebie/ST-FutureFunk) - Awesome color theme
 
-[http://virtualenvwrapper.readthedocs.org/en/latest/](http://virtualenvwrapper.readthedocs.org/en/latest/)
+### Devops
 
-Handy tools for managing your python virtualenv's, makes life a lot easier.
+[Sentry](https://getsentry.com/) - Hosted and self hosted error collection service
 
-### NodeENV
+[BugSnag](http://www.bugsnag.com/) - Hosted error collection service, similar to Sentry
 
-[https://github.com/ekalinin/nodeenv](https://github.com/ekalinin/nodeenv)
+[New Relic](http://newrelic.com/application-monitoring) - Absolute must for application performance monitoring
 
-Virtual environments for Node JS which work alongside virtualenvwrapper
+[Trello](http://trello.com) - Simple card based task management, without the fuss
 
-### New Relic APM
+[GitHub](https://github.com) - Every programmer should use this
 
-[http://newrelic.com/](http://newrelic.com/application-monitoring)
+[PagerDuty](https://www.pagerduty.com/) - Trigger cellular alarms from almost anything
 
-Code level application monitoring for web applications. This is an invaluable tool for getting insight and profiling into applications running in production.
+[Zapier](https://zapier.com/) - Provides cross integration for hundreds of cloud services
 
-### SASS
+[HipChat](https://www.hipchat.com/) - Cloud based chat system, but not as good as it once was.
 
-[http://sass-lang.com/guide](http://sass-lang.com/guide)
+[Travis CI](https://travis-ci.org/) - Awesome continous integration service
 
-SASS makes writing CSS fun! Stop writing CSS by hand, seriously.
+[MariaDB](http://vimeo.com/56639635) - Haven't used it yet, but would really like to
 
-### Bourbon Neat
+[Salt Stack](http://www.saltstack.com/) - Great alternative to Chef/Puppet.
 
-[http://neat.bourbon.io/](http://neat.bourbon.io/)
+[CloudFlare](http://www.cloudflare.com/) - Global CDN with advanced DDoS protection and SSL as standard, free for most users
 
-Looking for a bit more control over your CSS structure and styling? Put down [Bootstrap](http://getbootstrap.com/css/), and give Neat a try!
+### Database
 
-### Get Sentry
+[Percona](http://www.percona.com/) - Percona is a must have for anyone not already on MariaDB
 
-[https://getsentry.com/](https://getsentry.com/)
+[Percona Toolkit](http://www.percona.com/software/percona-toolkit) - Scary DBA tools for Percona, each with their own danger rating
 
-Need an easy way to collect errors from your production deployment? Sentry offers both hosted and non-hosted application logging for many different frameworks and languages. It's better than New Relic's error collector.
+[Redis](http://redis.io/) - Multi purpose key-value store with pub/sub support, can be used for almost anything!
 
-### Trello
+[MongoDB](http://www.mongodb.org/) - Things got a lot better since 2.x
 
-[http://trello.com](http://trello.com)
+### Programming
 
-Tired of using complex ticketing systems for your projects? Fed up with the usability overhead of JIRA etc? Trello is a great card based alternative for managing your tasks, and comes with full markdown support.
+[uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/) - Mature web application server which supports multiple languages
 
-### Github
+[virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/) - Helper scripts for managing virtual python environments
 
-[https://github.com](https://github.com)
+[NodeENV](https://github.com/ekalinin/nodeenv) - Helper scripts for managing virtual node environments
 
-Github allows for better collaboration, code review, and code management for open source and private projects. This service has really made a difference to the world of open source.
+[Runscope Inspector](https://www.runscope.com/docs/inspector) - Remote API capture and inspection, really useful
 
-### Runscope Traffic Inspector
+### Front end
 
-[https://www.runscope.com/docs/inspector](https://www.runscope.com/docs/inspector)
+[SASS](http://sass-lang.com/guide) - Syntactically beautiful abstraction for CSS
 
-Capture and inspect your API requests easily and efficiently, this tool has saved my ass a few times!
+[Bourbon Neat](http://neat.bourbon.io/) - Super minimal SCSS for responsive structure
 
-### PagerDuty
+[Bootstrap](http://getbootstrap.com/css/) - Although not as powerful as Bourbon Neat, worth a mention
 
-[https://www.pagerduty.com/](https://www.pagerduty.com/)
 
-Receives alarms from almost any source, and sends you a text or a phone call with the alarm details.
+### Others
 
-### Zapier
+[Stripe](https://stripe.com/) - Credit card processing for low risk merchants, very awesome
 
-[https://zapier.com/](https://zapier.com/)
+[Zencoder](http://zencoder.com/) - Hosted video encoding services, never had a single problem
 
-Connects APIs from 100s of cloud services, and allows you to create triggers between them. For example, if New Relic sends an event, you can trigger a message on Hipchat. This is great for integrating services that don't have direct integration available.
+[Jekyll](http://jekyllrb.com/) - Great alternative to [Wordpress](http://wordpress.com/) when used in combination with [Github Pages](https://pages.github.com/) and [Gist](https://gist.github.com/).
 
-### Hipchat
+[AS3 Promises](https://github.com/CodeCatalyst/promise-as3/) - Deferred implementation for AS3. 
 
-[https://www.hipchat.com/](https://www.hipchat.com/)
+### Inspiration
 
-HipChat is a nice corporate chat application with some cool features such as media previewing in the desktop application. However it's slowly getting worse, and would strongly consider moving back to IRC.
+[Salvatore (antirez)](http://antirez.com/latest/0) - For his contributions to Redis, thank you.
 
-### Travis CI 
+### Things to avoid
 
-[https://travis-ci.org/](https://travis-ci.org/)
+[RabbitMQ](https://www.rabbitmq.com/) - This dead rabbit keeps haunting us
 
-Hosted CI (Continuous Integration) service for automated testing of your projects.
+[Puppet](http://puppetlabs.com/) / [Chef](https://wiki.opscode.com/display/chef/Home) - Outdated and overly complex bloatware, try [Salt]((http://www.saltstack.com/)) instead.
 
-### Stripe
+### Python libraries
 
-[https://stripe.com/](https://stripe.com/)
+[django-pipeline](https://github.com/cyberdelia/django-pipeline) - Asset pipeline for Django
 
-If you have a business model that requires low risk payments, then Stripe is the one for you. Start accepting credit card payments for minimal fees and without PCI DSS (thanks to their brilliant Stripe JS library).
+[python-requests](http://docs.python-requests.org/en/latest/) - Beautiful and simple library for performing HTTP requests
 
-### Percona MySQL
+[django-devserver](https://github.com/dcramer/django-devserver) - Drop in replacement for Django's built-in runserver command.
 
-[http://www.percona.com/](http://www.percona.com/)
+[Eventlet](http://eventlet.net/) - Green threading library for Python
 
-Percona are dragging MySQL by its feet, kicking and screaming, into the 21st century (quoted from a colleague). Although the future of MySQL is looking bleak, Percona is a must for anyone that hasn't switched to [MariaDB](http://vimeo.com/56639635) yet.
+[pyquery](https://pypi.python.org/pypi/pyquery) - jQuery style HTML/XML scraping, much nicer than [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 
-Also have a look at the [PTK (Percona Toolkit)](http://www.percona.com/software/percona-toolkit), some scary but very handy DBA tools.
+### Learning tools
 
-### Redis
+[99U](http://99u.com/) - Weekly newsletter with interesting topics
 
-[http://redis.io/](http://redis.io/)
+[Khan Academy](https://www.khanacademy.org/cs) - Lots of quality learning material, free for anyone
 
-Redis is an advanced, multi-purpose key-value store. It even has pub/sub support, and is a great alternative to [dead rabbit](https://www.rabbitmq.com/). Redis stays fresh and alive thanks to the amazing work from [Salvatore (antirez)](http://antirez.com/latest/0).
+[TED](https://www.ted.com/) -  Collection of insightful and inspiring talks from the worlds brightest
 
-### Salt Stack
+### Design principles
 
-[http://www.saltstack.com/](http://www.saltstack.com/)
+[HATEOAS](http://stackoverflow.com/questions/20335967) - Must have for clean API services
 
-Lets face it, Chef and Puppet really suck. Salt is a great alternative for those who want hassle free devops automation.
+[Deferred](http://en.wikipedia.org/wiki/Futures_and_promises) - Allows you to write beautiful asyncronous code cleanly, see [Chris Webb](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt2-practical-use) and [JQuery Deferred](http://api.jquery.com/category/deferred-object/).
 
-### Zencoder
+### Books
 
-[http://zencoder.com/](http://zencoder.com/)
-
-Cloud service for video rendering, clean documentation and almost faultless service. It's a bit pricey but still beats doing it yourself.
-
-### django-pipeline
-
-[https://github.com/cyberdelia/django-pipeline](https://github.com/cyberdelia/django-pipeline)
-
-Asset pipeline for Django, compiles CSS/SASS/JS etc.
-
-### python-requests
-
-[http://docs.python-requests.org/en/latest/](http://docs.python-requests.org/en/latest/)
-
-Beautiful and simple library for performing HTTP requests. If you're still using `urllib`, take a look at [this comparison](https://gist.github.com/kennethreitz/973705).
-
-### django-devserver
-
-[https://github.com/dcramer/django-devserver](https://github.com/dcramer/django-devserver)
-
-Drop in replacement for Django's built-in runserver command.
-
-### eventlet
-
-[http://eventlet.net/](http://eventlet.net/)
-
-Green threading library for Python
-
-### PYQuery
-
-[https://pypi.python.org/pypi/pyquery](https://pypi.python.org/pypi/pyquery)
-
-jQuery style HTML/XML scraping, much nicer than BeautifulSoup
-
-### Boxcryptor
-
-[https://www.boxcryptor.com/](https://www.boxcryptor.com/)
-
-If you're a cloud storage user with any of the big names (Dropbox etc), you really should check this out. Boxcryptor offers architecturally secure cloud encryption for an extra layer of security. Nothing is ever safe, but this is another great deterrent for pretending data theft.
-
-### RegexBuddy
-
-[http://www.regexbuddy.com/](http://www.regexbuddy.com/)
-
-Handy desktop application (Windows only) for testing regex (regular expressions) with zero fuss.
-
-### SourceTree
-
-[http://www.sourcetreeapp.com/](http://www.sourcetreeapp.com/)
-
-Although lacking in some areas, SourceTree is a neat GUI for managing your GIT repo.
-
-### MongoVUE
-
-[http://www.mongovue.com/](http://www.mongovue.com/)
-
-Desktop application (windows only) for MongoDB managemnet
-
-### Navicat
-
-[http://www.navicat.com/](http://www.navicat.com/)
-
-GUI administration and development application for [MySQL](http://www.percona.com/software/percona-server), (MariaDB)[https://mariadb.org/] and several others.
-
-### VMware Workstation
-
-[http://www.vmware.com/uk/products/workstation](http://www.vmware.com/uk/products/workstation)
-
-Are you still running your code on your local host machine? Stop that! Workstation might be a bit expensive, but it beats [VirtualBox](https://www.virtualbox.org/) hands down.
-
-### KeePass
-
-[http://keepass.info/](http://keepass.info/)
-
-Password management tool for almost every platform. Not perfect if you're looking for complete integration, but it suits my needs perfectly.
-
-### 99U
-
-[http://99u.com/](http://99u.com/)
-
-One of the less spammy newsletters out there, with a weekly update of interesting topics.
-
-### Khan Academy
-
-[https://www.khanacademy.org/cs](https://www.khanacademy.org/cs)
-
-Absolutely insane amount of quality learning material available completely free for anyone.
-
-### TED
-
-[https://www.ted.com/](https://www.ted.com/)
-
-TED offers a collection of insightful and inspiring talks from some of the worlds brightest people.
-
-### Jekyll and Github Pages
-
-[http://jekyllrb.com/](http://jekyllrb.com/)
-
-This entire blog is written using Jekyll and Github pages. Combined with CloudFlare, you get a fast blog with no dynamic code attack vectors (such as wordpress exploits etc), as well as [MarkDown](http://daringfireball.net/projects/markdown/) support as standard, and [Gist](https://gist.github.com/) for syntax highlighting. If you're still using wordpress for your blog, STOP THAT.
-
-### CloudFlare
-
-[http://www.cloudflare.com/](http://www.cloudflare.com/)
-
-Provides global CDN services with things such as SSL and DDoS protection as standard. Their free plan covers pretty much 95% of use cases, and their pro plans are very competitive. If you want great performance, as well as DDoS and bot protection, check these guys out.
-
-### HATEOAS
-
-Are you designing an API? You should really keep HATEOAS principle in mind.
-
-* [http://spring.io/understanding/HATEOAS](http://spring.io/understanding/HATEOAS)
-* [http://en.wikipedia.org/wiki/HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)
-* [http://www.slideshare.net/trilancer/why-hateoas-1547275](http://www.slideshare.net/trilancer/why-hateoas-1547275)
-* [http://www.slideshare.net/XEmacs/representational-state-transfer-rest-and-hateoas](http://www.slideshare.net/XEmacs/representational-state-transfer-rest-and-hateoas)
-* [http://stackoverflow.com/questions/20335967](http://stackoverflow.com/questions/20335967)
-* [http://programmers.stackexchange.com/questions/235872](http://programmers.stackexchange.com/questions/235872)
-
-### Deferred and promises
-
-Deferred [constructs](http://en.wikipedia.org/wiki/Futures_and_promises) are a beautiful design approach for concurrent programming.
-
-There are several language specific implementations of promises and deferred, such as [AS3 Promises](https://github.com/CodeCatalyst/promise-as3/) and [JQuery Deferred](http://api.jquery.com/category/deferred-object/). There's also a great article by [Chris Webb](http://blog.mediumequalsmessage.com/promise-deferred-objects-in-javascript-pt2-practical-use).
+[The Clean Coder](http://www.amazon.co.uk/The-Clean-Coder-Professional-Programmers/dp/0137081073) - Although questionable, this book was a life changer for me
