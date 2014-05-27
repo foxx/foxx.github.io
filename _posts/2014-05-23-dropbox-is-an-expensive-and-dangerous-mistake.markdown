@@ -35,13 +35,17 @@ This approach also requires you to classify files as either sensitive or unsensi
 
 For cloud storage to be secure, you need [client side encryption](http://wuala.com/en/learn/technology). In simple terms, this encrypts your data before transit, and ensures that files cannot be decrypted without the key. However, this introduces a whole new problem called [key management](https://spideroak.com/privacypost/cloud-security/secure-encryption-key-management-in-the-cloud/).
 
-There are a few providers which offer this service, and even some in-depth comparisons by [lifehacker](http://lifehacker.com/the-best-cloud-storage-services-that-protect-your-priva-729639300).
+### Alternatives
+
+There are a few providers which offer client side encryption, and even some in-depth comparisons by [lifehacker](http://lifehacker.com/the-best-cloud-storage-services-that-protect-your-priva-729639300).
+
+I'm going to review these providers over the next few weeks, and will do a follow up post.
 
 Here are the three that stand out the most;
 
 * [tresorit.com](https://tresorit.com/)
 
-  This has been in private beta since [2011](http://en.wikipedia.org/wiki/Tresorit), and was released to general public in April 2014. The lack of maturity does scare me a little bit, and their client is not open sourced, so it's unclear if the encryption is flawed. However they plan on releasing this code in the near future (confirmed via telephone, no article found). Their data is physically stored in the EU. They also don't support two factor yet.
+  Released to generic public in April 2014, after emerging from a private beta since [2011](http://en.wikipedia.org/wiki/Tresorit). Lack of product maturity, no two factor authentication and no client source code does scare me a little, however they're planning on releasing the code soon. Data is physically stored in the EU.
 
 * [spideroak.com](https://spideroak.com/)
 
@@ -50,5 +54,3 @@ Here are the three that stand out the most;
 * [wuala.com](http://wuala.com/)
 
   Been around since [2008](http://en.wikipedia.org/wiki/Wuala), good maturity but again their client is not open source.
-
-I'm going to review these providers over the next few weeks, and do a seperate post about them.
