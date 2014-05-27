@@ -20,3 +20,8 @@ Perhaps a better use of our time would be contributing to open source projects, 
 
 <script src="https://gist.github.com/foxx/e55897f4c45081f06c06.js"></script>
 
+
+### SSH auth log scanner
+
+<script src="https://gist.github.com/foxx/120cfe6dab28516e73e0.js"></script>
+
