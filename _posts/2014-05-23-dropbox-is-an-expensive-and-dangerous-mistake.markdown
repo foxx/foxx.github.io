@@ -10,6 +10,8 @@ keywords: dropbox, boxcryptor, truecrypt, tresorit, spideroak, security, encrypt
 desc: In depth explanation about why you should not use DropBox
 ---
 
+### Thinking of using DropBox? Think again.
+
 Our requirements were quite simple, we wanted a cloud storage system that could store sensitive files, such as tax returns, accountancy and personal family albums. 
 
 
@@ -35,22 +37,30 @@ This approach also requires you to classify files as either sensitive or unsensi
 
 For cloud storage to be secure, you need [client side encryption](http://wuala.com/en/learn/technology). In simple terms, this encrypts your data before transit, and ensures that files cannot be decrypted without the key. However, this introduces a whole new problem called [key management](https://spideroak.com/privacypost/cloud-security/secure-encryption-key-management-in-the-cloud/).
 
-### Alternatives
+There are a few providers which offer client side encryption, and some in-depth comparisons in an article by [lifehacker](http://lifehacker.com/the-best-cloud-storage-services-that-protect-your-priva-729639300). I'll be reviewing these providers over the next few weeks and will do a follow up post.
 
-There are a few providers which offer client side encryption, and even some in-depth comparisons by [lifehacker](http://lifehacker.com/the-best-cloud-storage-services-that-protect-your-priva-729639300).
+Right now my money is on Tresorit, but we'll see how the testing goes :)
 
-I'm going to review these providers over the next few weeks, and will do a follow up post.
+&nbsp;
 
-Here are the three that stand out the most;
+# Alternatives?
 
-* [tresorit.com](https://tresorit.com/)
+#### Tresorit
 
-  Released to generic public in April 2014, after emerging from a private beta since [2011](http://en.wikipedia.org/wiki/Tresorit). Lack of product maturity, no two factor authentication and no client source code does scare me a little, however they're planning on releasing the code soon. Data is physically stored in the EU.
+[tresorit.com](https://tresorit.com/)
 
-* [spideroak.com](https://spideroak.com/)
+Released to generic public in April 2014, after emerging from a private beta since [2011](http://en.wikipedia.org/wiki/Tresorit). Lack of product maturity, no two factor authentication and no client source code does scare me a little, however they're planning on releasing the code soon. Data is physically stored in the EU.
 
-  These guys have been around since [2007](http://en.wikipedia.org/wiki/SpiderOak), and seem to have a decent level of maturity. Sadly their client is not open source either, but they plan to do so in the [near future](https://spideroak.com/faq/questions/35/why_isnt_spideroak_open_source_yet_when_will_it_be/).
+They also did a great article about why their product is [secure](https://tresorit.com/blog/did-nsa-hacked-tresorit-encryption-by-hacking-ssl/).
 
-* [wuala.com](http://wuala.com/)
+#### SpiderOak
 
-  Been around since [2008](http://en.wikipedia.org/wiki/Wuala), good maturity but again their client is not open source.
+[spideroak.com](https://spideroak.com/)
+
+These guys have been around since [2007](http://en.wikipedia.org/wiki/SpiderOak), and seem to have a decent level of maturity. Sadly their client is not open source either, but they plan to do so in the [near future](https://spideroak.com/faq/questions/35/why_isnt_spideroak_open_source_yet_when_will_it_be/).
+
+#### Wuala
+
+[wuala.com](http://wuala.com/)
+
+Been around since [2008](http://en.wikipedia.org/wiki/Wuala), good maturity but again their client is not open source.
