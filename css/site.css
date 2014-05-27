@@ -266,12 +266,13 @@ body {
         line-height: 22px;
         margin-bottom: 5px;
         min-height: 80px; }
-      .ct-posts .ct-post .title h3 {
+      .ct-posts .ct-post .title span.date {
         font-family: "Roboto";
         font-weight: 300;
         color: #666;
         font-size: 14px;
-        text-align: right; }
+        text-align: right;
+        display: block; }
 
 .ct-site-photo {
   margin-bottom: 15px; }
@@ -326,13 +327,13 @@ body {
     background-color: #444;
     margin-bottom: 3px; }
 
-.ct-content-right h2 {
+.ct-content-right h1 {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 30px;
   color: #d9d9d9;
   margin-bottom: 5px; }
-.ct-content-right h3 {
+.ct-content-right h2 {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 20px;
@@ -376,12 +377,13 @@ body {
     font-weight: 300;
     color: #525252;
     margin-bottom: 15px; }
-  .ct-post-content h2 {
+  .ct-post-content span.date {
     font-family: "Lato";
     font-size: 16px;
     font-weight: 300;
     color: #525252;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    display: block; }
   .ct-post-content h3 {
     font-family: "Roboto";
     font-size: 20px;

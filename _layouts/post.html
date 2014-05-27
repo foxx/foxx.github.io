@@ -10,9 +10,9 @@ layout: layout
       <div class="img-holder">
         <img src="{{ page.coverimage }}" />
       </div>
-      <div class="page-title">
+      <h2 class="page-title">
         {{ page.title }}
-      </div>
+      </h2>
 
     </div>
   {% elsif page.type == 'large' %}
@@ -21,26 +21,30 @@ layout: layout
         <img src="{{ page.coverimage }}" />
       </div>
 
-      <div class="page-title">
+      <h2 class="page-title">
         {{ page.title }}
-      </div>
+      </h2>
     </div>
   {% else %}
     <div class="ct-post-header ct-post-header-small">
       <div class="img-holder">
         <img src="{{ page.coverimage }}" />
       </div>
-      <div class="page-title">
+      <h2 class="page-title">
         {{ page.title }}
-      </div>
+      </h2>
     </div>
   {% endif %}
 
   <div class="ct-post-content">
 
-    <h2>
+    <span class="date">
       {{ page.date | date_to_string }} by Cal Leeming
-    </h2>
+    </span>
+
+    <div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="sleepycal">Tweet</a>
+    </div>
 
     <div>
       {{ content }}
@@ -75,3 +79,4 @@ layout: layout
 </div>
 
 
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

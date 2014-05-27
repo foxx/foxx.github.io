@@ -6,6 +6,8 @@ categories: general
 coverimage: /img/covers/skills.jpg
 type: small
 weight: 18
+keywords: cisco, cisco 7940, 7940, sip, alg, nat, sip alg, tp-link, virgin media, ntl, nat traversal
+desc: SIP ALG and NAT traversal problems on Cisco 7940
 ---
 
 

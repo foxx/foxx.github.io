@@ -6,6 +6,8 @@ categories: general
 coverimage: /img/covers/strut-channel-monitor-stand.jpg
 type: full
 weight: 7
+keywords: strut channel, monitor stand, strut, self build, stand
+desc: Building your own 3 screen monitor stand
 ---
 
 After seeing the [TechRadar article](http://www.techradar.com/news/computing-components/peripherals/build-a-triple-screen-stand-for-25-1090082) on building a cheap strut channel monitor, and an [imgur thread][3] of someone doing this, I decided to have a shot at this myself. By the end of it, my <b>house was a fucking disaster zone</b>. Metal shards in the carpet, saw dust all up the stairs.. luckily my family helped tidy everything up, so I didn't end up spending my entire Sunday cleaning up mess!

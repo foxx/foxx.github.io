@@ -1,25 +1,23 @@
 ---
 layout: layout
-title: Cal Leeming Blog
+title: Programming and Devops
 position: 1
+keywords: Python,Devops,Programming,Security,Reverse Engineering
+desc: Collection of articles by Cal Leeming, focusing on Programming, Security, Reverse Engineering, Python and Devops.
 ---
 
 <div class="ct-content-left">
     <div class="ct-posts">
 {% for weight in (1..99) reversed %}{% for post in site.posts %}{% if post.weight == weight %}
   <div class="ct-post ct-post-{{ post.type }}">
-    <a class="inner" href="{{ post.url }}">
+    <a class="inner" href="{{ post.url }}" title="{{ post.title }}">
       <div class="img-holder">
-        <img style="background-image:url('{{ post.coverimage }}'); 
-        {% if post.background_position %}
-          background-position: {{ post.background_position }};
-        {% endif %}
-        " />
+        <img alt="{{ post.title }}" style="background-image:url('{{ post.coverimage }}'); {% if post.background_position %}background-position: {{ post.background_position }};{% endif %}" />
       </div>
 
       <div class="title">
         <h2>{{ post.title }} {{post.position}}</h2>
-        <h3>{{ post.date | date_to_string }}</h3>
+        <span class="date">{{ post.date | date_to_string }}</span>
       </div>
     </a>
   </div>

@@ -5,6 +5,8 @@ date:   2013-12-12 00:00:01
 categories: general
 coverimage: /img/covers/rage.png
 weight: 11
+keywords: fonts, debian, font, pretty, ubuntu
+desc: Pretty fonts do not work in Debian
 ---
 
 Just spent 4 hours trying to get pretty fonts working in Debian, so they look like they do in Ubuntu. After reading through endless threads/discussions, and wasting 4 hours with font config, it turns out that Ubuntu have patched a few libraries (at least libcario, libxlt) to make their font rendering look pretty, patches which sadly are not included in Debian at this stage.

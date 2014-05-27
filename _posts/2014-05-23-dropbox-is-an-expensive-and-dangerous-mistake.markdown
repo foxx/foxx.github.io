@@ -6,9 +6,11 @@ categories: general
 coverimage: /img/covers/nope1.jpg
 type: small
 weight: 19
+keywords: dropbox, boxcryptor, truecrypt, tresorit, spideroak, security, encryption
+desc: In depth explanation about why you should not use DropBox
 ---
 
-Our requirements were quite simple, we wanted a cloud storage system that could store sensitive files, such as tax returns, accountancy and personal family albums.
+Our requirements were quite simple, we wanted a cloud storage system that could store sensitive files, such as tax returns, accountancy and personal family albums. 
 
 
 ### DropBox is fundementally unsafe

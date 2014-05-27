@@ -5,6 +5,8 @@ date:   2013-02-03 00:00:00
 categories: general
 coverimage: /img/covers/reproducing-dice-roll.png
 weight: 15
+keywords: dice roll, python, 27c3, cognitive psychology, hackers
+desc: Reproducing dice roll from 27C3 talk about Cognitive Psychology for Hackers
 ---
 
 

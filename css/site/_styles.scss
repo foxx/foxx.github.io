@@ -160,12 +160,13 @@ body {
         min-height:80px;
       }
 
-      h3 {
+      span.date {
         font-family:"Roboto";
         font-weight:300;
         color:#666;
         font-size:14px;
         text-align:right;
+        display:block;
       }
     }
   }
@@ -244,7 +245,7 @@ body {
 
 
 .ct-content-right {
-  h2 {
+  h1 {
     font-family:"Roboto";
     font-weight:300;
     font-size:30px;
@@ -252,7 +253,7 @@ body {
     margin-bottom:5px;
   }
 
-  h3 {
+  h2 {
     font-family:"Roboto";
     font-weight:300;
     font-size:20px;
@@ -317,12 +318,13 @@ body {
   }
 
 
-  h2 {
+  span.date {
     font-family:"Lato";
     font-size:16px;
     font-weight:300;
     color:#525252;
     margin-bottom:15px;
+    display:block;
   }
 
   h3 {

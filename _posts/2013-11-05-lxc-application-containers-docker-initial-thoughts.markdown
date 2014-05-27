@@ -5,6 +5,8 @@ date:   2013-11-05 00:00:00
 categories: general
 coverimage: /img/covers/sun-disappoint-pony.jpg
 weight: 16
+keywords: docker, docker.io, lxc, aufs, containers, ubuntu
+desc: Docker is not the right answer
 ---
 
 I have been using LXCs since early 2009 and have long argued this application containers should be adopted. Separating application run time is critical not just for security, but for sanity as well. Under most conditions, excluding any event which results in host contamination, for example kernel exploits, you can assume the host machine will still be clean even after running a guest container. 

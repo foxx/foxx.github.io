@@ -6,6 +6,8 @@ categories: general
 coverimage: /img/covers/access_virus_ti_03.jpg
 type: large
 weight: 17
+keywords: access virus ti, access virus, reverse engineering, firmware, cutting, python, idapro, ida pro
+desc: Reverse engineering and cutting the Access Virus TI firmware using Python and IDA Pro
 ---
 
 After several times of looking around on eBay for an Access Virus TI, and each time deciding that I didn't really have £800 to blow on a unit, I went in search of a firmware emulator. This drew a blank, so I decided to have a shot at poking into the firmware. I'd done this a few times before (mostly with phones and routers), but never with this. I didn't have an actual unit to look inside, so first I had to find some pictures and/or a hardware spec. 
@@ -30,7 +32,7 @@ Luckily for me this work had already been done by the guys over at midibox:
 * Very heavy aluminum end caps (at least it feels solid),  
 * the front wooden bar is mdf with wooden vineer, lime ?  
 * A 'trailing blob' psu -inside- the case,  
-* a really dodgy looking power cap.. that looked ready to explode. </li>  
+* a really dodgy looking power cap.. that looked ready to explode.
 {% endhighlight %}
 
 I had some difficulty finding an exact match for "dspb56367ac150", but we did find a DSP56367, which is part of the Motorola DSP 563xx Freescale family (24-bit @ 150mhz). Here is a link to the specification of this chip www.freescale.com/files/dsp/doc/data_sheet/DSP56367.pdf 

@@ -5,6 +5,8 @@ date:   2012-12-04 00:00:00
 categories: general
 coverimage: /img/covers/piccard1.jpg
 weight: 5
+keywords: collision, random, python, repr, str, cast
+desc: Generating random number collisions in Python due to bad casting
 ---
 
 

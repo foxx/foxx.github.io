@@ -5,6 +5,8 @@ date:   2014-01-01 00:00:01
 categories: general
 coverimage: /img/covers/boxcat.jpg
 weight: 18
+keywords: elf, embedding, embedded, embed
+desc: Embedding data inside ELF binaries
 ---
 
 There are several ways to embed data into ELF binaries, but none were suitable for my needs. So I created [elfdataembed](https://github.com/foxx/elfdataembed), a small library that embeds files into 32/64bit ELF sections, and provides a simple C interface for the runtime to [extract them](http://stackoverflow.com/questions/2900936/packing-a-file-into-an-elf-executable).

@@ -6,6 +6,8 @@ categories: general
 coverimage: /img/covers/billion-row-db.png
 weight: 17
 type: small
+keywords: mysql, percona, innodb, billions, ec2, ssd
+desc: Scaling to billions of rows using EC2, SSD and Percona MySQL with InnoDB
 ---
 
 So today, we broke our hosting companies record.. 1.1 billion rows in a Percona MySQL InnoDB table! Sounds impressive, but reality soon kicks in when you can't run SELECT() queries against it for fear of saturating our poor SAS disks and locking up the web application. And even harder when you're working against the clock on deadlines. With a total datadir size of around 160GB, 1,159,945,113 rows in a single table and no long term NoSQL plans on the horizon, our immediate options were limited. 
