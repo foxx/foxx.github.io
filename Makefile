@@ -4,4 +4,4 @@ runserver:
 	jekyll serve -w -H 0.0.0.0 -P 8080
 
 scss:
-	sass --watch css/
+	sass --style compressed --watch css/

@@ -4,7 +4,7 @@ title:  1.1 billion row 160GB Percona MySQL DB on EC2 with RAID 1 SSD1
 date:   2012-10-30 00:00:00
 categories: general
 coverimage: /img/covers/billion-row-db.png
-weight: 17
+weight: 16
 type: small
 keywords: mysql, percona, innodb, billions, ec2, ssd
 desc: Scaling to billions of rows using EC2, SSD and Percona MySQL with InnoDB

@@ -450,12 +450,11 @@ body {
       @include span-columns(3.5 of 12);
       display:block;
       overflow:hidden;
-      height:200px;
 
       img {
         display:block;
-        max-height:300px;
-        width:100%;
+        max-height:200px;
+        min-width:100%;
         border:0px;
         color:auto;
       }
