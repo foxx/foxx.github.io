@@ -8,6 +8,10 @@ body {
     background: #444444 url(/img/bg1.png) left top fixed;
 }
 
+.row {
+  @include row();
+}
+
 .ct-posts {
     @include outer-container;
 }
@@ -284,7 +288,7 @@ body {
 
   iframe,video {
     width:100%;
-    height:500px;
+    //height:500px;
   }
 
   img {
@@ -478,6 +482,13 @@ body {
 }
 
 code {
+  margin: 0;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  padding: 2px;
+  //font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  //font-size: 12px;
   //font-family:"Lucida Console";
 }
 

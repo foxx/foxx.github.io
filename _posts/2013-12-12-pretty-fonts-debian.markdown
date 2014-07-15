@@ -4,7 +4,7 @@ title:  Pretty fonts in Debian. Give up now. Seriously.
 date:   2013-12-12 00:00:01
 categories: general
 coverimage: /img/covers/rage.png
-weight: 11
+weight: 16
 keywords: fonts, debian, font, pretty, ubuntu
 desc: Pretty fonts do not work in Debian
 ---
