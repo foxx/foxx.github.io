@@ -1,5 +1,7 @@
 ## foxx.github.io
 
+This code is a complete mess and needs cleaning up badly.
+
 Inspirations;
 
 * http://simnorlabs.com/themeforest/themes/blogtime/
