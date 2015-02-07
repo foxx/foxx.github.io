@@ -9,4 +9,4 @@ sudo apt-get -y install apt-fast
 # install packages
 sudo apt-get update
 sudo apt-fast -y install language-pack-en build-essential git ruby ruby-dev make gcc nodejs
-sudo gem install github-pages --no-ri --no-rdoc
+sudo gem install github-pages jekyll --no-ri --no-rdoc

@@ -5,7 +5,7 @@ date:   2012-10-26 00:00:00
 categories: general
 coverimage: /img/covers/quiet-fan-replacement.jpg
 weight: 16
-type: large
+type: small
 keywords: fan, hack, 3com 2824, switch, ebay, quiet fan, quiet
 desc: How to make your 3com 2824 switch fan quiet
 ---

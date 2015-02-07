@@ -5,7 +5,7 @@ date:   2012-10-26 00:00:00
 categories: general
 coverimage: /img/covers/access_virus_ti_03.jpg
 type: large
-weight: 17
+weight: 15
 keywords: access virus ti, access virus, reverse engineering, firmware, cutting, python, idapro, ida pro
 desc: Reverse engineering and cutting the Access Virus TI firmware using Python and IDA Pro
 ---

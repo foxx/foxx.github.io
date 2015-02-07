@@ -5,7 +5,7 @@ date:   2013-05-28 00:00:00
 categories: general
 coverimage: /img/postcontent/multi-tenant-1.png
 weight: 16
-type: large
+type: small
 keywords: voip, sip, 3cx, 3cxphone, 3cx phone, vmware, windows, multi user, multiuser
 desc: How to properly test multi user SIP platforms
 ---
