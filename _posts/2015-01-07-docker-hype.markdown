@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Lets review.. Docker (aka useless hype)
+title:  Lets review.. Docker (again)
 date:   2015-01-17 00:00:00
 categories: general
 coverimage: /img/covers/pewdiepie1.jpg
@@ -12,16 +12,16 @@ desc: Many reasons why you should stop using Docker
 
 ### Summary
 
-It's been just over a year since my last review of Docker, heavily critisising it's flawed architectural design and poor user experience. The project has since matured into [1.0][1] and gained some [notority][4] from Amazon, but has suffered growing user frustration, [hype][3] critisism and even breakout [exploits][1] leading to host contamination. However the introduction of private repos in [Docker Hub][5], which eliminated the need to run your own registry for hosted deployments, coupled with webhooks and tight Github build [integrations][6], looked to be a promising start.
+It's been just over a year since my last [review][55] of Docker, heavily critisising it's flawed architectural design and poor user experience. The project has since matured into [1.0][1] and gained some [notority][4] from Amazon, but has suffered growing user frustration, [hype][3] critisism and even breakout [exploits][1] leading to host contamination. However the introduction of private repos in [Docker Hub][5], which eliminated the need to run your own registry for hosted deployments, coupled with webhooks and tight Github build [integrations][6], looked to be a promising start.
 
-So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times.
+So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
+
+If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.
 
 
 ### Dockerfile
 
-Dockerfile has numerous problems, it's ugly, restrictive, contradictory and fundementally flawed.
-
-Say you want to build multiple images of a single repo, for example a second image which contains debugging tools, but both using the same base requirements. Docker does not support this (per [#9198][8]), there is no ability to extend a Dockerfile (per [#735][7]), using sub directories will break build context and prevent you using ADD/COPY (per [#2224][9]), as would piping (per [#2112][10]), and you cannot use env vars at build time to conditionally change instructions (per [#2637][11]).
+Dockerfile has numerous problems, it's ugly, restrictive, contradictory and fundementally flawed. Lets say you want to build multiple images of a single repo, for example a second image which contains debugging tools, but both using the same base requirements. Docker does not support this (per [#9198][8]), there is no ability to extend a Dockerfile (per [#735][7]), using sub directories will break build context and prevent you using ADD/COPY (per [#2224][9]), as would piping (per [#2112][10]), and you cannot use env vars at build time to conditionally change instructions (per [#2637][11]).
 
 Our hacky [workaround][53] was to create a base image, two environment specific images and some Makefile automation which involved renaming and sed replacement. There are also some unexpected "[features][54]" which lead to env `$HOME` disappearing, resulting in unhelpful error messages. Absolutely disgusting.
 
@@ -73,6 +73,8 @@ It is already being abused by projects such as [baseimage-docker](https://github
 
 If you're development workflow is sane, then you will already understand that Docker is unnecessary. All of the features which it claims to be helpful are either useless or poorly implemented, and it's primary benefits can be easily achieved using namespaces directly. Docker would have been a cute idea 8 years ago, but it's pretty much useless today.
 
+
+* Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
 
 [1]: http://blog.docker.com/2014/06/docker-container-breakout-proof-of-concept-exploit/
 [2]: http://www.theregister.co.uk/2014/06/09/docker_milestone_release/
@@ -128,3 +130,6 @@ If you're development workflow is sane, then you will already understand that Do
 [52]: https://github.com/phusion/baseimage-docker#fat_containers
 [53]: https://gist.github.com/foxx/0305f9f7ebe65b246c6c
 [54]: https://gist.github.com/foxx/0c4f02de6e3906fa1c98
+[55]: http://iops.io/blog/lxc-application-containers-docker-initial-thoughts/
+[56]: https://www.youtube.com/channel/UCOwxx9VnEnlFKt5EB70KTzQ
+[57]: https://www.youtube.com/watch?v=LWCUMLEbQ00
