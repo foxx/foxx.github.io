@@ -1,6 +1,8 @@
 ## foxx.github.io
 
-This code is a complete mess and needs cleaning up badly.
+This code is a fucking mess and needs cleaning up badly. 
+
+No seriously, I am deeply ashamed of this :/
 
 Inspirations;
 

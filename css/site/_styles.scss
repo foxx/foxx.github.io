@@ -533,3 +533,12 @@ b {
 iframe {
   margin-bottom:15px;
 }
+
+.bg2 {
+  background-image: url('/img/bg2.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  width:100%;
+  height:580px;
+  display: block;
+}
