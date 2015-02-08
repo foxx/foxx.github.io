@@ -16,8 +16,9 @@ It's been just over a year since my last [review][55] of Docker, heavily critici
 
 So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
 
-[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del> 
+[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
 
+(See [reddit][67] and [hackernews][66] thread for discussion)
 
 ### Dockerfile
 
@@ -148,3 +149,5 @@ If your development workflow is sane, then you will already understand that Dock
 [63]: https://blog.jtlebi.fr/2013/12/22/introduction-to-linux-namespaces-part-1-uts/
 [64]: https://aws.amazon.com/marketplace
 [65]: https://atlas.hashicorp.com/boxes/search
+[66]: https://news.ycombinator.com/item?id=9015355
+[67]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/
