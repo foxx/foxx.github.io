@@ -16,9 +16,7 @@ It's been just over a year since my last [review][55] of Docker, heavily critici
 
 So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
 
-[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
-
-(See [reddit][67] and [hackernews][66] thread for discussion)
+(See [reddit][67] and [hackernews][66] thread for discussion. )
 
 ### Dockerfile
 
@@ -80,7 +78,10 @@ It is already being abused by projects such as [baseimage-docker](https://github
 
 If your development workflow is sane, then you will already understand that Docker is unnecessary. All of the features which it claims to be helpful are either useless or poorly implemented, and it's primary benefits can be easily achieved using namespaces directly. Docker would have been a cute idea 8 years ago, but it's pretty much useless today.
 
-[edit]: Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post.
+[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production.Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
+
+There is also a sub discussion by [a-ko][68] which has some very insightful comments.
+
 
 * Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
 
@@ -151,3 +152,4 @@ If your development workflow is sane, then you will already understand that Dock
 [65]: https://atlas.hashicorp.com/boxes/search
 [66]: https://news.ycombinator.com/item?id=9015355
 [67]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/
+[68]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/coeo7c7
