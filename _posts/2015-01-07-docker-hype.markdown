@@ -85,6 +85,7 @@ Although most of the problems mentioned are self explanatory, this post makes no
 
 There is a sub discussion by [a-ko][68] discussing long term impacts of containerisation, and a detailed technical rebuttal by [markbnj][69], both of which you may find quite useful. 
 
+I'd like to say thank you to everyone who took time to give their feedback. It's fantastic to see so many people enjoy my style of writing, and reading responses from several high profile engineers, including those who have [inspired][70] me for many years, has been *very* humbling. 
 
 * Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
 
@@ -157,3 +158,4 @@ There is a sub discussion by [a-ko][68] discussing long term impacts of containe
 [67]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/
 [68]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/coeo7c7
 [69]: https://news.ycombinator.com/item?id=9016558
+[70]: http://redis.io/
