@@ -16,7 +16,9 @@ It's been just over a year since my last [review][55] of Docker, heavily critici
 
 So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
 
-If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.
+[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del> 
+
+
 
 
 ### Dockerfile
@@ -37,11 +39,15 @@ These problems are caused by the poor architectural design of Docker as a whole,
 
 ### Docker Hub
 
-Docker encourages social collaboration via Docker Hub which allows Dockerfiles to be published, both public and private, which can later be extended and used by other users via [FROM][24] instruction, rather than copy/pasting. However this is flawed for several reasons. Dockerfile does not support multiple FROM instructions (per [#3378][21], [#5714][22] and [#5726][23]), meaning you can only inherit from a single image. It also has no version enforcement, for example the author of `dockerfile/ubuntu:14.04` could replace the contents of that tag, which is the equivalent of using a package manager without enforcing versions. And as mentioned later in the article, it has frustratingly slow speed restrictions.
+Docker encourages social collaboration via Docker Hub which allows Dockerfiles to be published, both public and private, which can later be extended and used by other users via [FROM][24] instruction, rather than copy/pasting. This ecosystem is akin to AMIs in AWS [marketplace][64] and Vagrant [boxes][65], which in principle are very useful.
+
+However the Docker Hub implementation is flawed for several reasons. Dockerfile does not support multiple FROM instructions (per [#3378][21], [#5714][22] and [#5726][23]), meaning you can only inherit from a single image. It also has no version enforcement, for example the author of `dockerfile/ubuntu:14.04` could replace the contents of that tag, which is the equivalent of using a package manager without enforcing versions. And as mentioned later in the article, it has frustratingly slow speed restrictions.
 
 Docker Hub also has an automated build system which detects new commits in your repository and triggers a container build. It is also completely useless for many reasons. Build configuration is restrictive with little to no ability for customisation, missing even the basics of pre/post script hooks. It enforces a specific project structure, expecting a single Dockerfile in the project root, which breaks our previously mentioned build workarounds, and build times were horribly slow.
 
 Our workaround was to use [CircleCI][25], an exceptional hosted CI platform, which triggered Docker builds from Makefile and pushed up to Docker Hub. This did not solve the problem of slow speeds, but the only alternative was to use our own Docker Registry, which is ridiculously [complex][26].
+
+[edit]: AMIs in Amazon Marketplace are 
 
 
 ### Security
@@ -55,11 +61,13 @@ Docker, by design, puts ultimate trust in namespace [capabilities][29] which exp
 
 ### Containers are not VMs
 
-Namespaces and cgroups are beautifully [powerful][49], allowing a process and its children to have a private view of shared kernel resources, such as the network stack and process table. This fine-grain control and segregation, coupled with chroot jailing and [grsec][39], can provide an excellent layer of protection. Some applications, for example [uWSGI][38], take direct advantage of these features without Docker, and applications which don't support namespaces directly can be sandboxed using [firejail][47].
+Namespaces and cgroups are beautifully [powerful][49], allowing a process and its children to have a private view of shared kernel resources, such as the network stack and process table. This fine-grain control and segregation, coupled with chroot jailing and [grsec][39], can provide an excellent layer of protection. Some applications, for example [uWSGI][38], take direct advantage of these features without Docker, and applications which don't support namespaces directly can be sandboxed using [firejail][47]. If you're feeling adventurous, you can support directly into your [code][63] 
 
 Containerisation projects, such as LXC and Docker, take advantage of these features to effectively run multiple distros inside the same kernel space. In [comparison][46] with hypervisors, this can sometimes have the [advantage][45] of lower memory usage and faster startup times, but at the cost of reduced security, stability and compatibility. One horrible [edge case][42] relates to [Linux Kernel Interfaces][41], running incompatible or untested combinations of glibc versions in kernel and userspace, resulting in unexpected behavior.
 
 Back in 2008 when LXC was conceived, hardware assisted virtualisation had only been around for a couple of years, many hypervisors had performance and stability issues, as such virtualisation was not a widely used technology and these were acceptable tradeoffs to keep costs low and reduce physical footprint. However we have now reached the point where hypervisor performance is almost as fast as bare metal and, interestingly, faster in some [cases][43]. Hosted on-demand VMs are also becoming faster and cheaper, with [DigitalOcean][44] massively [outperforming][51] EC2 in both performance and cost, making it financially viable to have a 1:1 mapping of applications to VMs.
+
+[edit] As [pointed][60] out by [Bryan Cantrill][61], virtualisation performance will vary depending on workload types, for example IO heavy applications can result in [slower][62] performance.
 
 There are some specific use cases in which containerisation is the correct approach, but unless you can explain precisely why in your use case, then you should probably be using a hypervisor instead. Even if you're using virtualisation you should still be taking advantage of namespaces, and tools such as [firejail][47] can help when your application lacks native support for these features.
 
@@ -133,3 +141,11 @@ If your development workflow is sane, then you will already understand that Dock
 [55]: http://iops.io/blog/lxc-application-containers-docker-initial-thoughts/
 [56]: https://www.youtube.com/channel/UCOwxx9VnEnlFKt5EB70KTzQ
 [57]: https://www.youtube.com/watch?v=LWCUMLEbQ00
+[58]: http://blog.codeship.com/immutable-deployments/
+[59]: https://www.digitalocean.com/community/tutorials/how-to-dockerise-and-deploy-multiple-wordpress-applications-on-ubuntu
+[60]: https://news.ycombinator.com/item?id=9015638
+[61]: https://twitter.com/bcantrill
+[62]: http://dtrace.org/blogs/brendan/2013/01/11/virtualization-performance-zones-kvm-xen/
+[63]: https://blog.jtlebi.fr/2013/12/22/introduction-to-linux-namespaces-part-1-uts/
+[64]: https://aws.amazon.com/marketplace
+[65]: https://atlas.hashicorp.com/boxes/search
