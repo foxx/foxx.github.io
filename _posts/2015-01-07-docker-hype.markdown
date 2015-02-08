@@ -16,7 +16,7 @@ It's been just over a year since my last [review][55] of Docker, heavily critici
 
 So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
 
-(See [reddit][67] and [hackernews][66] thread for discussion. )
+(See [reddit][67] and [hackernews][66] thread for discussion)
 
 ### Dockerfile
 
@@ -83,7 +83,7 @@ On the surface, Docker has a lot going for it. It's ecosystem is encouraging dev
 
 Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
 
-There is also a sub discussion by [a-ko][68] which has some very insightful comments.
+There is a sub discussion by [a-ko][68] discussing long term impacts of containerisation, and a detailed technical rebuttal by [markbnj][69], both of which you may find quite useful. 
 
 
 * Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
@@ -156,3 +156,4 @@ There is also a sub discussion by [a-ko][68] which has some very insightful comm
 [66]: https://news.ycombinator.com/item?id=9015355
 [67]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/
 [68]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/coeo7c7
+[69]: https://news.ycombinator.com/item?id=9016558
