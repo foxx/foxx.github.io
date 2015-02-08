@@ -44,8 +44,6 @@ Docker Hub also has an automated build system which detects new commits in your 
 
 Our workaround was to use [CircleCI][25], an exceptional hosted CI platform, which triggered Docker builds from Makefile and pushed up to Docker Hub. This did not solve the problem of slow speeds, but the only alternative was to use our own Docker Registry, which is ridiculously [complex][26].
 
-[edit]: AMIs in Amazon Marketplace are 
-
 
 ### Security
 
@@ -78,7 +76,12 @@ It is already being abused by projects such as [baseimage-docker](https://github
 
 If your development workflow is sane, then you will already understand that Docker is unnecessary. All of the features which it claims to be helpful are either useless or poorly implemented, and it's primary benefits can be easily achieved using namespaces directly. Docker would have been a cute idea 8 years ago, but it's pretty much useless today.
 
-[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production.Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
+
+### Corrections/amendments
+
+On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. 
+
+Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
 
 There is also a sub discussion by [a-ko][68] which has some very insightful comments.
 
