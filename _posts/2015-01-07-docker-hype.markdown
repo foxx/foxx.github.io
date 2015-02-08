@@ -19,8 +19,6 @@ So I decided to give Docker another chance and put it into production for 6 mont
 [edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del> 
 
 
-
-
 ### Dockerfile
 
 Dockerfile has numerous problems, it's ugly, restrictive, contradictory and fundamentally flawed. Lets say you want to build multiple images of a single repo, for example a second image which contains debugging tools, but both using the same base requirements. Docker does not support this (per [#9198][8]), there is no ability to extend a Dockerfile (per [#735][7]), using sub directories will break build context and prevent you using ADD/COPY (per [#2224][9]), as would piping (per [#2112][10]), and you cannot use env vars at build time to conditionally change instructions (per [#2637][11]).
@@ -81,6 +79,7 @@ It is already being abused by projects such as [baseimage-docker](https://github
 
 If your development workflow is sane, then you will already understand that Docker is unnecessary. All of the features which it claims to be helpful are either useless or poorly implemented, and it's primary benefits can be easily achieved using namespaces directly. Docker would have been a cute idea 8 years ago, but it's pretty much useless today.
 
+[edit]: Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post.
 
 * Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
 
