@@ -16,7 +16,7 @@ It's been just over a year since my last [review][55] of Docker, heavily critici
 
 So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
 
-(See [reddit][67] and [hackernews][66] thread for discussion)
+*(See [reddit][67] and [hackernews][66] thread for discussion, credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57])*
 
 ### Dockerfile
 
@@ -87,7 +87,11 @@ There is a sub discussion by [a-ko][68] discussing long term impacts of containe
 
 I'd like to say thank you to everyone who took time to give their feedback. It's fantastic to see so many people enjoy my style of writing, and reading responses from several high profile engineers, including those who have [inspired][70] me for many years, has been *very* humbling. 
 
-* Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
+### Response from Docker founder Solomon Hykes
+
+And not a single fuck was given that day... pastebin link [here][71].
+
+<img src="http://i.imgur.com/lRqSeks.png" />
 
 [1]: http://blog.docker.com/2014/06/docker-container-breakout-proof-of-concept-exploit/
 [2]: http://www.theregister.co.uk/2014/06/09/docker_milestone_release/
@@ -159,3 +163,4 @@ I'd like to say thank you to everyone who took time to give their feedback. It's
 [68]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/coeo7c7
 [69]: https://news.ycombinator.com/item?id=9016558
 [70]: http://redis.io/
+[71]: http://pastebin.com/6Fn4Z26E
