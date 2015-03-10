@@ -1,6 +1,9 @@
 name: Cal Leeming Blog
 markdown: redcarpet
-pygments: true
+highlighter: true
 excerpt_separator: "\n"
 permalink: /blog/:title
 baseurl: /
+sass:
+    style: :compressed
+    sass_dir: ./_sass
