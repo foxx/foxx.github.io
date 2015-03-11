@@ -6,6 +6,29 @@ keywords: Python,Devops,Programming,Security,Reverse Engineering
 desc: Articles by Cal Leeming about Programming, Security, Reverse Engineering, Python and Devops.
 ---
 
+
+
+<div class="list-posts">
+  <h2>Articles</h2>
+  
+  {% for post in site.posts %}
+  <div class="post">
+    
+    <a href="{{ post.url }}" title="{{ post.title }}">
+      <i alt="{{ post.title }}" style="background-image:url('{{ post.coverimage }}');"></i>
+    </a>
+
+    <div class="label">
+      <a href="{{ post.url }}" title="{{ post.title }}">
+        <span class="title">{{ post.title }} {{post.position}}</span>
+      </a>
+      <span class="date">{{ post.date | date_to_string }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!--
+
 <div class="ct-content-left">
     <div class="ct-posts">
 {% for weight in (1..99) reversed %}{% for post in site.posts %}{% if post.weight == weight %}
@@ -28,3 +51,5 @@ desc: Articles by Cal Leeming about Programming, Security, Reverse Engineering, 
 <div class="ct-content-right">
   {% include right.html %}
 </div>
+
+-->

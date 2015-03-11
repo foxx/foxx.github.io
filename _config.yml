@@ -4,6 +4,7 @@ highlighter: true
 excerpt_separator: "\n"
 permalink: /blog/:title
 baseurl: /
+exclude: ['.sass-cache', '_site', '.vagrant', '_sass/neat/', '_sass/bourbon']
 sass:
     style: :compressed
     sass_dir: ./_sass
