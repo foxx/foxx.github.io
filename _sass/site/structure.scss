@@ -13,14 +13,14 @@ $color3: #494949; // dark grey/blue
     @include outer-container;
 
     .links {
-      @include span-columns(8 of 12);
+      @include span-columns(6 of 12);
 
       ul {
         @include outer-container;
         list-style-type: none;
 
         li {
-          @include span-columns(3 of 12);
+          @include span-columns(4 of 12);
 
           a {
 
@@ -48,7 +48,7 @@ $color3: #494949; // dark grey/blue
     }
 
     .buttons {
-      @include span-columns(4 of 12);
+      @include span-columns(6 of 12);
 
       ul {
         @include outer-container;
@@ -161,6 +161,7 @@ $color3: #494949; // dark grey/blue
     font-family: BebasNeue-Book;
     color: #fff;
     padding-bottom:15px;
+    display:block;
   }
 
   a {
@@ -168,11 +169,11 @@ $color3: #494949; // dark grey/blue
   }
 
   .post {
-    @include span-columns(4 of 12);
+    @include span-columns(3 of 12);
     padding-right: 15px;
     padding-bottom: 15px;
 
-    &:nth-child(3n) {
+    &:nth-of-type(4n) {
       padding-right:0px;
     }
 
@@ -190,23 +191,60 @@ $color3: #494949; // dark grey/blue
       padding: 15px;
 
       span.title {
-        font-family: "PT Sans Narrow";
-        font-weight:200;
-        font-size: 22px;
+        font-family: "Lato";
+        font-weight:300;
+        font-size: 19px;
+        line-height:22px;
         color: #ececec;
         margin-bottom: 10px;
-        min-height:50px;
+        min-height: 70px;
         display: block;
       }
 
       span.date {
-        font-family: "PT Sans Narrow";
-        font-weight:200;
-        font-size: 18px;
+        font-family: "Lato";
+        font-weight: 300;
+        font-size: 14px;
         color: #ccc;
         display: block;
       }
 
     }
   }
+}
+
+
+/* Social buttons */
+
+.social-buttons {
+  @include outer-container;
+  padding-top:20px;
+
+  .button {
+    $size:50px;
+    background-color:#444;
+    margin-bottom:5px;
+    margin-right:5px;
+    text-decoration:none;
+    border:0px;
+    width:$size;
+    height:$size;
+    display:block;
+    float:right;
+    
+    &:hover {
+      background-color: rgb(195, 62, 137);
+    }
+
+    >i {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+      display:block;
+    }
+
+  }
+
 }
