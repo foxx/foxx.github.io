@@ -82,7 +82,7 @@ It is already being abused by projects such as [baseimage-docker](https://github
 If your development workflow is sane, then you will already understand that Docker is unnecessary. All of the features which it claims to be helpful are either useless or poorly implemented, and it's primary benefits can be easily achieved using namespaces directly. Docker would have been a cute idea 8 years ago, but it's pretty much useless today.
 
 
-* Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
+**Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
 
 [1]: http://blog.docker.com/2014/06/docker-container-breakout-proof-of-concept-exploit/
 [2]: http://www.theregister.co.uk/2014/06/09/docker_milestone_release/
