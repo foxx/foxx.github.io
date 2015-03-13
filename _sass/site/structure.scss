@@ -7,6 +7,7 @@ $color3: #494949; // dark grey/blue
 .site-header {
   $heading-pad1: 32px;
   background-color: $color1;
+  display: none;
 
   >div {
     @include outer-container;
@@ -65,46 +66,7 @@ $color3: #494949; // dark grey/blue
       }
     }
 
-    .social-buttons {
-      @include outer-container;
-      margin: auto;
-      display: inline-block;
-
-      @include media($lg) {
-        @include span-columns(6 of 12);
-        padding-top:20px;
-      }
-
-
-      .button {
-        $size:50px;
-        background-color:#444;
-        margin-bottom:5px;
-        margin-right:5px;
-        text-decoration:none;
-        border:0px;
-        width:$size;
-        height:$size;
-        display:block;
-        float:right;
-        
-        &:hover {
-          background-color: rgb(195, 62, 137);
-        }
-
-        >i {
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: 50% 50%;
-          width: 100%;
-          height: 100%;
-          display:block;
-        }
-
-      }
-
-
-    }
+    
   }
 }
 
@@ -123,7 +85,7 @@ $color3: #494949; // dark grey/blue
 
   a.profile-img {
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 75px;
     margin-bottom: 20px;
 
     i {
@@ -167,7 +129,7 @@ $color3: #494949; // dark grey/blue
     margin: auto;
   }
 
-  a.button {
+  a.bigbutton {
     margin-top:20px;
     border: 1px solid #fff;
     padding-top: 10px;
@@ -190,6 +152,41 @@ $color3: #494949; // dark grey/blue
       }
     }
   }
+
+
+  .social-buttons {
+    margin: auto;
+    display: inline-block;
+    margin-bottom:30px;
+
+    .button {
+      $size:42px;
+      background-color:#444;
+      margin-bottom:5px;
+      margin-right:5px;
+      text-decoration:none;
+      border:0px;
+      width:$size;
+      height:$size;
+      display:block;
+      float:left;
+      
+      &:hover {
+        background-color: $color2;
+      }
+
+      >i {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 100%;
+        display:block;
+      }
+
+    }
+  }
+
 }
 
 .site-content {

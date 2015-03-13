@@ -1,0 +1,107 @@
+
+
+<!--
+
+
+
+        <div class="site-header">
+          <div>
+            <div class="links">
+              <ul>
+                <li><a href="/"><span>Articles</span></a></li>
+                <li><a href="/"><span>Social</span></a></li>
+                <li><a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/"><span>About</span></a></li>
+              </ul>
+            </div>
+
+            <div class="social-buttons">
+              <a href="mailto:cal@iops.io" target="_blank" class="button">
+                <i class="img-email-128"></i></a>
+
+              <a href="http://github.com/foxx" target="_blank" class="button">
+                <i class="img-github-128"></i></a>
+
+              <a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/" target="_blank" class="button">
+                <i class="img-linkedin-128"></i></a>
+
+              <a href="skype:cal.leeming" target="_blank" class="button">
+                <i class="img-skype-128"></i></a>
+
+              <a href="http://stackoverflow.com/users/1267398/sleepycal" target="_blank" class="button">
+                <i class="img-stackoverflow-128"></i></a>
+
+              <a class="button" href="http://www.twitter.com/sleepycal" target="_blank">
+                <i class="img-twitter-128"></i></a>
+
+              <a class="button" href="https://www.youtube.com/user/foxiewhisper" target="_blank">
+                <i class="img-youtube-128"></i></a>
+
+              <a class="button" href="http://www.facebook.com/sleepycal" target="_blank" >
+                <i class="img-facebook-128"></i></a>
+
+              <a href="http://www.mixcloud.com/sleepycal/" target="_blank" class="button">
+                <i class="img-mixcloud-128"></i></a>
+
+              <a class="button" href="https://soundcloud.com/sleepycal" target="_blank">
+                <i class="img-soundcloud-128"></i></a>
+            </div>
+          </div>
+        </div>
+<div class="ct-content-left ct-post">
+
+  {% if page.type == 'full' %}
+    <div class="ct-post-header ct-post-header-{{ page.type }}">
+      <div class="img-holder">
+        <img src="{{ page.coverimage }}" />
+      </div>
+      <h2 class="page-title">
+        {{ page.title }}
+      </h2>
+
+    </div>
+  {% elsif page.type == 'large' %}
+    <div class="ct-post-header ct-post-header-{{ page.type }}">
+      <div class="img-holder">
+        <img src="{{ page.coverimage }}" />
+      </div>
+
+      <h2 class="page-title">
+        {{ page.title }}
+      </h2>
+    </div>
+  {% else %}
+    <div class="ct-post-header ct-post-header-small">
+      <div class="img-holder">
+        <img src="{{ page.coverimage }}" />
+      </div>
+      <h2 class="page-title">
+        {{ page.title }}
+      </h2>
+    </div>
+  {% endif %}
+
+  <div class="ct-post-content">
+
+    <span class="date">
+      {{ page.date | date_to_string }} by Cal Leeming
+    </span>
+
+    <div>
+    </div>
+
+    <div>
+      
+    </div>
+  </div>
+
+  <div class="ct-post-comments">
+    
+  </div>
+</div>
+
+<div class="ct-content-right">
+  {% include right.html %}
+</div>
+
+-->
+

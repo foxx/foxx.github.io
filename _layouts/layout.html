@@ -71,8 +71,42 @@
         <div class="site-splash" style="background-image:url('/img/bg2.jpg');">
           <div class="content">
 
+            <div>
             <a class="profile-img" href="https://twitter.com/sleepycal">
               <i class="img-profile-128"></i></a>
+            </div>
+
+            <div class="social-buttons">
+              <a href="mailto:cal@iops.io" target="_blank" class="button">
+                <i class="img-email-128"></i></a>
+
+              <a href="http://github.com/foxx" target="_blank" class="button">
+                <i class="img-github-128"></i></a>
+
+              <a href="http://uk.linkedin.com/pub/cal-leeming/5/391/380/" target="_blank" class="button">
+                <i class="img-linkedin-128"></i></a>
+
+              <a href="skype:cal.leeming" target="_blank" class="button">
+                <i class="img-skype-128"></i></a>
+
+              <a href="http://stackoverflow.com/users/1267398/sleepycal" target="_blank" class="button">
+                <i class="img-stackoverflow-128"></i></a>
+
+              <a class="button" href="http://www.twitter.com/sleepycal" target="_blank">
+                <i class="img-twitter-128"></i></a>
+
+              <a class="button" href="https://www.youtube.com/user/foxiewhisper" target="_blank">
+                <i class="img-youtube-128"></i></a>
+
+              <a class="button" href="http://www.facebook.com/sleepycal" target="_blank" >
+                <i class="img-facebook-128"></i></a>
+
+              <a href="http://www.mixcloud.com/sleepycal/" target="_blank" class="button">
+                <i class="img-mixcloud-128"></i></a>
+
+              <a class="button" href="https://soundcloud.com/sleepycal" target="_blank">
+                <i class="img-soundcloud-128"></i></a>
+            </div>
 
             {% if page %}
             <h1>{{ page.title }}</h1>
@@ -82,15 +116,19 @@
             <h2>Devops &amp; Software Engineer</h2>
             {% endif %}
 
-            {% if page.type == "post" %}
-            <a href="/" class="button">
-              <span>Back to home page</span>
-            </a>
-            {% else %}
-            <a class="button">
-              <span>What does this mean?</span>
-            </a>
-            {% endif %}
+            <div>
+              {% if page.type == "post" %}
+              <a href="/" class="bigbutton">
+                <span>Back to home page</span>
+              </a>
+              {% else %}
+              <a class="bigbutton">
+                <span>What does this mean?</span>
+              </a>
+              {% endif %}
+            </div>
+
+
           </div>
         </div>
 
