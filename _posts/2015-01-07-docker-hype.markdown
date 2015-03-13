@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Lets review.. Docker (again)
+subtitle: An absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience
 date:   2015-01-17 00:00:00
 categories: general
 coverimage: /img/covers/pewdiepie1.jpg
