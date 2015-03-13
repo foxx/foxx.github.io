@@ -16,10 +16,7 @@ It's been just over a year since my last [review][55] of Docker, heavily critici
 
 So I decided to give Docker another chance and put it into production for 6 months. The result was an absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience which left me wanting to smash my face into the desk. Indeed performance was so bad, that disabling caching features actually resulted in faster build times. 
 
-[edit]: On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del> 
-
-
-
+*(See [reddit][67] and [hackernews][66] thread for discussion, credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57])*
 
 ### Dockerfile
 
@@ -46,8 +43,6 @@ However the Docker Hub implementation is flawed for several reasons. Dockerfile 
 Docker Hub also has an automated build system which detects new commits in your repository and triggers a container build. It is also completely useless for many reasons. Build configuration is restrictive with little to no ability for customisation, missing even the basics of pre/post script hooks. It enforces a specific project structure, expecting a single Dockerfile in the project root, which breaks our previously mentioned build workarounds, and build times were horribly slow.
 
 Our workaround was to use [CircleCI][25], an exceptional hosted CI platform, which triggered Docker builds from Makefile and pushed up to Docker Hub. This did not solve the problem of slow speeds, but the only alternative was to use our own Docker Registry, which is ridiculously [complex][26].
-
-[edit]: AMIs in Amazon Marketplace are 
 
 
 ### Security
@@ -82,7 +77,21 @@ It is already being abused by projects such as [baseimage-docker](https://github
 If your development workflow is sane, then you will already understand that Docker is unnecessary. All of the features which it claims to be helpful are either useless or poorly implemented, and it's primary benefits can be easily achieved using namespaces directly. Docker would have been a cute idea 8 years ago, but it's pretty much useless today.
 
 
-**Credits to [CYPHERDEN][56] for the cover image, taken from [PewDiePie][57]
+### Corrections/amendments
+
+On the surface, Docker has a lot going for it. It's ecosystem is encouraging developers towards a mindset of [immutable deployments][58], and starting new projects can be done quickly and [easily][59], something which many people find useful. However it's important to note that this article focuses on the daily, long term usage of Docker, both locally and in production. 
+
+Although most of the problems mentioned are self explanatory, this post makes no effort to explain how Docker could do it better. There are many alternative solutions to Docker, each with their own pros/cons, and I'll be explaining these in detail on a follow up post. <del>If you expect anything positive from Docker, or its maintainers, then you're shit outta luck.</del>
+
+There is a sub discussion by [a-ko][68] discussing long term impacts of containerisation, and a detailed technical rebuttal by [markbnj][69], both of which you may find quite useful. 
+
+I'd like to say thank you to everyone who took time to give their feedback. It's fantastic to see so many people enjoy my style of writing, and reading responses from several high profile engineers, including those who have [inspired][70] me for many years, has been *very* humbling. 
+
+### Response from Docker founder Solomon Hykes
+
+And not a single fuck was given that day... pastebin link [here][71].
+
+<img src="http://i.imgur.com/lRqSeks.png" style="max-width:600px;" />
 
 [1]: http://blog.docker.com/2014/06/docker-container-breakout-proof-of-concept-exploit/
 [2]: http://www.theregister.co.uk/2014/06/09/docker_milestone_release/
@@ -149,3 +158,9 @@ If your development workflow is sane, then you will already understand that Dock
 [63]: https://blog.jtlebi.fr/2013/12/22/introduction-to-linux-namespaces-part-1-uts/
 [64]: https://aws.amazon.com/marketplace
 [65]: https://atlas.hashicorp.com/boxes/search
+[66]: https://news.ycombinator.com/item?id=9015355
+[67]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/
+[68]: http://www.reddit.com/r/sysadmin/comments/2v4fqe/docker_is_fundamentally_flawed_useless_hype/coeo7c7
+[69]: https://news.ycombinator.com/item?id=9016558
+[70]: http://redis.io/
+[71]: http://pastebin.com/6Fn4Z26E

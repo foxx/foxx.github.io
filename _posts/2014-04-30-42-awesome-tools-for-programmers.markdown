@@ -10,7 +10,9 @@ keywords: programming, programmers, tools, code, coding, awesome
 desc: List of useful tools collected over the years
 ---
 
-Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow. (in no particular order)
+Over the years I've tweaked and perfected my workflow to be [KISS](http://en.wikipedia.org/wiki/KISS_principle) and [DRY](http://en.wikipedia.org/wiki/Don't_repeat_yourself). Here is a collection of tools that you may not even know exist, and could help improve your workflow. (in no particular order).
+
+EDIT: Since switching to OS X for most of my work, this list has drastically changed. I'll be doing a new article in the coming months.
 
 ### Windows Development
 
