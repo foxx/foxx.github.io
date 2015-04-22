@@ -3,6 +3,7 @@ markdown: redcarpet
 highlighter: true
 excerpt_separator: "\n"
 permalink: /blog/:title
+domain: iops.io
 baseurl: /
 exclude: ['.sass-cache', '_site', '.vagrant', '_sass/neat/', '_sass/bourbon']
 sass:
