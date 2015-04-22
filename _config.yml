@@ -1,6 +1,6 @@
 name: Cal Leeming Blog
 markdown: redcarpet
-highlighter: true
+highlighter: pygments
 excerpt_separator: "\n"
 permalink: /blog/:title
 url: https://iops.io
