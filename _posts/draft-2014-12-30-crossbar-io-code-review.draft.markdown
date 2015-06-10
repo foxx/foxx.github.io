@@ -21,6 +21,7 @@ Firstly, this is a fantastic concept, and I must applaud the authors for thier w
 
 However this is where the positives stop, and upon reviewing their code I have serious concerns. My limit for this review is two hours, sadly this was not enough to address every concern, but it was enough to make a comprehensive decision to say no.
 
+I would urge all readers to review the code/specifications, and come to your own conclusion. There was also a [discussion](https://groups.google.com/forum/#!msg/autobahnws/EMKF4a0aXKI/uy7cg9DvqLYJ) with the authors regarding this article, prior to its release.
 
 ### Crossbar demo
 
@@ -77,10 +78,6 @@ Furthermore, WAMP is a trademark which belongs to the company who has sponsored 
 
 Both AutobahnJS and crossbar.io are let down by poor architectural design, bad code quality, excessive [SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code) and unclear documentation. They are both written in ES5, rather than the far superior ES6, and have clearly not followed TDD.
 
-Autobahn Python is a better story, it now have asyncio support and is mostly clean, despite not being PEP8 compliant or passing lint checks. However as it's a pure-python implementation there will have performance limitations, and it is tightly bound with WAMP. You could use uWSGI as a WS server for performance, but sadly it does not pass the Autobahn test suite. 
+Autobahn Python is a better story, it now has asyncio support and the WS implementation seems mostly clean, despite not being PEP8 compliant or passing lint checks. However as it's a pure-python implementation there will have performance limitations, and it is tightly bound with WAMP.
 
-Admittedly the Autobahn WAMP family has wide cross language support and would allow for rapid prototyping, but the WAMP specification as a whole feels unviable.
-
-As such, on the grounds of poor code and architectual design quality, I would choose not to use crossbar.io, Autobahn or the WAMP specification for any of my work. This doesn't mean *you* shouldn't use it, but you should at least be aware of the dragons.
-
-There was also a [discussion](https://groups.google.com/forum/#!msg/autobahnws/EMKF4a0aXKI/uy7cg9DvqLYJ) with the authors regarding this article, prior to its release.
+On the grounds of poor code and architectual design quality, I would choose not to use crossbar.io, Autobahn or the WAMP specification for any of my work. Admittedly the Autobahn WAMP family has wide cross language support and would allow for rapid prototyping, but the WAMP specification as a whole feels unviable. This doesn't mean *you* shouldn't use it, but you should at least be aware of the dragons.
