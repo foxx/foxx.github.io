@@ -69,6 +69,10 @@ At some points it's quite difficult to understand what code is being used for [s
 
 After reading through [WAMP v2](https://github.com/tavendo/WAMP/blob/master/spec/advanced.md), which admittedly is still in beta, I'm left with the impression that it is an over-engineered solution to a very simple problem, which when coupled with lacking maturity and stability, makes it a dangerous candidate for production.
 
+The specification makes for difficult reading, in some ways it reminds me of RFC 3261 (SIP). Some places have nested JSON encoded as a string [1] (wtf?), and throughout the spec there is type hinting appended to message definition keys (|string, |bool etc). There has also been minimal external input and peer review, the majority of the spec has been written by one person and less than a handful of people had any deep involvement on the group mailing list throughout its conception.
+
+Furthermore, WAMP is a trademark which belongs to the company who has sponsored its development, and it uses the CC license which is not recommended for software and is not GPL compatible. Also many of the Autobahn WAMP family use differing licenses, Apache/MIT etc.
+
 ### Conclusion
 
 Both AutobahnJS and crossbar.io are let down by poor architectural design, bad code quality, excessive [SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code) and unclear documentation. They are both written in ES5, rather than the far superior ES6, and have clearly not followed TDD.
