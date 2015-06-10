@@ -17,7 +17,7 @@ There has already been a comprehensive review of what [crossbar.io](http://cross
 
 In short, crossbar.io aims to provide an end-to-end framework which takes advantages of websockets to implement [WAMP](http://wamp.ws/), allowing you to handle/trigger events without polling. It works on top of Web Sockets implemented by Autobahn.
 
-Firstly, this is a fantastic concept, and I must applaud the authors for thier work. Much like my review of SwampDragon, anything which helps raise awareness about why [SPAs](http://en.wikipedia.org/wiki/Single-page_application) are awesome is a good thing. The autobahn test suite is has also proved very helpful to the community.
+Firstly, this is a fantastic concept, and I must applaud the authors for thier work. Much like my review of SwampDragon, anything which helps raise awareness about why [SPAs](http://en.wikipedia.org/wiki/Single-page_application) are awesome is a good thing, and the autobahn test suite has proved very useful to the community.
 
 However this is where the positives stop, and upon reviewing their code I have serious concerns. My limit for this review is two hours, sadly this was not enough to address every concern, but it was enough to make a comprehensive decision to say no.
 
