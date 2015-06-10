@@ -17,7 +17,7 @@ There has already been a comprehensive review of what [crossbar.io](http://cross
 
 In short, crossbar.io aims to provide an end-to-end framework which takes advantages of websockets to implement [WAMP](http://wamp.ws/), allowing you to handle/trigger events without polling. It works on top of Web Sockets implemented by Autobahn.
 
-Firstly, this is a fantastic concept, and I must applaud the authors for thier work. Much like my review of SwampDragon, anything which helps raise awareness about why [SPAs](http://en.wikipedia.org/wiki/Single-page_application) are awesome is a good thing.
+Firstly, this is a fantastic concept, and I must applaud the authors for thier work. Much like my review of SwampDragon, anything which helps raise awareness about why [SPAs](http://en.wikipedia.org/wiki/Single-page_application) are awesome is a good thing. The autobahn test suite is has also proved very helpful to the community.
 
 However this is where the positives stop, and upon reviewing their code I have serious concerns. My limit for this review is two hours, sadly this was not enough to address every concern, but it was enough to make a comprehensive decision to say no.
 
@@ -73,7 +73,7 @@ After reading through [WAMP v2](https://github.com/tavendo/WAMP/blob/master/spec
 
 Both AutobahnJS and crossbar.io are let down by poor architectural design, bad code quality, excessive [SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code) and unclear documentation. They are both written in ES5, rather than the far superior ES6, and have clearly not followed TDD.
 
-Autobahn Python is a better story, it now have asyncio support and is mostly clean, despite not being PEP8 compliant or passing lint checks. However this is a pure-python implementation and thus will have performance limitations, although the only viable alternative is uWSGI, which sadly does not pass the Autobahn test suite. 
+Autobahn Python is a better story, it now have asyncio support and is mostly clean, despite not being PEP8 compliant or passing lint checks. However as it's a pure-python implementation there will have performance limitations, and it is tightly bound with WAMP. You could use uWSGI as a WS server for performance, but sadly it does not pass the Autobahn test suite. 
 
 Admittedly the Autobahn WAMP family has wide cross language support and would allow for rapid prototyping, but the WAMP specification as a whole feels unviable.
 
