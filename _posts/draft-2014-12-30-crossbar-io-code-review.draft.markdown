@@ -30,7 +30,7 @@ The performance was snappy with quite a high FPS, but it resulted in a 45% CPU u
 
 ### Python server code
 
-The underlying WAMP implementation is done using [autobahn](http://autobahn.ws/), also made by the same authors, and uses websockets for communication. Based on their Python [examples](http://autobahn.ws/python/), I can only draw the conclusion that [Twisted](https://twistedmatrix.com/trac/) is a pre-requisite. 
+The underlying WAMP implementation is done using [autobahn](http://autobahn.ws/), also made by the same authors, and uses websockets for communication. Based on their Python [examples](http://autobahn.ws/python/), which can be used with both Twisted and asyncio.
 
 Initial docs inspection worries me, their [getting started](http://crossbar.io/docs/Getting-started-with-Python/) docs appears to show a blob of JSON which is presumably used to configure the application, though I don't see any documentation on what each attribute does. There is also a section on "hacking code" just underneath, which doesn't give any explanation on what it does and why it would be necessary.
 
