@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Code review of crossbar.io
+title:  Code review of AutobahnJS / crossbar.io
 date:   2014-12-30 00:00:00
 categories: general
 coverimage: /img/covers/repairguy.jpg
@@ -15,15 +15,11 @@ desc: Code review of crossbar.io
 
 There has already been a comprehensive review of what [crossbar.io](http://crossbar.io/) has to offer [here](http://tavendo.com/blog/post/is-crossbar-the-future-of-python-web-apps/), which is worth reading before making any decision.
 
-In short, crossbar.io aims to provide an end-to-end framework which takes advantages of websockets to implement [WAMP](http://wamp.ws/), allowing you to handle/trigger events without polling. 
+In short, crossbar.io aims to provide an end-to-end framework which takes advantages of websockets to implement [WAMP](http://wamp.ws/), allowing you to handle/trigger events without polling. It works on top of Web Sockets implemented by Autobahn.
 
 Firstly, this is a fantastic concept, and I must applaud the authors for thier work. Much like my review of SwampDragon, anything which helps raise awareness about why [SPAs](http://en.wikipedia.org/wiki/Single-page_application) are awesome is a good thing.
 
 However this is where the positives stop, and upon reviewing their code I have serious concerns. My limit for this review is two hours, sadly this was not enough to address every concern, but it was enough to make a comprehensive decision to say no.
-
-### tl;dr
-
-Fantastic idea let down by poor architectural design, bad code quality, excessive [SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code) and unclear documentation. Personally I would choose not to use this in production or for any personal projects.
 
 
 ### Crossbar demo
@@ -66,3 +62,12 @@ Object documentation does not seem to follow [jsdoc](https://github.com/jsdoc3/j
 
 Some sections have good assertion checks [session.js#L1004](https://github.com/tavendo/AutobahnJS/blob/v0.9.5/package/lib/session.js#L1004), but the majority does not [session.js#L182](https://github.com/tavendo/AutobahnJS/blob/v0.9.5/package/lib/session.js#L182). 
 At some points it's quite difficult to understand what code is being used for [session.js#L1343](https://github.com/tavendo/AutobahnJS/blob/v0.9.5/package/lib/session.js#L1343).
+
+### Conclusion
+
+Both AutobahnJS and crossbar.io are let down by poor architectural design, bad code quality, excessive [SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code) and unclear documentation. They are both written in ES5, rather than the far superior ES6, and have clearly not followed TDD.
+
+Autobahn Python is a better story, it now have asyncio support and is mostly clean, despite not being PEP8 compliant or passing lint checks. However this is a pure-python implementation and thus will have performance limitations, although the only viable alternative is uWSGI, which sadly does not pass the Autobahn test suite. 
+
+Admittedly the Autobahn WAMP family has wide cross language support and would allow for rapid prototyping, but it doesn't feel clean. WAMP as a specification does not feel mature enough, and I would personally choose not to use crossbar.io or Autobahn for any of my work.
+
