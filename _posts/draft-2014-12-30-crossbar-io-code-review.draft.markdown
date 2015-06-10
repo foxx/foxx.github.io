@@ -69,9 +69,9 @@ At some points it's quite difficult to understand what code is being used for [s
 
 After reading through [WAMP v2](https://github.com/tavendo/WAMP/blob/master/spec/advanced.md), which admittedly is still in beta, I'm left with the impression that it is an over-engineered solution to a very simple problem, which when coupled with lacking maturity and stability, makes it a dangerous candidate for production.
 
-The specification makes for difficult reading, in some ways it reminds me of RFC 3261 (SIP). Some places have nested JSON encoded as a string [1] (wtf?), and throughout the spec there is type hinting appended to message definition keys (|string, |bool etc). There has also been minimal external input and peer review, the majority of the spec has been written by one person and less than a handful of people had any deep involvement on the group mailing list throughout its conception.
+The specification makes for difficult reading, in some ways it reminds me of RFC 3261 (SIP). Some places have nested JSON encoded as a string (wtf?), and throughout the spec there is type hinting appended to message definition keys (|string, |bool etc). There has also been minimal external input and peer review, the majority of the spec has been written by one person and less than a handful of people had any deep involvement on the group mailing list throughout its conception.
 
-Furthermore, WAMP is a trademark which belongs to the company who has sponsored its development, and it uses the CC license which is not recommended for software and is not GPL compatible. Also many of the Autobahn WAMP family use differing licenses, Apache/MIT etc.
+Furthermore, WAMP is a trademark which belongs to the company who has sponsored its development, and many of the Autobahn WAMP family use differing licenses, Apache/MIT etc.
 
 ### Conclusion
 
@@ -82,3 +82,5 @@ Autobahn Python is a better story, it now have asyncio support and is mostly cle
 Admittedly the Autobahn WAMP family has wide cross language support and would allow for rapid prototyping, but the WAMP specification as a whole feels unviable.
 
 As such, on the grounds of poor code and architectual design quality, I would choose not to use crossbar.io, Autobahn or the WAMP specification for any of my work. This doesn't mean *you* shouldn't use it, but you should at least be aware of the dragons.
+
+There was also a [discussion](https://groups.google.com/forum/#!msg/autobahnws/EMKF4a0aXKI/uy7cg9DvqLYJ) with the authors regarding this article, prior to its release.
