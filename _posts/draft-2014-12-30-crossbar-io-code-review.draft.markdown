@@ -78,6 +78,6 @@ Furthermore, WAMP is a trademark which belongs to the company who has sponsored 
 
 Both AutobahnJS and crossbar.io are let down by poor architectural design, bad code quality, excessive [SLOC](http://en.wikipedia.org/wiki/Source_lines_of_code) and unclear documentation. They are both written in ES5, rather than the far superior ES6, and have clearly not followed TDD.
 
-Autobahn Python is a better story, it now has asyncio support and the WS implementation seems mostly clean, despite not being PEP8 compliant or passing lint checks. However as it's a pure-python implementation there will have performance limitations, and it is tightly bound with WAMP.
+Autobahn Python is a better story, it now has asyncio support and the WS implementation seems mostly clean, despite not being PEP8 compliant or passing lint checks. However as it's a pure-python implementation there will be performance limitations, and it is tightly bound with WAMP.
 
 On the grounds of poor code and architectual design quality, I would choose not to use crossbar.io, Autobahn or the WAMP specification for any of my work. Admittedly the Autobahn WAMP family has wide cross language support and would allow for rapid prototyping, but the WAMP specification as a whole feels unviable. This doesn't mean *you* shouldn't use it, but you should at least be aware of the dragons.
