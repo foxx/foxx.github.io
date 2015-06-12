@@ -25,7 +25,7 @@ I would urge all readers to review the code/specifications, and come to your own
 
 ### Crossbar demo
 
-There is a fancy colorpicker [demo](https://demo.crossbar.io/demo/colorpicker/index.html) which syncronises the selected color upon change. However the [example code](https://github.com/crossbario/crossbardemo/blob/master/crossbardemo/crossbardemo/web/demo/colorpicker/js/colorpicker.js) isn't very clean and doesn't appear to implement any proper [JS design patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/).
+There is a fancy colorpicker [demo](https://demo.crossbar.io/colorpicker/index.html) which syncronises the selected color upon change. However the [example code](https://github.com/crossbario/crossbarexamples/blob/master/demos/colorpicker/js/colorpicker.js) isn't very clean and doesn't appear to implement any proper [JS design patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/).
 
 The performance was snappy with quite a high FPS, but it resulted in a 45% CPU utilization on my 3ghz i7 with light usage and 60% if I dragged around furiously, which is unacceptably high and would only become worse with additional DOM manipulation.
 
