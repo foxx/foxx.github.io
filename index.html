@@ -12,7 +12,7 @@ desc: Articles by Cal Leeming about Programming, Security, Reverse Engineering, 
   <div class="ct-post ct-post-{{ post.type }}">
     <a class="inner" href="{{ post.url }}" title="{{ post.title }}">
       <div class="img-holder">
-        <img alt="{{ post.title }}" style="background-image:url('{{ post.coverimage }}'); {% if post.background_position %}background-position: {{ post.background_position }};{% endif %}" />
+        <div alt="{{ post.title }}" class="img" style="background-image:url('{{ post.coverimage }}'); {% if post.background_position %}background-position: {{ post.background_position }};{% endif %}"></div>
       </div>
 
       <div class="title">

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Lets review.. Docker (again)
+subtitle: An absolute shit show of abysmal performance, hacky workarounds and rage inducing user experience
 date:   2015-01-17 00:00:00
 categories: general
 coverimage: /img/covers/pewdiepie1.jpg
@@ -91,7 +92,7 @@ I'd like to say thank you to everyone who took time to give their feedback. It's
 
 And not a single fuck was given that day... pastebin link [here][71].
 
-<img src="http://i.imgur.com/lRqSeks.png" style="max-width:600px;" />
+<img src="http://i.imgur.com/lRqSeks.png" />
 
 [1]: http://blog.docker.com/2014/06/docker-container-breakout-proof-of-concept-exploit/
 [2]: http://www.theregister.co.uk/2014/06/09/docker_milestone_release/

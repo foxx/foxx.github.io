@@ -22,7 +22,7 @@ layout: layout
       </div>
 
       <h2 class="page-title">
-        {{ page.title }}
+        {{ page.title | xml_escape }}
       </h2>
     </div>
   {% else %}
