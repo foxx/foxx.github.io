@@ -27,9 +27,27 @@ Enjoy.
 
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/OCh867rT1dg" frameborder="0" allowfullscreen></iframe>
 
+### Timeline
+
+0m: Intro
+1m: Office visit starts
+1m 50s: Statement read out in public
+3m: Impero staff getting pissed
+6m 30s: Flyer dropping cars
+7m: Conversation with [marketing director][10]
+
+
 ### How can you help?
 
 If you see [@ImperoSoftware][8] tweeting or talking in social media, respond with your thoughts on this situation. If the world gives this enough attention, we can force their hand into admitting their faults and doing the right thing.
+
+
+### Response from Impero
+
+Impero tried to play this exchange off as a joke, as seen in a [PR statement][5] released a few days later, and their response on Twitter.
+
+<a class="twitter-timeline" href="https://twitter.com/search?q=%40sleepycal%20%40imperosoftware" data-widget-id="628659311145807872">Tweets about @sleepycal @imperosoftware</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 [0]: https://twitter.com/TheWack0lian
@@ -42,3 +60,4 @@ If you see [@ImperoSoftware][8] tweeting or talking in social media, respond wit
 [7]: http://lizardhq.rum.supply/
 [8]: https://twitter.com/ImperoSoftware
 [9]: http://rum.supply/2015/08/04/impero-2.html
+[10]: https://www.linkedin.com/profile/view?id=72547704&authType=name&authToken=FxeV&trk=mirror-profile-memberlist-photo
