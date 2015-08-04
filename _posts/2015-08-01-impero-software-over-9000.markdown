@@ -10,8 +10,6 @@ keywords: impero, software, impero software, security, vulnerability, disclosure
 desc: Teaching Impero Software a lesson they won't forget
 ---
 
-### Summary
-
 You may already be aware of the legal action by Impero Software against security researcher [Raylee][0], for disclosing a serious vulnerability publicly, even making headlines on [The Register][1] and [The Guardian][2].
 
 In a [letter][3] by their lawyers, they suggested that Raylee's actions were criminal under the UK Computer Misuse Act 1990, and made slanderous claims in a [public PR][4] stating that he has "illegally hacked" their software.
