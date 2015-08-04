@@ -44,11 +44,12 @@ If you see [@ImperoSoftware][8] tweeting or talking in social media, respond wit
 
 ### Response from Impero
 
-Impero tried to play this exchange off as a joke, as seen in a [PR statement][5] released a few days later, and their response on Twitter.
+Impero tried to play this exchange off as a joke, as seen in a [PR statement][5] released a few days later, and their response on [Twitter][11]. 
+
+Impero want to sweep this under the carpet, and that's just not cricket.
 
 <a class="twitter-timeline" href="https://twitter.com/search?q=%40sleepycal%20%40imperosoftware" data-widget-id="628659311145807872">Tweets about @sleepycal @imperosoftware</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
 
 [0]: https://twitter.com/TheWack0lian
 [1]: http://www.theregister.co.uk/2015/07/16/school_software_firm_calls_in_lawyers_after_researcher_goes_full_disclosure/
@@ -61,3 +62,4 @@ Impero tried to play this exchange off as a joke, as seen in a [PR statement][5]
 [8]: https://twitter.com/ImperoSoftware
 [9]: http://rum.supply/2015/08/04/impero-2.html
 [10]: https://www.linkedin.com/profile/view?id=72547704&authType=name&authToken=FxeV&trk=mirror-profile-memberlist-photo
+[11]: https://twitter.com/search?src=typd&q=%40sleepycal%20%40imperosoftware
