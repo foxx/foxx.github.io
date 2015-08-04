@@ -21,7 +21,7 @@ Suffice to say, this got the attention of their entire office, and other compani
 Enjoy.
 
 
-<iframe width="100%" height="450" src="https://www.youtube.com/embed/OCh867rT1dg" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/OCh867rT1dg?start=90" frameborder="0" allowfullscreen></iframe>
 
 ### Timeline
 
