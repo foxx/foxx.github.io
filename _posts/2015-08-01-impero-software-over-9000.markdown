@@ -14,13 +14,9 @@ You may already be aware of the legal action by Impero Software against security
 
 In a [letter][3] by their lawyers, they suggested that Raylee's actions were criminal under the UK Computer Misuse Act 1990, and made slanderous claims in a [public PR][4] stating that he has "illegally hacked" their software. Although it's quite obvious that [Gateley PLC][6], the lawyers in question, have absolutely no understanding of the legal aspects of this situation, it's one that must be taken seriously and fought with action.
 
-Many of us felt compelled to stand up for Raylee, and teach Impero Software a lesson on how to behave on the internet, one which they wouldn't soon forget.
+Many of us felt compelled to stand up for Raylee, and teach Impero Software a lesson on how to behave on the internet, one which they wouldn't soon forget. After a brief conversation in [Lizard HQ][7], it was decided the best way to get their attention was to print out a new vulnerability over 9000 times, hand deliver it to their offices, and capture the entire thing on camera for delivery proof, whilst also leaving a copy on every car in their car park.
 
-After a brief conversation in [Lizard HQ][7], it was decided the best way to get their attention was to print out a new vulnerability over 9000 times, hand deliver it to their offices, and capture the entire thing on camera for delivery proof, whilst also leaving a copy on every car in their car park.
-
-Suffice to say, this got the attention of their entire office, and other companies in the area. 
-
-The official POC disclosure can be found [here][9]. I've added subtitles as their voices are hard to hear, apologies in advance for the sub-par quality.
+Suffice to say, this got the attention of their entire office, and other companies in the area. The official POC disclosure can be found [here][9]. I've added subtitles as their voices are hard to hear, apologies in advance for the sub-par quality.
 
 Enjoy.
 
@@ -29,12 +25,12 @@ Enjoy.
 
 ### Timeline
 
-0m: Intro
-1m: Office visit starts
-1m 50s: Statement read out in public
-3m: Impero staff getting pissed
-6m 30s: Flyer dropping cars
-7m: Conversation with [marketing director][10]
+* 0m: Intro
+* 1m: Office visit starts
+* 1m 50s: Statement read out in public
+* 3m: Impero staff getting pissed
+* 6m 30s: Flyer dropping cars
+* 7m: Conversation with [marketing director][10]
 
 
 ### How can you help?
