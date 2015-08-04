@@ -20,12 +20,12 @@ After a brief conversation in [Lizard HQ][7], it was decided the best way to get
 
 Suffice to say, this got the attention of their entire office, and other companies in the area. 
 
-The official POC disclosure can be found [here][9].
+The official POC disclosure can be found [here][9]. I've added subtitles as their voices are hard to hear, apologies in advance for the sub-par quality.
 
 Enjoy.
 
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/OCh867rT1dg" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/OCh867rT1dg" frameborder="0" allowfullscreen></iframe>
 
 ### How can you help?
 
