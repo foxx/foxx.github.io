@@ -10,6 +10,8 @@ keywords: impero, software, impero software, security, vulnerability, disclosure
 desc: Teaching Impero Software a lesson they won't forget
 ---
 
+In response to the legal action taken by [Impero Software][12] against security researcher [Raylee][0], I decided to turn up unannounced at their offices with a little surprise and a GoPro. This was their response.
+
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/OCh867rT1dg?start=90" frameborder="0" allowfullscreen></iframe>
 
 ### Background
@@ -61,3 +63,4 @@ Impero want to sweep this under the carpet, and that's just not cricket.
 [9]: http://rum.supply/2015/08/04/impero-2.html
 [10]: https://www.linkedin.com/profile/view?id=72547704&authType=name&authToken=FxeV&trk=mirror-profile-memberlist-photo
 [11]: https://twitter.com/search?src=typd&q=%40sleepycal%20%40imperosoftware
+[12]: https://www.imperosoftware.com
